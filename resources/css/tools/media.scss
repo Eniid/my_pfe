@@ -1,0 +1,42 @@
+@mixin media($size) {
+    $desktop: "(min-width: 1024px)";
+    $tablet: "(min-width: 768px) and (max-width: 1023px)";
+    $mobile: "(max-width: 767px)";
+    @if $size == desktop {
+      @media only screen and #{$desktop} {
+        @content;
+      }
+    }
+    @else if $size == tablet {
+      @media only screen and #{$tablet} {
+        @content;
+      }
+    }
+    @else if $size == mobile {
+      @media only screen and #{$mobile} {
+        @content;
+      }
+    }
+    @else {
+      @media only screen and #{$size} {
+        @content;
+      }
+    }
+  }
+
+
+
+
+//** Usage **//
+//   body {
+//       @include media(desktop){
+//           background-color: red;
+//       }
+//       @include media(tablet){
+//         background-color: rgb(0, 225, 255);
+//     }
+//         @include media(mobile){
+//         background-color: rgb(0, 255, 42);
+//     }
+//   }
+  

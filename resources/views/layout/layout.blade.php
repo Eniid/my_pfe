@@ -16,14 +16,14 @@
 
 
         <!-- Styles -->
-        <link rel="stylesheet" href="">
+        <link rel="stylesheet" href="./css/app.css">
 
         <!-- //? Document title  -->
         <title>@yield('title') : Hogwarts</title>
     </head>
 
 
-    <body>
+    <body class="body->test">
         <!-- //?CONTENT   -->
         @yield('content')
 

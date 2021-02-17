@@ -1,0 +1,16 @@
+
+//* Title fond *// 
+@mixin f_title($size: false, $colour: false, $lh: false) {
+    font-family: $f_title;
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $lh { line-height: $lh; }
+}
+
+//* Text font *// 
+@mixin f_title($size: false, $colour: false, $lh: false) {
+    font-family: $f_main;
+    @if $size { font-size: $size; }
+    @if $colour { color: $colour; }
+    @if $lh { line-height: $lh; }
+}

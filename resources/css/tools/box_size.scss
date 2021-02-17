@@ -1,0 +1,14 @@
+@mixin box($width, $height:$width) {
+    width: $width;
+    height: $height;
+  }
+
+
+//? Use ?*// 
+    //   .square {
+    //     @include box(50px);
+    //   }
+    
+    //   .rectangle {
+    //     @include box(100px, 50px);
+    //   }
