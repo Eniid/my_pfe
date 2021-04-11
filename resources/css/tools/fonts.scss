@@ -8,7 +8,7 @@
 }
 
 //* Text font *// 
-@mixin f_title($size: false, $colour: false, $lh: false) {
+@mixin f_text($size: false, $colour: false, $lh: false) {
     font-family: $f_main;
     @if $size { font-size: $size; }
     @if $colour { color: $colour; }

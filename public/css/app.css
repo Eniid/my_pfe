@@ -365,3 +365,23 @@ template {
 [hidden] {
   display: none;
 }
+
+html {
+  font-family: muli, Helvetica, Arial, sans-serif;
+  font-size: 10px;
+}
+
+body {
+  font-size: 1.6rem;
+  background-image: url(../img/background.png);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.main-sec {
+  background-color: #F5F5F5;
+  border-radius: 0.75rem;
+  margin-top: 40rem;
+  margin-bottom: 20rem;
+}

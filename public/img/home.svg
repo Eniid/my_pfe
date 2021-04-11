@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="22.434" height="19.89" viewBox="0 0 22.434 19.89">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#a657d5"/>
+      <stop offset="1" stop-color="#7379eb"/>
+    </linearGradient>
+  </defs>
+  <path id="Icon_ionic-md-home" data-name="Icon ionic-md-home" d="M12,24.39V17.76H17.18v6.63h5.263V14.445h3.365L14.592,4.5,3.375,14.445H6.74V24.39Z" transform="translate(-3.375 -4.5)" fill="url(#linear-gradient)"/>
+</svg>

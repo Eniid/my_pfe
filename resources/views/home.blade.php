@@ -3,7 +3,8 @@
 
 @section('content')
 
-<main>
+<div class="bg"></div>
+<main class="main-sec">
     <!-- House cup and last event -->
     <div class="home-info">
         <section class="house-cup">
