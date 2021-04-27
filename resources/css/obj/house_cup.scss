@@ -1,0 +1,83 @@
+
+.house_cup__all {
+    display: flex; 
+}
+
+.house-cup__hourglass {
+    width: 4rem;
+    height: 18rem;
+    border-radius: 10rem;
+    @include nm;
+    display: flex;
+    margin: 0.7rem; 
+}
+
+.house-cup__sand {
+    width: 3rem;
+    border-radius: 10rem;
+    margin:0.5rem;
+    align-self: flex-end;
+    position: relative; 
+}
+
+.house-cup__rav {
+    .house-cup__sand {
+        height: 13rem;
+        background: linear-gradient($g_ravenclaw);
+        box-shadow:  2px 2px 5px #405D8D55,
+                -2px -2px 5px #1484BF55;
+    }
+}
+
+.house-cup__sly {
+    .house-cup__sand {
+        height: 11rem;
+        background: linear-gradient($g_slytherin);
+        box-shadow:  2px 2px 5px #206F1255,
+                -2px -2px 5px #91BF1455;
+    }
+}
+
+.house-cup__grif {
+    .house-cup__sand {
+        height: 3rem;
+        background: linear-gradient($g_gryffondor);
+        box-shadow:  2px 2px 5px #9B272755,
+                -2px -2px 5px #EF0E6D55;
+    }
+}
+
+.house-cup__huff {
+    .house-cup__sand {
+        height: 7rem;
+        background: linear-gradient($g_hufflepuff);
+        box-shadow:  2px 2px 5px #FFB37B55,
+                -2px -2px 5px #FFE20055;
+    }
+}
+
+.house-emoji {
+    text-align : center; 
+    font-size : 2rem
+}
+
+
+.house-point-display {
+    display: none; 
+}
+
+.house-cup__sand:hover{
+    .house-point-display {
+        display: block;
+        @include absolute(bottom .3rem left 0.3rem);
+        box-shadow:  1px 1px 2px #00000021,
+                    -1px -1px 2px #fff;
+        background-color: $c_bg;
+        border-radius: 2rem;
+        width: 20rem;
+        z-index: 1000000;
+        padding: 1rem;
+        font-size: 1.2rem;
+        text-align: center;
+    }
+}

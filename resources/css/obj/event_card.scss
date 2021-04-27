@@ -1,0 +1,83 @@
+//** SMAL EVENT BOX **/ 
+
+.sm-event {
+    @include nm; 
+    display: inline-block;
+    height: 11rem;
+    width: 11rem;
+    border-radius: .6rem;
+    padding: 1.5rem; 
+    margin: .75rem;
+}
+
+.sm-event:hover {
+    @include nmi; 
+    transition: cubic-bezier(0.075, 0.82, 0.165, 2);
+}
+
+.sm-event__title {
+    font-size: 1.2rem;
+    color: $c_main;
+    font-family: $f_main-light;
+}
+
+.sm-event__date__month, .sm-event__date__time {
+    display: block;
+    font-family: $f_main-light;
+    font-size: 1rem;
+}
+
+.sm-event__date__day {
+    font-size: 2rem;
+}
+
+.sm-event__date__place {
+    display: block;
+    font-size: 1.2rem;
+    font-family: $f_main-light;
+
+    padding: 1.5rem 0;
+    img{
+        padding-right: .5rem;
+    }
+}
+
+//** .sm-event add **//
+
+.sm-event__add {
+    @include nmi; 
+    display: inline-block;
+    height: 11rem;
+    width: 11rem;
+    border-radius: .6rem;
+    padding: 1.5rem; 
+    margin: .75rem;
+    text-align: center;
+}
+
+.sm-event__button {
+    @include nm; 
+    border-radius: .7rem;
+    text-align: center;
+    padding: 1rem;
+    width: 60%;
+    margin: 1rem auto .5rem;
+}
+
+.sm-event__add__text {
+    display: block;
+    font-size: 1.2rem;
+    font-family: muli_l, Helvetica, Arial, sans-serif;
+    padding: 1.2rem 0;
+}
+
+.sm-event__add:hover {
+    .sm-event__button {
+        @include nm; 
+        transform: scale(0.9);
+        img{
+            transform: rotate(90deg);
+            transition: 1s;
+        }
+    }
+}

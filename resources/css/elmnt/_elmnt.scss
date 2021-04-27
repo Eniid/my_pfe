@@ -12,6 +12,16 @@ body{
     background-attachment: fixed;
 }
 
+h3 {
+    font-family: $f_main-light;
+    color: $c_main;
+}
+
+.flex {
+    display: flex;
+}
+
+
 
 
 // .bg{

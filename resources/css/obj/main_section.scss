@@ -3,4 +3,87 @@
     border-radius: $rad;
     margin-top: 40rem;
     margin-bottom: 20rem;
+    padding: 6rem; 
+    position: relative;
+}
+
+.bg{
+    position: fixed;
+    text-align: center;
+    width: 100%;
+}
+
+.main_title {
+    color: #fff; 
+    font-family: $f_title;
+    font-size: 15rem;
+    font-weight: 100;
+    position: relative;
+    top: -38rem;   
+}
+
+.nmto {
+    color: #fff;
+    font-family: doand, serif;
+    font-size: 7rem;
+    font-weight: 100;
+    position: relative;
+    bottom: 11rem;
+}
+
+
+
+//**HOME DISP**//
+
+aside {
+    @include absolute(right 5rem top 5rem);
+    width: 30%;
+    max-width: 30rem;
+
+}
+
+.home-house_ev{ 
+    width: 70%;
+    justify-content: space-between;
+}
+
+.last-event{
+    margin: 0 4rem;
+}
+
+.last-topics {
+    width: 70%;
+}
+
+.new-user {
+    font-size: 1.4rem;
+    line-height: 2rem;
+}
+
+@include media(tablet){
+    aside {
+    position: relative; 
+    width: 100%;
+    max-width: 30rem;
+    }
+
+    .home-house_ev{ 
+    width: 100%;
+    justify-content: space-between;
+    }
+}
+
+@include media(mobile){
+    aside {
+    position: relative; 
+    width: 100%;
+    max-width: 30rem;
+    }
+
+    .home-house_ev{ 
+    flex-direction: column;
+
+    width: 100%;
+    justify-content: space-between;
+    }
 }

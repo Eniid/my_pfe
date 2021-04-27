@@ -1,0 +1,53 @@
+
+.sm-pp__box {
+    @include nm; 
+    background: $c_bg;
+    height: 5.5rem;
+    width: 5.5rem;
+    border-radius: 5.5rem;
+    margin: 0 .5rem;
+
+    position: relative;
+}
+
+.sm-pp {
+    @include nmi;
+    height: 3.5rem;
+    width: 3.5rem;
+    border-radius: 5rem;
+    //padding: 1rem;
+    border: $c_bg .3rem solid;
+    margin: .7rem;
+    transition : transform .3s; 
+
+    
+}
+
+.sm-pp__box:hover {
+    .sm-pp {        
+        transform : rotate(40deg);
+        transition : .6s; 
+    }
+
+    .sm-pp__info {
+
+        display: inline-block;
+        @include absolute(bottom -4rem left -3rem);
+        box-shadow:  1px 1px 2px #00000021,
+                    -1px -1px 2px #fff;
+        background-color: $c_bg;
+        border-radius: 2rem;
+        width: 10rem;
+        z-index: 1000000;
+        padding: 1rem;
+        font-size: 1.1rem;
+        text-align: center;
+    }
+}
+
+.sm-pp__info{
+    display: none;
+}
+
+
+

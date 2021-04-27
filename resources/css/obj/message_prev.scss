@@ -1,0 +1,60 @@
+.topic-preview{
+    @include nm; 
+    //width: 65%;
+    margin: 0; 
+    padding: 3rem 5rem;
+    border-radius: .5rem;
+    position: relative;
+}
+
+
+.lt__title{
+    font-family: $f_main-light;
+    color: $c_main;
+    font-size: 2rem;
+}
+
+.lt__ariane {
+    font-size: 1.1rem;
+    @include relative(top -13);
+    opacity: .7;
+}
+
+.topix-preview__content {
+    font-size: 1.3rem;
+    line-height: 2rem;
+}
+
+
+.topix-preview__author {
+    @include absolute(top 2rem right 2rem);
+
+}
+
+.topix-preview__author__name {
+    font-size: 1.2rem;
+
+    a{
+        text-decoration: none;
+        color: $c_ravenclaw;
+    }
+    a:after {
+        content: '';
+        display: block;
+        margin: .1rem 2rem;
+        height: 2px;
+        width: 0;
+        background: transparent;
+        transition: width .5s ease, background-color .5s ease;
+      }
+      a:hover:after {
+        width: 50%;
+        background:$c_ravenclaw;
+      }
+}
+
+.topix-preview__author__messages {
+    font-size: 1rem;
+    position: relative;
+    top: -.6rem;
+}

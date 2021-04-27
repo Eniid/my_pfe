@@ -1,6 +1,6 @@
 @mixin media($size) {
-    $desktop: "(min-width: 1024px)";
-    $tablet: "(min-width: 768px) and (max-width: 1023px)";
+    $desktop: "(min-width: 1244px)";
+    $tablet: "(min-width: 768px) and (max-width: 1240px)";
     $mobile: "(max-width: 767px)";
     @if $size == desktop {
       @media only screen and #{$desktop} {
