@@ -1,0 +1,18 @@
+nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: $c_bg;
+    text-align: center;
+    box-shadow: 0px 1px 72px -23px rgba(0,0,0,0.53);
+
+
+        li{
+            display: inline-block;
+
+            a{
+                padding: 5rem;
+            }
+        }
+}
+

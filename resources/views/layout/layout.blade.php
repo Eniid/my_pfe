@@ -19,11 +19,27 @@
         <link rel="stylesheet" href="./css/app.css">
 
         <!-- //? Document title  -->
-        <title>@yield('title') : Hogwarts</title>
+        <title>@yield('title') Hogwarts</title>
     </head>
 
-
     <body class="body->test">
+        <header>
+            <nav>
+                <h2 class="visually-hidden">Menu de Navigation</h2>
+                <ol>
+                   <li><a href="/hp">Harry Potter</a></li> 
+                   <li><a href="/bs">Between us</a></li> 
+                   <li><a href="#">Role Play</a></li> 
+                   <li><a href="/"><img src="./img/home.svg" alt=""></a></li> 
+                   <li><a href="/events">Even</a></li> 
+                   <li><a href="/">Owls</a></li> 
+                   <li><a href="/profil">Profil</a></li> 
+                   <li><a href="#"><img src="" alt="search"></a></li>
+                   <li><a href="/login"><img src="" alt="out"></a></li>
+                </ol>
+            </nav>
+        </header>
+
         <!-- //?CONTENT   -->
         @yield('content')
 
