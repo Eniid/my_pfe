@@ -22,7 +22,7 @@ class CreateUsersTable extends Migration
             $table->string('house');
             $table->string('wand_wood');
             $table->string('wand_inside');
-            $table->string('description');
+            $table->string('description')->nullable();
             $table->unsignedSmallInteger('wand_length');
             $table->unsignedSmallInteger('messages')->default('0');
             $table->unsignedSmallInteger('house_point')->default('0');
