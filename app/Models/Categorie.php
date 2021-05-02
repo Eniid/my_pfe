@@ -16,4 +16,16 @@ class Categorie extends Model
      ];
 
 
+     public function forum()
+     {
+         return $this->belongsTo(Forum::class);
+     }
+
+     public function topic()
+     {
+         return $this->hasMany(Topic::class);
+     }
+
+
+
 }

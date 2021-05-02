@@ -9,13 +9,13 @@ class Forum extends Model
 {
     use HasFactory;
 
-        /**
-     * The attributes that are mass assignable.
-     *
-     * @var array
-     */
      protected $fillable = [
         'slug',
         'name',
-    ];
+     ];
+
+     public function categorie()
+     {
+         return $this->hasMany(Categorie::class);
+     }
 }
