@@ -37,7 +37,7 @@
                    <li><a href="#"><img src="" alt="search"></a></li>
                    <li><a href="/login"><img src="" alt="out"></a></li>
                 </ol>
-        ^    </nav>
+            </nav>
         </header>
 
         <!-- //?CONTENT   -->

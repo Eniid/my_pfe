@@ -13,6 +13,16 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+
+//* register 
+Route::get('/login', [RegisterController::class, 'index']);
+
+
+Route::get('/login', function () {
+    return view('login.login');
+});
+
+
 Route::get('/', function () {
     return view('home');
 });
@@ -57,6 +67,8 @@ Route::get('/profil', function () {
     return view('profil.profil');
 });
 
-Route::get('/login', function () {
-    return view('login.login');
+
+
+Route::get('/register', function () {
+    return view('login.register');
 });

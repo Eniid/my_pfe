@@ -372,7 +372,10 @@ html {
 }
 
 body {
-  font-size: 1.6rem;
+  font-size: 1.5rem;
+  letter-spacing: 0.01rem;
+  color: rgba(0, 0, 0, 0.753);
+  font-weight: lighter;
   background-image: url(../img/background.png);
   background-size: cover;
   background-position: center;
@@ -382,6 +385,30 @@ body {
 h3 {
   font-family: muli_l, Helvetica, Arial, sans-serif;
   color: #9165DF;
+}
+
+input {
+  display: block;
+  background: #F5F5F5;
+  box-shadow: inset 2px 2px 6px #dadada, inset -2px -2px 6px #fff;
+  border: none;
+  padding: 1rem 2rem;
+  border-radius: 0.7rem;
+}
+
+input[type=text], input[type=password] {
+  width: 100%;
+}
+
+input:focus {
+  outline: none;
+  border: #405D8D solid 1px;
+}
+
+label {
+  display: block;
+  color: #696969;
+  margin: 1.5rem 0 0.5rem;
 }
 
 .flex {
@@ -481,7 +508,7 @@ aside {
   height: 18rem;
   border-radius: 10rem;
   background: #F5F5F5;
-  box-shadow: 6px 6px 12px #dadada, -6px -6px 12px #fff;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
   display: flex;
   margin: 0.7rem;
 }
@@ -544,7 +571,7 @@ aside {
 
 .sm-event {
   background: #F5F5F5;
-  box-shadow: 6px 6px 12px #dadada, -6px -6px 12px #fff;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
   display: inline-block;
   height: 11rem;
   width: 11rem;
@@ -555,7 +582,7 @@ aside {
 
 .sm-event:hover {
   background: #F5F5F5;
-  box-shadow: inset 6px 6px 12px #dadada, inset -6px -6px 12px #fff;
+  box-shadow: inset 4px 4px 6px #dadada, inset -4px -4px 6px #fff;
   transition: cubic-bezier(0.075, 0.82, 0.165, 2);
 }
 
@@ -587,7 +614,7 @@ aside {
 
 .sm-event__add {
   background: #F5F5F5;
-  box-shadow: inset 6px 6px 12px #dadada, inset -6px -6px 12px #fff;
+  box-shadow: inset 4px 4px 6px #dadada, inset -4px -4px 6px #fff;
   display: inline-block;
   height: 11rem;
   width: 11rem;
@@ -599,7 +626,7 @@ aside {
 
 .sm-event__button {
   background: #F5F5F5;
-  box-shadow: 6px 6px 12px #dadada, -6px -6px 12px #fff;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
   border-radius: 0.7rem;
   text-align: center;
   padding: 1rem;
@@ -616,7 +643,7 @@ aside {
 
 .sm-event__add:hover .sm-event__button {
   background: #F5F5F5;
-  box-shadow: 6px 6px 12px #dadada, -6px -6px 12px #fff;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
   transform: scale(0.9);
 }
 .sm-event__add:hover .sm-event__button img {
@@ -626,7 +653,7 @@ aside {
 
 .topic-preview {
   background: #F5F5F5;
-  box-shadow: 6px 6px 12px #dadada, -6px -6px 12px #fff;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
   margin: 0;
   padding: 3rem 5rem;
   border-radius: 0.5rem;
@@ -699,9 +726,116 @@ nav li a {
   padding: 5rem;
 }
 
+.login_content {
+  display: none;
+}
+
+.login_checkbox:checked ~ .login_content {
+  display: block;
+}
+
+.login_checkbox:checked ~ .login_btn {
+  display: none;
+}
+
+.register_content {
+  display: none;
+}
+
+.register_checkbox:checked ~ .register_content {
+  display: block;
+}
+
+.register_checkbox:checked ~ .register_btn {
+  display: none;
+}
+
+.login_btn {
+  background: #F5F5F5;
+  box-shadow: 5px 0 12px #dadada, -5px 0 12px #fff, 0 -5px 12px #fff, 0 5px 12px #fff;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.7rem;
+  transform: rotate(45deg);
+  display: flex;
+}
+
+.register_btn {
+  background: #F5F5F5;
+  box-shadow: 5px 0 12px #dadada, -5px 0 12px #fff, 0 -5px 12px #fff, 0 5px 12px #fff;
+  width: 10rem;
+  height: 10rem;
+  border-radius: 0.7rem;
+  transform: rotate(45deg);
+  display: flex;
+}
+
+.fup {
+  text-align: center;
+}
+.fup a {
+  color: black;
+}
+
+.login_img {
+  padding: 0rem 2.2rem;
+  font-size: 6rem;
+  transform: rotate(-45deg);
+}
+
+.register_img {
+  padding: 0rem 2.2rem;
+  font-size: 6rem;
+  transform: rotate(-45deg);
+}
+
+.login_btn:hover {
+  background: #F5F5F5;
+  box-shadow: inset 5px 0 12px #dadada, inset -5px 0 12px #fff, inset 0 -5px 12px #fff, inset 0 5px 12px #fff;
+}
+
+.register_btn:hover {
+  background: #F5F5F5;
+  box-shadow: inset 5px 0 12px #dadada, inset -5px 0 12px #fff, inset 0 -5px 12px #fff, inset 0 5px 12px #fff;
+}
+
+.login_desc {
+  margin: 0 auto;
+  width: 50%;
+  max-width: 80rem;
+  min-width: 20rem;
+}
+
+.login_content {
+  width: 23rem;
+}
+
+.register_content {
+  width: 23rem;
+}
+
+.registration-sec {
+  height: 100%;
+  margin-top: 0rem;
+  margin-bottom: 0;
+}
+.registration-sec .cta {
+  width: 20rem;
+}
+
+.registration {
+  justify-content: space-between;
+  align-items: center;
+  height: 100%;
+}
+
+.registration__password {
+  margin-top: 0.5rem;
+}
+
 .sm-pp__box {
   background: #F5F5F5;
-  box-shadow: 6px 6px 12px #dadada, -6px -6px 12px #fff;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
   background: #F5F5F5;
   height: 5.5rem;
   width: 5.5rem;
@@ -712,7 +846,7 @@ nav li a {
 
 .sm-pp {
   background: #F5F5F5;
-  box-shadow: inset 6px 6px 12px #dadada, inset -6px -6px 12px #fff;
+  box-shadow: inset 4px 4px 6px #dadada, inset -4px -4px 6px #fff;
   height: 3.5rem;
   width: 3.5rem;
   border-radius: 5rem;
@@ -742,6 +876,35 @@ nav li a {
 
 .sm-pp__info {
   display: none;
+}
+
+.cta {
+  background: #F5F5F5;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
+  padding: 1.5rem;
+  border: none;
+  border-radius: 0.7rem;
+  margin: 1.5rem 0;
+  display: block;
+  text-align: center;
+}
+.cta a {
+  color: black;
+  text-decoration: none;
+}
+
+.cta_m {
+  background: linear-gradient(54deg, #A657D5, #7379EB);
+  box-shadow: 2px 2px 6px #7379eb57, -2px -2px 6px #a757d552;
+}
+.cta_m a {
+  color: #fff;
+}
+
+.login_registration {
+  width: 100%;
+  justify-content: space-evenly;
+  margin: 10rem 0;
 }
 
 .visually-hidden {

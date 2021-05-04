@@ -1,0 +1,117 @@
+//** Display none of masked elements **/ 
+
+
+.login_content {
+    display: none;
+}
+
+.login_checkbox:checked ~  .login_content {
+    display: block;
+}
+.login_checkbox:checked ~  .login_btn {
+    display: none;
+}
+
+
+.register_content {
+    display: none;
+}
+
+.register_checkbox:checked ~  .register_content {
+    display: block;
+}
+.register_checkbox:checked ~  .register_btn {
+    display: none;
+}
+
+
+
+
+//** BTNs **/ 
+
+
+.login_btn {
+    background: #F5F5F5;
+    
+    box-shadow:  5px 0 12px #dadada,
+                -5px 0 12px #fff,
+                0 -5px 12px #fff,
+                0 5px 12px #fff;
+    width: 10rem;
+    height: 10rem;
+    border-radius: .7rem;
+    transform: rotate(45deg);
+    display: flex;
+}
+
+.register_btn {
+    background: #F5F5F5;
+    
+    box-shadow:  5px 0 12px #dadada,
+                -5px 0 12px #fff,
+                0 -5px 12px #fff,
+                0 5px 12px #fff;
+    width: 10rem;
+    height: 10rem;
+    border-radius: .7rem;
+    transform: rotate(45deg);
+    display: flex;
+}
+
+.fup {
+    text-align: center;
+    a{
+        color: black; 
+    }
+
+}
+
+
+.login_img {
+padding: 0rem 2.2rem;
+font-size: 6rem;
+    transform: rotate(-45deg);
+
+}
+
+.register_img {
+padding: 0rem 2.2rem;
+font-size: 6rem;
+    transform: rotate(-45deg);
+
+}
+
+.login_btn:hover {
+    background: #F5F5F5;
+    box-shadow:  inset 5px 0 12px #dadada,
+                inset -5px 0 12px #fff,
+                inset 0 -5px 12px #fff,
+                inset 0 5px 12px #fff;
+}
+
+
+.register_btn:hover {
+    background: #F5F5F5;
+    box-shadow:  inset 5px 0 12px #dadada,
+                inset -5px 0 12px #fff,
+                inset 0 -5px 12px #fff,
+                inset 0 5px 12px #fff;
+}
+
+
+
+
+
+.login_desc {
+    margin : 0 auto; 
+    width : 50%; 
+    max-width : 80rem; 
+    min-width : 20rem; 
+}
+
+.login_content {
+    width : 23rem; 
+}
+.register_content {
+    width : 23rem; 
+}
