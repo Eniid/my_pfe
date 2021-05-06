@@ -833,6 +833,42 @@ nav li a {
   margin-top: 0.5rem;
 }
 
+.cat-box {
+  position: relative;
+  background: #F5F5F5;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
+  width: 90%;
+  max-width: 55rem;
+  border-radius: 0.7rem;
+  font-size: 1.4rem;
+  line-height: 2rem;
+}
+.cat-box h3 {
+  font-size: 2.5rem;
+  margin-top: 3.5rem;
+}
+
+.cat__last-message {
+  bottom: 2rem;
+  right: 2rem;
+  position: absolute;
+  text-align: right;
+}
+.cat__last-message p {
+  margin: 0;
+}
+.cat__last-message .cat__last-message__topic {
+  margin-top: -0.7rem;
+}
+
+.cat__last-messge__text {
+  margin: 0 2rem;
+}
+
+.cat-content {
+  margin: 0 5rem 0 -2rem;
+}
+
 .sm-pp__box {
   background: #F5F5F5;
   box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
@@ -905,6 +941,15 @@ nav li a {
   width: 100%;
   justify-content: space-evenly;
   margin: 10rem 0;
+}
+
+.cat-cta {
+  width: 30rem;
+  margin: 10 auto;
+}
+
+.cat-cta_contener {
+  text-align: center;
 }
 
 .visually-hidden {

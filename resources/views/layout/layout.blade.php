@@ -14,6 +14,9 @@
         
         <!-- Flavicon  -->
 
+        <!-- CSRF Token -->
+        <meta name="csrf-token" content="{{ csrf_token() }}">
+
 
         <!-- Styles -->
         <link rel="stylesheet" href="./css/app.css">
@@ -35,7 +38,16 @@
                    <li><a href="/">Owls</a></li> 
                    <li><a href="/profil">Profil</a></li> 
                    <li><a href="#"><img src="" alt="search"></a></li>
-                   <li><a href="/login"><img src="" alt="out"></a></li>
+                   <li>
+                 @guest
+                 Je suis hors ligne 
+                 @endguest
+
+                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                        @csrf
+                        <button>logout</button>
+                    </form>
+                   </li>
                 </ol>
             </nav>
         </header>

@@ -23,4 +23,9 @@ class Post extends Model
          return $this->belongsTo(Topic::class);
      }
 
+     public function postable()
+     {
+         return $this->morphTo();
+     }
+
 }

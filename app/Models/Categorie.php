@@ -21,7 +21,7 @@ class Categorie extends Model
          return $this->belongsTo(Forum::class);
      }
 
-     public function topic()
+     public function topics()
      {
          return $this->hasMany(Topic::class);
      }

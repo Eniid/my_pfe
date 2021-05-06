@@ -1,0 +1,40 @@
+.cat-box {
+    position: relative;
+    @include nm; 
+    width: 90%;
+    max-width: 55rem;
+    border-radius: 0.7rem;
+    font-size: 1.4rem;
+    line-height: 2rem;
+
+    h3{
+        font-size: 2.5rem;
+        margin-top: 3.5rem;
+    }
+}
+
+
+
+.cat__last-message {
+    bottom: 2rem;
+    right: 2rem;
+    position: absolute;
+    text-align: right;
+
+    p {
+        margin: 0;
+    }
+
+    .cat__last-message__topic {
+        margin-top: -.7rem;
+    }
+}
+
+
+.cat__last-messge__text {
+    margin: 0 2rem;
+}
+
+.cat-content {
+    margin: 0 5rem 0 -2rem ;
+}

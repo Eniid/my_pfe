@@ -2,8 +2,9 @@
 
 namespace Database\Factories;
 
-use App\Models\Model;
+use App\Models\User;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class RaUserFactory extends Factory
 {
@@ -12,7 +13,7 @@ class RaUserFactory extends Factory
      *
      * @var string
      */
-    protected $model = Model::class;
+    protected $model = User::class;
 
     /**
      * Define the model's default state.

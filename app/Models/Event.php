@@ -18,9 +18,9 @@ class Event extends Model
         'link',
      ];
 
-     public function post()
+     public function posts()
      {
-         return $this->hasMany(Post::class);
+         return $this->morphMany(Post::class, 'postable');
      }
 
      public function user()

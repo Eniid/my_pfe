@@ -19,11 +19,11 @@ class CreateUsersTable extends Migration
             $table->string('email')->unique();
             $table->timestamp('email_verified_at')->nullable();
             $table->string('password');
-            $table->string('house');
-            $table->string('wand_wood');
-            $table->string('wand_inside');
+            $table->string('house')->nullable();
+            $table->string('wand_wood')->nullable();
+            $table->string('wand_inside')->nullable();
             $table->string('description')->nullable();
-            $table->unsignedSmallInteger('wand_length');
+            $table->unsignedSmallInteger('wand_length')->nullable();
             $table->unsignedSmallInteger('messages')->default('0');
             $table->unsignedSmallInteger('house_point')->default('0');
             $table->boolean('is_admin')->default(false);

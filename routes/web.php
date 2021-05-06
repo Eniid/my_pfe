@@ -1,6 +1,9 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\RegisterController;
+use App\Http\Controllers\ForumController;
+use App\Http\Controllers\EventController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,61 +17,86 @@ use Illuminate\Support\Facades\Route;
 */
 
 
-//* register 
-Route::get('/login', [RegisterController::class, 'index']);
+//* LOGIN 
+// Route::get('/login', [RegisterController::class, 'login']);
 
+    //? Registration
 
-Route::get('/login', function () {
-    return view('login.login');
-});
-
-
-Route::get('/', function () {
-    return view('home');
-});
-
-Route::get('/hp', function () {
-    return view('forums.hp');
-});
-
-Route::get('/bs', function () {
-    return view('forums.bs');
-});
-
-Route::get('/rp', function () {
-    return view('forums.rp');
-});
-
-Route::get('/topic', function () {
-    return view('forums.topic-list');
-});
-
-Route::get('/message', function () {
-    return view('forums.message');
-});
-
-Route::get('/new', function () {
-    return view('forums.new-topic');
-});
-
-Route::get('/event', function () {
-    return view('event.event');
-});
-
-Route::get('/events', function () {
-    return view('event.events');
-});
-
-Route::get('/event_new', function () {
-    return view('event.new');
-});
-
-Route::get('/profil', function () {
-    return view('profil.profil');
-});
+    // Route::get('/register', function () {
+    //     return view('login.register');
+    // });
 
 
 
-Route::get('/register', function () {
-    return view('login.register');
-});
+    Route::get('/house', function () {
+        return view('auth.register_house');
+    });
+    
+
+
+
+//* PAGES 
+
+Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+
+    //? Forum 
+        //Categories
+        Route::get('/hp', [ForumController::class, 'index'])->middleware('auth');
+
+        // Topics
+        Route::get('/topic', function () {
+            return view('forums.topic-list');
+        });
+
+        // Posts 
+        Route::get('/message', function () {
+            return view('forums.message');
+        });
+        
+
+        // New Post 
+
+
+        // Edit Post 
+
+
+
+
+    //? Event 
+        // Events
+        Route::get('/events', [EventController::class, 'index'])->middleware('auth');
+
+
+        // Event 
+        Route::get('/event', [EventController::class, 'read'])->middleware('auth');
+
+
+        // New event
+        Route::get('/event_new', [EventController::class, 'create'])->middleware('auth');
+
+
+        // Edit event 
+        Route::get('/edit', [EventController::class, 'edit'])->middleware('auth');
+
+
+
+
+    //? Profil
+        // profil
+        Route::get('/profil', function () {
+            return view('profil.profil');
+        });
+
+
+        // Edit Profil
+        
+
+
+
+
+
+
+
+
+Auth::routes();

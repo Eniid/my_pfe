@@ -15,8 +15,8 @@ class ForumSeeder extends Seeder
     {
         \DB::table('forums')->insert([
             0 => [
-                'name'          => 'Harry Potter',
-                'slug'          => 'hp',
+                'name'          => 'Wizarding World',
+                'slug'          => 'ww',
             ],
             1 => [
                 'name'          => 'Between Us',

@@ -14,8 +14,8 @@ class Topic extends Model
         return $this->belongsTo(User::class);
     }
 
-    public function post()
+    public function posts()
     {
-        return $this->hasMany(Post::class);
+        return $this->morphMany(Post::class, 'postable');
     }
 }
