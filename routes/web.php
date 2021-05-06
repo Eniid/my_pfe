@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RegisterController;
 use App\Http\Controllers\ForumController;
 use App\Http\Controllers\EventController;
+use App\Http\Controllers\TopicController;
+use App\Http\Controllers\CategorieController;
 
 /*
 |--------------------------------------------------------------------------
@@ -45,18 +47,16 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
         Route::get('/hp', [ForumController::class, 'index'])->middleware('auth');
 
         // Topics
-        Route::get('/topic', function () {
-            return view('forums.topic-list');
-        });
+        Route::get('/topics', [CategorieController::class, 'index'])->middleware('auth');
+
+
+        // New topic 
+        Route::get('/new-topic', [CategorieController::class, 'create'])->middleware('auth');
+
 
         // Posts 
-        Route::get('/message', function () {
-            return view('forums.message');
-        });
+        Route::get('/posts', [TopicController::class, 'create'])->middleware('auth');
         
-
-        // New Post 
-
 
         // Edit Post 
 

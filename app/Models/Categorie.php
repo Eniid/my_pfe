@@ -29,3 +29,4 @@ class Categorie extends Model
 
 
 }
+  
