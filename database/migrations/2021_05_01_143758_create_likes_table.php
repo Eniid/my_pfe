@@ -17,7 +17,6 @@ class CreateLikesTable extends Migration
             $table->id();
             $table->foreignId('post_id')->constrained(); 
             $table->foreignId('user_id')->constrained(); 
-            $table->boolean('like')->default(false);
             $table->timestamps();
         });
     }

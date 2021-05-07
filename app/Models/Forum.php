@@ -14,6 +14,13 @@ class Forum extends Model
         'name',
      ];
 
+
+     public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
+
      public function categories()
      {
          return $this->hasMany(Categorie::class);

@@ -16,6 +16,7 @@ class CreateTopicsTable extends Migration
         Schema::create('topics', function (Blueprint $table) {
             $table->id();
             $table->string('title'); 
+            $table->string('slug');
             $table->string('img')->nullable();
             $table->foreignId('user_id')->constrained(); 
             $table->foreignId('categorie_id')->constrained(); 

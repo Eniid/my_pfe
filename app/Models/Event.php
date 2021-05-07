@@ -18,6 +18,11 @@ class Event extends Model
         'link',
      ];
 
+     public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
      public function posts()
      {
          return $this->morphMany(Post::class, 'postable');

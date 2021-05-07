@@ -19,10 +19,11 @@
         <h2>New</h2>
         <span class="lt__ariane">Forum ↣ category</span>
 
-        <form action="">
-            <input type="text">
-            <input type="file">
-            <textarea name="" id="" cols="30" rows="10">Votre message</textarea>
+        <form action="/topics" method='post'>
+            @csrf 
+            <input type="text" name="title">
+            <input type="file" name="img">
+            <textarea name="body" id="" cols="30" rows="10">Votre message</textarea>
             <button>Send</button>
         </form>
     </section>

@@ -17,10 +17,10 @@
 
 
         <section>
-            <h2>Cathegorie</h2>
+            <h2>{{$forum->name}}</h2>
 
             <div class="">
-            @foreach($categories as $categorie)
+            @foreach($forum->categories as $categorie)
                 <section class="cat-box">
                     <div class="cat-box_img">
                         <img src="" alt="">
@@ -30,7 +30,7 @@
                             <img src="./img/cat-new.svg" alt="new message">
                         </div>
                         <div class="cat-content">
-                            <h3>{{$categorie->name}}</h3>
+                            <h3><a href="/{{$forum->slug}}/{{$categorie->slug}}"> {{$categorie->name}}</a></h3>
                             <p>{{$categorie->description}}</p>
                         </div>
 

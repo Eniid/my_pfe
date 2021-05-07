@@ -4,6 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Categorie;
 use Illuminate\Database\Eloquent\Factories\Factory;
+use Illuminate\Support\Str;
 
 class CategorieFactory extends Factory
 {
@@ -21,8 +22,12 @@ class CategorieFactory extends Factory
      */
     public function definition()
     {
+        $title = $this->faker->sentence(3);
+        $slug = Str::of($title)->slug('-'); 
+
         return [
-            'name' => $this->faker->title,
+            'name' => $title, 
+            'slug' => $slug,
             'description' => $this->faker->text,
             'forum_id' => $this->faker->randomElement([1, 2, 3]),
         ];

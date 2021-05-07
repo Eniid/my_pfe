@@ -16,6 +16,11 @@ class Categorie extends Model
      ];
 
 
+     public function getRouteKeyName()
+    {
+        return 'slug';
+    }
+
      public function forum()
      {
          return $this->belongsTo(Forum::class);
@@ -25,7 +30,6 @@ class Categorie extends Model
      {
          return $this->hasMany(Topic::class);
      }
-
 
 
 }

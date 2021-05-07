@@ -19,7 +19,7 @@
 
 
         <!-- Styles -->
-        <link rel="stylesheet" href="./css/app.css">
+        <link rel="stylesheet" href="{{ asset('css/app.css') }}" >
 
         <!-- //? Document title  -->
         <title>@yield('title') Hogwarts</title>

@@ -33,6 +33,7 @@ use App\Http\Controllers\CategorieController;
     Route::get('/house', function () {
         return view('auth.register_house');
     });
+
     
 
 
@@ -42,17 +43,11 @@ use App\Http\Controllers\CategorieController;
 Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 
 
-    //? Forum 
-        //Categories
-        Route::get('/hp', [ForumController::class, 'index'])->middleware('auth');
-
-        // Topics
-        Route::get('/topics', [CategorieController::class, 'index'])->middleware('auth');
-
 
         // New topic 
         Route::get('/new-topic', [CategorieController::class, 'create'])->middleware('auth');
 
+        Route::post('/topics', [CategorieController::class, 'store'])->middleware('auth');
 
         // Posts 
         Route::get('/posts', [TopicController::class, 'create'])->middleware('auth');
@@ -93,6 +88,12 @@ Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('ho
         
 
 
+    //? Forum 
+        // Affichage de toutes les categories du forum 
+        Route::get('/{forum:slug}', [ForumController::class, 'show'])->middleware('auth');
+
+        // Topics
+        Route::get('/{forum:slug}/{categorie:slug}', [CategorieController::class, 'show'])->middleware('auth');
 
 
 
