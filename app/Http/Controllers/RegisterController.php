@@ -7,7 +7,15 @@ use Illuminate\Http\Request;
 class RegisterController extends Controller
 {
     
-    public function login(){
-        //return view('login.login');
+    public function setHouse(){
+        
+        
+        return view('login.register_house');
+    }
+
+    public function setWand(){
+        
+        return view('login.register_house');
+        
     }
 }

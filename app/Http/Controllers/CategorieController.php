@@ -18,7 +18,7 @@ class CategorieController extends Controller
         $categorie->load('topics');
 
 
-        return view('forums.show-cat', compact('categorie'));
+        return view('forums.categories.categorie', compact('categorie', 'forum'));
     }
 
 

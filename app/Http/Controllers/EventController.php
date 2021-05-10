@@ -10,7 +10,7 @@ class EventController extends Controller
         return view('event.events');
     }
 
-    public function read(){
+    public function show(Event $event){
         return view('event.event');
     }
 
