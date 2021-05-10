@@ -7,6 +7,8 @@ use App\Models\Categorie;
 use App\Models\Forum;
 use App\Models\Topic;
 use App\Models\Post;
+use Illuminate\Support\Str;
+
 
 class TopicController extends Controller
 {
@@ -23,8 +25,54 @@ class TopicController extends Controller
         return view('forums.categories.topics.topic', compact('categorie', 'forum', 'topic', 'posts'));
     }
 
-    public function create(){
-        return view('forums.categories.topics.new-topic');
+    public function create(Forum $forum, Categorie $categorie){
+
+        return view('forums.categories.topics.new-topic', compact('categorie', 'forum'));
+    }
+ 
+
+    public function store(Forum $forum, Categorie $categorie, Request $request){
+
+
+        //Valisation
+        $topic = new Topic(request()->validate(
+            [
+                'title' => 'required|min:4',
+                //'img' => '', // chose à vérifier sur une image
+            ]
+        ));
+
+        
+        $slug = Str::of(request('title'))->slug('-'); 
+
+        $topic -> title = request('title'); 
+        $topic -> slug = $slug; 
+        //$topic -> imgs = request('img'); 
+        $topic -> user_id = auth()->id(); 
+        $topic -> categorie_id = $categorie->id; 
+        $topic -> save();
+
+        $post = new Post(request()->validate(
+            [
+                'body' => 'required|min:4',
+            ]
+        ));
+        
+        $post -> body = request('body'); 
+        $post -> user_id = auth()->id(); 
+        $post -> postable_id = $topic->id; 
+        $post -> postable_type = "topic";
+        $post -> save();
+            
+            
+
+
+        return redirect('/'.$forum->slug.'/'.$categorie->slug);
+
+
+
+
+        return view('forums.categories.topics.new-topic', compact('categorie', 'forum'));
     }
  
 

@@ -85,7 +85,8 @@ Auth::routes();
 
 
             // nouveau topic 
-           // Route::get('/{forum:slug}/{categorie:slug}/create', [CategorieController::class, 'show'])->middleware('auth');
+            Route::get('/{forum:slug}/{categorie:slug}/topics/create', [TopicController::class, 'create'])->middleware('auth');
+            Route::post('/{forum:slug}/{categorie:slug}/topics/store', [TopicController::class, 'store'])->middleware('auth');
         
             // Un topic 
             Route::get('/{forum:slug}/{categorie:slug}/{topic:slug}', [TopicController::class, 'show'])->middleware('auth');

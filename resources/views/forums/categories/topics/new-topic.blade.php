@@ -17,9 +17,12 @@
 
     <section>
         <h2>New</h2>
-        <span class="lt__ariane">Forum ↣ category</span>
+        <span class="lt__ariane">
+            <a href="/{{ $forum->slug }}">{{ $forum->name }} </a> ↣ <a href="/{{ $forum->slug}}/{{$categorie->slug}}">{{ $categorie->name }}</a>
+        </span>
 
-        <form action="/topics" method='post'>
+
+        <form action="/{{ $forum->slug}}/{{$categorie->slug}}/topics/store" method='post'>
             @csrf 
             <input type="text" name="title">
             <input type="file" name="img">
