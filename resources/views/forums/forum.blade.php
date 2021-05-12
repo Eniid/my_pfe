@@ -16,10 +16,10 @@
    
 
 
-        <section>
+        <section class="max-116">
             <h2>{{$forum->name}}</h2>
 
-            <div class="">
+            <div class="flex categories">
             @foreach($forum->categories as $categorie)
                 <section class="cat-box">
                     <div class="cat-box_img">

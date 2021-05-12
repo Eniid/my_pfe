@@ -4,7 +4,7 @@
 @section('content')
 
 <div class="bg">
-<h1 class="main_title">Hogwarts</h1>
+<h1 class="main_title">Wizarding World <span>online</span></h1>
 
 <p class="nmto">Nothing more to see here! </p>
 </div>

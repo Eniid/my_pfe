@@ -50,7 +50,13 @@ label {
 
 
 
-
+h1 {
+    span {
+        display: block;
+        font-family: $f_main-light;
+        font-size: 5rem;
+    }
+}
 
 
 

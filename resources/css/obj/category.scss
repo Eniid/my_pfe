@@ -1,3 +1,11 @@
+//* Affichage de categories **// 
+
+
+.max-116 {
+    max-width: 116rem;
+    margin: auto;
+}
+
 .cat-box {
     position: relative;
     @include nm; 
@@ -6,6 +14,7 @@
     border-radius: 0.7rem;
     font-size: 1.4rem;
     line-height: 2rem;
+    margin: 3rem 0;
 
     h3{
         font-size: 2.5rem;
@@ -38,3 +47,21 @@
 .cat-content {
     margin: 0 5rem 0 -2rem ;
 }
+
+.categories {
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+h3 {
+    a{
+        text-decoration: none;
+        color:  $c_main;
+    }
+}
+
+
+
+//* Categorie -> Affichage des topics  **// 
+
+

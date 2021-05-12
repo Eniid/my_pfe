@@ -22,34 +22,46 @@
         <link rel="stylesheet" href="{{ asset('css/app.css') }}" >
 
         <!-- //? Document title  -->
-        <title>@yield('title') Hogwarts</title>
+        <title>@yield('title') Wizarding World Online</title>
     </head>
 
     <body class="body->test">
         <header>
+        @auth
             <nav>
                 <h2 class="visually-hidden">Menu de Navigation</h2>
-                <ol>
-                   <li><a href="/hp">Harry Potter</a></li> 
+                <ol class="flex nav-ol">
+                   <li><a href="/ww">Wizarding World</a></li> 
                    <li><a href="/bs">Between us</a></li> 
-                   <li><a href="#">Role Play</a></li> 
-                   <li><a href="/"><img src="./img/home.svg" alt=""></a></li> 
-                   <li><a href="/events">Even</a></li> 
+                   <li><a href="/rp">Role Play</a></li> 
+                   <li><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}" alt=""></a></li> 
+                   <li><a href="{{ url('events') }}">Events</a></li> 
                    <li><a href="/">Owls</a></li> 
-                   <li><a href="/profil">Profil</a></li> 
-                   <li><a href="#"><img src="" alt="search"></a></li>
                    <li>
-                 @guest
-                 Je suis hors ligne 
-                 @endguest
-
-                    <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                        @csrf
-                        <button>logout</button>
-                    </form>
+                        <form action="" class="search-form">
+                            <div class="searchbox">
+                                <input type="text" name="" id="" placeholder="search">
+                                <a href="#"><img src="{{ asset('img/search.svg') }}" alt="search"></a>
+                            </div>
+                        </form>
                    </li>
+
+                   <li>
+                        <div class="sm-pp__box">
+                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                            <div class="sm-pp__info">
+                                <a href="/profil">profil</a>
+                                <hr>
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                    @csrf
+                                    <button>logout</button>
+                                </form>
+                            </div>
+                        </div>
+                   </li> 
                 </ol>
             </nav>
+          @endauth  
         </header>
 
         <!-- //?CONTENT   -->

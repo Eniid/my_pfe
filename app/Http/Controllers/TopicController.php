@@ -27,7 +27,7 @@ class TopicController extends Controller
 
     public function create(Forum $forum, Categorie $categorie){
 
-        return view('forums.categories.topics.new-topic', compact('categorie', 'forum'));
+        return view('forums.categories.topics.topic-post-form', compact('categorie', 'forum'));
     }
  
 
@@ -68,15 +68,11 @@ class TopicController extends Controller
 
 
         return redirect('/'.$forum->slug.'/'.$categorie->slug);
-
-
-
-
-        return view('forums.categories.topics.new-topic', compact('categorie', 'forum'));
     }
  
 
 
+ 
 
 
 

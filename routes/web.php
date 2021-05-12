@@ -7,6 +7,7 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -69,7 +70,7 @@ Auth::routes();
 
     //* Profil
             // profil
-            Route::get('/events/{event:slug}', [EventController::class, 'show'])->middleware('auth');
+            Route::get('/profil', [UserController::class, 'index'])->middleware('auth');
 
 
             // Edit Profil
@@ -93,6 +94,8 @@ Auth::routes();
         
         
             // Edit topic
+            Route::get('/{forum:slug}/{categorie:slug}/post/edit/{post}', [TopicController::class, 'edit'])->middleware('auth');
+            //Route::post('/{forum:slug}/{categorie:slug}/topics/store', [TopicController::class, 'store'])->middleware('auth');
             //Route::get('/{forum:slug}/{categorie:slug}/{topic:slug}/edit', [CategorieController::class, 'show'])->middleware('auth');
 
             // Edit post
