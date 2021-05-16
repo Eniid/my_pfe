@@ -1,5 +1,5 @@
 // Helvetica Neue
-@font-face { 	font-family: "doand"; 	src: url('/fonts/DawningofaNewDay-Regular.ttf'); } 
+@font-face { 	font-family: "cos"; 	src: url('/fonts/cosmic.ttf'); } 
 @font-face { 	font-family: "muli"; 	src: url('/fonts/Muli.ttf'); } 
 @font-face { 	font-family: "muli_b"; 	src: url('/fonts/Muli-Bold.ttf'); } 
 @font-face { 	font-family: "muli_i"; 	src: url('/fonts/Muli-Italic.ttf'); } 
@@ -7,9 +7,9 @@
 
 
 // Les polices
-$f_main : muli, Helvetica, Arial, sans-serif; 
+$f_main : muli_l, Helvetica, Arial, sans-serif; 
 $f_main-bold : muli_b, Helvetica, Arial, sans-serif; 
 $f_main-italic : muli_i, Helvetica, Arial, sans-serif; 
 $f_main-light : muli_l, Helvetica, Arial, sans-serif; 
-$f_title : doand, serif; 
+$f_title : cos, serif; 
 

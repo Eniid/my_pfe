@@ -14,10 +14,7 @@ class Topic extends Model
         'slug',
      ];
 
-    public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+
 
     public function user()
     {

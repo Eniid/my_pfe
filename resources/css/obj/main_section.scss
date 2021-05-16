@@ -5,6 +5,7 @@
     margin-bottom: 20rem;
     padding: 6rem; 
     position: relative;
+
 }
 
 .bg{
@@ -23,13 +24,17 @@
 }
 
 .nmto {
+    bottom: 10rem;
     color: #fff;
-    font-family: doand, serif;
-    font-size: 7rem;
+    font-family: $f_title;
+    font-size: 5rem;
     font-weight: 100;
-    position: relative;
+    position: fixed;
     bottom: 11rem;
+    width: 100%; 
+    margin: auto
 }
+
 
 
 

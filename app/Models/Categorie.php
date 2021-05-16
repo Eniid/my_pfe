@@ -16,10 +16,6 @@ class Categorie extends Model
      ];
 
 
-     public function getRouteKeyName()
-    {
-        return 'slug';
-    }
 
      public function forum()
      {

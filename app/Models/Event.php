@@ -18,10 +18,7 @@ class Event extends Model
         'link',
      ];
 
-     public function getRouteKeyName()
-    {
-        return 'slug';
-    }
+
 
      public function posts()
      {

@@ -1,0 +1,90 @@
+//* Mais section title *// 
+
+.head-sec {
+    position: fixed;
+    text-align: center;
+
+
+    .bg {
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-image: url(../img/background.png);
+        background-size: cover;
+        }
+
+
+    h1 {
+        position: fixed;
+        font-size: 8.5rem;
+        top: 9rem;
+        width: 100%;
+        color: $c_gold;
+        text-shadow: 0px 10px 14px rgba(255,255,255,0.31);
+        }
+
+        .separation {
+            position: fixed;
+            top: 28rem;
+            width: 100%;
+
+        }
+        
+        span {
+            font-family: muli_l, Helvetica, Arial, sans-serif;
+            color: #fff;
+            letter-spacing: 1.5rem;
+            font-size: 3.5rem;
+            position: relative;
+            top: -2rem;
+        }
+
+        .log-cta {
+            bottom: 10rem;
+            margin: 3rem auto;
+            width: 25rem;
+        }
+
+        p{
+            
+            color: #fff;
+            max-width: 43rem;
+            min-width: 30rem;
+            width: 50%;
+            margin: auto;
+            line-height: 2.3rem;
+        }
+
+        .login-pres {
+            width: 100%;
+            position: fixed;
+            top: 40rem;
+        }
+
+        .logo_img{
+
+            position: fixed;
+            top: 10rem;
+            right: 1rem;
+            width: 100%;
+            text-align: center;
+            opacity: 0.4;
+
+            img {
+                width: 25rem;
+
+            }
+        }
+    }
+
+
+    .bg-color {
+        background: linear-gradient(#473357, #8a61a86e);    
+        position: fixed;
+        top: 0;
+        bottom: 0;
+        right: 0;
+        left: 0;
+}
