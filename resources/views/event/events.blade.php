@@ -1,13 +1,11 @@
 @extends('layout.layout')
 
+@section('title')
+Event Name |
+@endsection
 
 @section('content')
 
-<div class="bg">
-<h1 class="main_title">Hogwarts</h1>
-
-<p class="nmto">Nothing more to see here! </p>
-</div>
 <main class="main-sec">
     <!-- House cup and last event -->
     <div class="home-info">
@@ -133,3 +131,5 @@
 
  
 </main>
+
+@endsection

@@ -1,17 +1,11 @@
 @extends('layout.layout')
 
 @section('title')
-    Harry Potter :
+New Topic |
 @endsection
-
 
 @section('content')
 
-<div class="bg">
-<h1 class="main_title">Hogwarts</h1>
-
-<p class="nmto">Nothing more to see here! </p>
-</div>
 <main class="main-sec">
    
 
@@ -34,3 +28,5 @@
     
  
 </main>
+
+@endsection

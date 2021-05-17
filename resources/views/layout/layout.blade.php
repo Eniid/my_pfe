@@ -62,6 +62,18 @@
                 </ol>
             </nav>
           @endauth  
+
+
+
+            <div class="bg head-sec">
+                <div class="bg-color" style="background: linear-gradient(#1484BF, #405D8D); opacity : .7;"></div>
+            
+                <div class="logo_img"><img src="{{ asset('img/sw/asset 167.png') }}" alt=""></div>
+                <h1 class="main_title">Wizarding World <span>ONLINE</span> </h1>
+                <div class="separation"><img src="{{ asset('img/sep.svg') }}" alt=""></div>
+            
+                <p class="nmto">Nothing more to see here! </p>
+            </div>
         </header>
 
         <!-- //?CONTENT   -->
