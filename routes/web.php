@@ -42,7 +42,9 @@ Auth::routes();
 //* REGISTER
 
     Route::get('/register/house', [RegisterController::class, 'setHouse'])->middleware('auth');
+    Route::post('/register/house', [RegisterController::class, 'storeHouse'])->middleware('auth');
     Route::get('/register/wand', [RegisterController::class, 'setWand'])->middleware('auth');
+    Route::post('/register/wand', [RegisterController::class, 'storeWand'])->middleware('auth');
 
 
 
