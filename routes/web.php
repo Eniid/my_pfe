@@ -52,6 +52,7 @@ Auth::routes();
 //* HOME PAGE
 
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/termes-and-policy', [App\Http\Controllers\HomeController::class, 'tp'])->name('t&p');
 
 
     //* Events
@@ -61,6 +62,7 @@ Auth::routes();
    
            // New event
            Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
+           Route::post('/events/create', [EventController::class, 'store'])->middleware('auth');
    
    
            // Edit event 
@@ -72,7 +74,7 @@ Auth::routes();
 
     //* Profil
             // profil
-            Route::get('/profil', [UserController::class, 'index'])->middleware('auth');
+            Route::get('/profil/{user}', [UserController::class, 'index'])->middleware('auth');
 
 
             // Edit Profil

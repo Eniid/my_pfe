@@ -14,15 +14,11 @@ class TopicController extends Controller
 {
     public function show (Forum $forum, Categorie $categorie, Topic $topic){
 
-        //$post->load('posts');
-
-        $posts = Post::whereHasMorph(
-            'postable',
-            [Topic::class],
-        )->get();
+        $topic->load('posts');
 
 
-        return view('forums.categories.topics.topic', compact('categorie', 'forum', 'topic', 'posts'));
+
+        return view('forums.categories.topics.topic', compact('categorie', 'forum', 'topic'));
     }
 
     public function create(Forum $forum, Categorie $categorie){
@@ -61,7 +57,7 @@ class TopicController extends Controller
         $post -> body = request('body'); 
         $post -> user_id = auth()->id(); 
         $post -> postable_id = $topic->id; 
-        $post -> postable_type = "topic";
+        $post -> postable_type = "App\Models\Topic";
         $post -> save();
             
             

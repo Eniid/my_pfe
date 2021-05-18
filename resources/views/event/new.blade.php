@@ -12,27 +12,36 @@ New event |
     <section>
         <h2>New event</h2>
 
-        <form action="">
+        <form action="/events/create" method="POST">
+            @csrf
             <div>
                 <label for="name">Event's name</label>
-                <input type="text" id="name" placeholder="Give your event a name">
+                <input type="text" name="name" id="name" placeholder="Give your event a name">
 
                 <label for="desc">Event descitption</label>
-                <textarea name="" id="desc" cols="30" rows="10">Votre message</textarea>
+                <textarea name="desc" id="desc" cols="30" rows="10">Votre message</textarea>
             </div>
             <div>
                 <label for="date">Date</label>
-                <input type="date" id="date">
+                <input type="date" id="date" name="date">
 
-                <label for="name">Place</label>
-                <input type="text" id="name" placeholder="Skype ? Discord ? An adress ?">
+                <label for="place">Place</label>
+                <input type="text" name="place" id="place" placeholder="Skype ? Discord ? An adress ?">
 
                 <label for="desc">Message for the participents</label>
-                <textarea name="" id="desc" cols="30" rows="10">Only seenable bu the participents</textarea>
+                <textarea name="private_desc" id="desc" cols="30" rows="10">Only seenable bu the participents</textarea>
             </div>
 
-
-            <button class="CTA">Create an event</button>
+            @if ($errors->any())
+            <div class="alert alert-danger">
+                <ul>
+                    @foreach ($errors->all() as $error)
+                        <li>{{ $error }}</li>
+                    @endforeach
+                </ul>
+            </div>
+        @endif
+            <button class="cta">Create an event</button>
         </form>
     </section>
     

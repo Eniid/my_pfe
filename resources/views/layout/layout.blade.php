@@ -44,13 +44,13 @@
                                 <a href="#"><img src="{{ asset('img/search.svg') }}" alt="search"></a>
                             </div>
                         </form>
-                   </li>
+                   </li> 
 
                    <li>
                         <div class="sm-pp__box">
                             <img src="/img/pp1.jpg" alt="" class="sm-pp">
                             <div class="sm-pp__info">
-                                <a href="/profil">profil</a>
+                                <a href="/profil/{{auth()->id()}}">profil</a>
                                 <hr>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
                                     @csrf
@@ -73,6 +73,7 @@
                 <div class="separation"><img src="{{ asset('img/sep.svg') }}" alt=""></div>
             
                 <p class="nmto">Nothing more to see here! </p>
+                <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a></p>
             </div>
         </header>
 

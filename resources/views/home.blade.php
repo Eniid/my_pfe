@@ -126,12 +126,14 @@
                     <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" alt="">Discord</span>
                 </section>
 
+                <a href="/events/create">
                 <div class="sm-event__add">
                     <div class="sm-event__button">
                         <img src="/img/plus.svg" alt="" width="50" height="50">
                     </div>
-                    <span class="sm-event__add__text">Add a new event</span>
+                    <span class="sm-event__add__text"> Add a new event</span>
                 </div>
+                </a>
             </div>
         </section>
     </div>
@@ -206,7 +208,7 @@
 
     <!-- Last topic -->
     <section class="last-topics">
-        <h2>Last Topics</h2>
+        <h2>Your friends latest topic</h2>
         <section class="topic-preview">
             <h3 class="lt__title">Topic title</h3>
             <span class="lt__ariane">Forum ↣ category</span>

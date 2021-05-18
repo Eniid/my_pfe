@@ -1,7 +1,7 @@
 @extends('layout.layout')
 
 @section('title')
-User Name |
+{{ $user->name }} | 
 @endsection
 
 @section('content')
@@ -10,25 +10,29 @@ User Name |
     <div class="home-info">
         <div class="flex home-house_ev">
             <section class="profil_info">
-                <h2 class="profil__user-name">User Name</h2>
+                <h2 class="profil__user-name">{{ $user->name }}</h2>
                 <img src="" alt="">
                 <img src="" alt="">
                 <div class="profil__messages">
                     <div class="main-message__messages">
-                        <p class="messages__numbers">1234</p>
+                        <p class="messages__numbers">{{ $user->messages}}</p>
                         <p class="messages__text">messages</p>
                     </div>
                     <div class="main-message__messages">
-                        <p class="messages__numbers">1234</p>
+                        <p class="messages__numbers">{{ $user->house_point }}</p>
                         <p class="messages__text">House Point</p>
                     </div>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e</p>
+                    <p>{{ $user->description }}</p>
                 </div>
 
                 <div>
                     <p>Bois</p>
+                    <p>{{ $user->wand_wood }}</p>
+
                     <p>info</p>
+                    <p>{{ $user->wand_inside }}</p>
                     <p>Taille</p>
+                    <p>{{ $user->wand_length }} inches</p>
                     <p>Ici on va devoir mettre de la 3D et ça va être chaud</p>
                 </div>
 
@@ -39,7 +43,7 @@ User Name |
 
     <!-- Users -->
     <aside class="qeel">
-        <h2 class="hidden">Users's friends</h2>
+        <h2 class="hidden">{{ $user->name }}</h2>
         <div class="online">
                 <div class="flex">
                     <div class="sm-pp__box">

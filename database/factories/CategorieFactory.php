@@ -28,7 +28,7 @@ class CategorieFactory extends Factory
         return [
             'name' => $title, 
             'slug' => $slug,
-            'description' => $this->faker->text,
+            'description' => $this->faker->sentence(10),
             'forum_id' => $this->faker->randomElement([1, 2, 3]),
         ];
     }

@@ -417,6 +417,19 @@ h1 span {
   font-size: 5rem;
 }
 
+h4 {
+  font-size: 1.7rem;
+  margin: 4rem 0rem 1rem 0rem;
+  font-family: muli_b, Helvetica, Arial, sans-serif;
+}
+
+.sub {
+  color: #383838;
+  font-size: 1rem;
+  position: relative;
+  top: -1.4rem;
+}
+
 .flex {
   display: flex;
 }
@@ -445,7 +458,7 @@ h1 span {
   top: -38rem;
 }
 
-.nmto {
+.head-sec .nmto {
   bottom: 10rem;
   color: #fff;
   font-family: cos, serif;
@@ -455,6 +468,22 @@ h1 span {
   bottom: 11rem;
   width: 100%;
   margin: auto;
+  max-width: 200rem;
+  min-width: 0;
+}
+
+.head-sec .footer {
+  position: fixed;
+  bottom: 2rem;
+  width: 100%;
+  margin: auto;
+  max-width: 200rem;
+  min-width: 0;
+  font-size: 1rem;
+}
+.head-sec .footer a {
+  padding: 1rem;
+  color: #fff;
 }
 
 aside {
@@ -954,6 +983,27 @@ nav .sm-pp__box:hover .sm-pp__info {
 h3 a {
   text-decoration: none;
   color: #9165DF;
+}
+
+.t-a-p {
+  width: 70%;
+  max-width: 70rem;
+  text-align: justify;
+  margin: auto;
+}
+.t-a-p p {
+  line-height: 2rem;
+}
+.t-a-p a {
+  color: #000;
+  text-underline-offset: 0.3rem;
+  -webkit-text-decoration-color: #9165DF;
+          text-decoration-color: #9165DF;
+  transition: 0.3s;
+}
+.t-a-p a:hover {
+  color: #9165DF;
+  transition: 0.2s;
 }
 
 .sm-pp__box {

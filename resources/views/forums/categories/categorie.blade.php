@@ -6,7 +6,6 @@ Cat Name |
 
 @section('content')
 <main class="main-sec">
-   
     <section class="max-116">
         <h2>{{$categorie->name}}</h2>
         <span class="lt__ariane">

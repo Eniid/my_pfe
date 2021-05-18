@@ -15,7 +15,7 @@ Topic Name |
 
     <!-- TOPIC -->
 
-            @foreach($posts as $post)
+            @foreach($topic->posts as $post)
                 <div class="main-message">
                     <!-- Profil -->
                     <div class="main-message__profil">

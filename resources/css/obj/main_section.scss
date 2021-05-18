@@ -23,7 +23,7 @@
     top: -38rem;   
 }
 
-.nmto {
+.head-sec .nmto {
     bottom: 10rem;
     color: #fff;
     font-family: $f_title;
@@ -32,7 +32,25 @@
     position: fixed;
     bottom: 11rem;
     width: 100%; 
-    margin: auto
+    margin: auto;
+    max-width: 200rem;
+    min-width: 0;
+}
+
+.head-sec  .footer {
+    position: fixed;
+    bottom: 2rem;    
+    width: 100%; 
+    margin: auto;
+    max-width: 200rem;
+    min-width: 0;
+    font-size: 1rem;
+
+    a {
+        padding: 1rem; 
+        color: #fff; 
+    }
+
 }
 
 

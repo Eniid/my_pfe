@@ -1,0 +1,23 @@
+.t-a-p {
+    width: 70%;
+    max-width: 70rem;
+    text-align: justify;
+    margin: auto;
+
+    p {
+        line-height: 2rem;
+    }
+
+    a{
+        color: #000;  
+        text-underline-offset: .3rem;
+        text-decoration-color: $c_main;
+        transition: .3s;
+    
+    }     
+    a:hover{
+        color: $c_main;  
+        transition: .2s;
+    
+    }        
+}

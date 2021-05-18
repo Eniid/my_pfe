@@ -54,7 +54,7 @@ class CategorieController extends Controller
         ));
         
         $post -> body = request('body'); 
-        $post -> user_id = 1; //! Comment récupérer l'id de l'utilisateur co ?
+        $post -> user_id = auth()->id(); //! Comment récupérer l'id de l'utilisateur co ?
         $post -> postable_id = $topic->id; //? ça marché comme ça ? 
         $post -> postable_type = "topic";
         $post -> save();
