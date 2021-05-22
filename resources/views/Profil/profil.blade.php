@@ -22,7 +22,13 @@
                         <p class="messages__numbers">{{ $user->house_point }}</p>
                         <p class="messages__text">House Point</p>
                     </div>
-                    <p>{{ $user->description }}</p>
+
+                    @if ($user->id === auth()->id())
+                        C'est mon profil! 
+                        
+                    @else
+                        <p>{{ $user->description }}</p>
+                    @endif
                 </div>
 
                 <div>

@@ -1,0 +1,36 @@
+.topic-list {
+    @include nm; 
+    display: flex;
+    border-radius: .5rem;
+    align-items: center;
+    margin: 2rem;
+
+
+    .cat-box_new {
+        img{
+            height: 10rem;
+        }
+    }
+
+    .icone {
+        width: 4rem;
+    }
+
+    .flex {
+        align-items: center;
+    }
+}
+
+.topic-main_box {
+    flex-grow: 3;
+    padding: 0 2rem;
+}
+
+.topix-preview__author__name {
+    padding: -2rem;
+    margin: -1rem 0 -0.5rem 0;
+}
+
+.latest-message {
+    padding: 2rem;
+}

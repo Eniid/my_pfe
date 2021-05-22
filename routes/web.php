@@ -56,6 +56,9 @@ Auth::routes();
 
 
     //* Events
+
+            Route::post('/events/join', [EventController::class, 'participation'])->middleware('auth');
+
            // Events
            Route::get('/events', [EventController::class, 'index'])->middleware('auth');
 
@@ -69,7 +72,9 @@ Auth::routes();
            Route::get('/events/edit/{event:slug}', [EventController::class, 'edit'])->middleware('auth');
 
            // Event 
-            Route::get('/events/{event:slug}', [EventController::class, 'show'])->middleware('auth');
+
+           Route::get('/events/{event:slug}', [EventController::class, 'show'])->middleware('auth');
+           Route::post('/events/{event:slug}', [PostController::class, 'store_event'])->middleware('auth');
    
 
     //* Profil
@@ -82,6 +87,8 @@ Auth::routes();
 
 
     //* Forum 
+
+
             // Un forum
             Route::get('/{forum:slug}', [ForumController::class, 'show'])->middleware('auth');
 
@@ -96,14 +103,18 @@ Auth::routes();
             // Un topic 
             Route::get('/{forum:slug}/{categorie:slug}/{topic:slug}', [TopicController::class, 'show'])->middleware('auth');
         
+            Route::post('/{forum:slug}/{categorie:slug}/{topic:slug}', [PostController::class, 'store'])->middleware('auth');
+
         
             // Edit topic
             Route::get('/{forum:slug}/{categorie:slug}/post/edit/{post}', [TopicController::class, 'edit'])->middleware('auth');
-            //Route::post('/{forum:slug}/{categorie:slug}/topics/store', [TopicController::class, 'store'])->middleware('auth');
             //Route::get('/{forum:slug}/{categorie:slug}/{topic:slug}/edit', [CategorieController::class, 'show'])->middleware('auth');
 
             // Edit post
             //Route::get('/{forum:slug}/{categorie:slug}/{topic:slug}/{post:slug}/edit', [PostController::class, 'edit'])->middleware('auth');
 
 
+            // Like
+            Route::post('/{forum:slug}/{categorie:slug}/{topic:slug}/like', [PostController::class, 'like'])->middleware('auth');
+            Route::delete('/{forum:slug}/{categorie:slug}/{topic:slug}/unlike', [PostController::class, 'unlike'])->middleware('auth');
 

@@ -18,14 +18,17 @@ class Post extends Model
          return $this->belongsTo(User::class);
      }
 
-     public function topic()
-     {
-         return $this->belongsTo(Topic::class);
-     }
 
      public function postable()
      {
          return $this->morphTo();
+     }
+
+     
+
+     public function likes()
+     {
+         return $this->belongsToMany(User::class, 'likes');
      }
 
 }

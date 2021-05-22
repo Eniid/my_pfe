@@ -8,6 +8,8 @@
 
 @section('content')
 <main class="main-sec">
+
+
     <!-- House cup and last event -->
     <div class="home-info">
         <div class="flex home-house_ev">
@@ -69,62 +71,30 @@
 
             </section>
             <section class="last-event">
-                <h2>Event to come</h2>
-                <div class="last-event__flex-contener">
-                    <a href="#">
-                        <section class="sm-event">
-                            <h3 class="sm-event__title">Event title</h3>
-                            <div class="sm-event__date">
-                                <span class="sm-event__date__month">January</span>
-                                <span class="sm-event__date__day">10</span>
-                                <span class="sm-event__date__time">10.20AM</span>
-                            </div>
-                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
-                        </section>
-                    </a>
-
-                    <a href="#">
-                        <section class="sm-event">
-                            <h3 class="sm-event__title">Event title</h3>
-                            <div class="sm-event__date">
-                                <span class="sm-event__date__month">January</span>
-                                <span class="sm-event__date__day">10</span>
-                                <span class="sm-event__date__time">10.20AM</span>
-                            </div>
-                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
-                        </section>
-                    </a>
-
-                    <section class="sm-event">
-                        <h3 class="sm-event__title">Event title</h3>
-                        <div class="sm-event__date">
-                            <span class="sm-event__date__month">January</span>
-                            <span class="sm-event__date__day">10</span>
-                            <span class="sm-event__date__time">10.20AM</span>
-                        </div>
-                        <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
-                    </section>
+                <div class="flex filters">
+                    <h2>Event to come</h2>
+                    <div class="under">
+                        <a href="#" class="active">All</a>
+                        <a href="#">My events</a>
+                    </div>
                 </div>
+                <div class="last-event__flex-contener">
 
-                <section class="sm-event">
-                    <h3 class="sm-event__title">Event title</h3>
-                    <div class="sm-event__date">
-                        <span class="sm-event__date__month">January</span>
-                        <span class="sm-event__date__day">10</span>
-                        <span class="sm-event__date__time">10.20AM</span>
-                    </div>
-                    <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
-                </section>
+                    @foreach ($events as $event)
+                        <a href="#">
+                            <section class="sm-event">
+                                <h3 class="sm-event__title">Event title</h3>
+                                <div class="sm-event__date">
+                                    <span class="sm-event__date__month">January</span>
+                                    <span class="sm-event__date__day">10</span>
+                                    <span class="sm-event__date__time">10.20AM</span>
+                                </div>
+                                <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
+                            </section>
+                        </a>
+                    @endforeach
 
-                <section class="sm-event">
-                    <h3 class="sm-event__title">Event title</h3>
-                    <div class="sm-event__date">
-                        <span class="sm-event__date__month">January</span>
-                        <span class="sm-event__date__day">10</span>
-                        <span class="sm-event__date__time">10.20AM</span>
-                    </div>
-                    <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" alt="">Discord</span>
-                </section>
+
 
                 <a href="/events/create">
                 <div class="sm-event__add">
@@ -175,6 +145,9 @@
                 </div>
         </div>
         <section class="new-user">
+            <div>
+
+            </div>
             <h3 class="h2-like">New users</h2>
             <p>Be nice with them, make them feel welcomed!</p>
             <div class="flex">
@@ -206,19 +179,31 @@
         </div>
     </aside>
 
+
+
+
     <!-- Last topic -->
+
     <section class="last-topics">
-        <h2>Your friends latest topic</h2>
+        <div class="flex filters">
+            <h2>Latest topics</h2>
+            <div class="under">
+                <a href="#" class="active">All</a>
+                <a href="#">Topics you follow</a>
+                <a href="#">Your friends topic</a>
+            </div>
+        </div>
+
+        @foreach ($posts as $post)
         <section class="topic-preview">
-            <h3 class="lt__title">Topic title</h3>
+            <h3 class="lt__title"><a href="{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}/{{ $post->postable->slug}}"> {{ $post->postable->title }}</a></h3>
             <span class="lt__ariane">Forum ↣ category</span>
 
             <div class="topix-preview__content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e</p>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e</p>
+                {{ $post->body }}
             </div>
 
-            <div class="flex">
+            {{-- <div class="flex">
                 <div class="sm-pp__box">
                     <img src="/img/pp1.jpg" alt="" class="sm-pp">
                     <div class="sm-pp__info">
@@ -243,16 +228,16 @@
                         User Name
                     </div>
                 </div>
-            </div>
+            </div> --}}
             
 
             <div class="topix-preview__author flex">
                 <div>
-                    <p class="topix-preview__author__name">🐍 <span><a href="#">Name</a></span></p>
-                    <p class="topix-preview__author__messages">230messages</p>
+                    <p class="topix-preview__author__name">🐍<span><a href="#">{{ $post->user->name }}</a></span></p>
+                    <p class="topix-preview__author__messages">{{ $post->user->posts_count }} messages</p>
                         
                 </div>
-               <div class="sm-pp__box">
+               <div class="sm-pp__box ra">
                    <a href="#" name="xxx profil">
                         <img src="/img/pp1.jpg" alt="" class="sm-pp">
                     </a>
@@ -263,7 +248,9 @@
                 
             </div>
         </section>
+        @endforeach
     </section>
+
 
 
  

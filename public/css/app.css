@@ -394,6 +394,7 @@ input {
   border: none;
   padding: 1rem 2rem;
   border-radius: 0.7rem;
+  box-sizing: border-box;
 }
 
 input[type=text], input[type=password] {
@@ -420,7 +421,7 @@ h1 span {
 h4 {
   font-size: 1.7rem;
   margin: 4rem 0rem 1rem 0rem;
-  font-family: muli_b, Helvetica, Arial, sans-serif;
+  font-family: muli, Helvetica, Arial, sans-serif;
 }
 
 .sub {
@@ -1006,6 +1007,109 @@ h3 a {
   transition: 0.2s;
 }
 
+.topic-list {
+  background: #F5F5F5;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
+  display: flex;
+  border-radius: 0.5rem;
+  align-items: center;
+  margin: 2rem;
+}
+.topic-list .cat-box_new img {
+  height: 10rem;
+}
+.topic-list .icone {
+  width: 4rem;
+}
+.topic-list .flex {
+  align-items: center;
+}
+
+.topic-main_box {
+  flex-grow: 3;
+  padding: 0 2rem;
+}
+
+.topix-preview__author__name {
+  padding: -2rem;
+  margin: -1rem 0 -0.5rem 0;
+}
+
+.latest-message {
+  padding: 2rem;
+}
+
+.main-message .profl_main {
+  flex-direction: row-reverse;
+  position: relative;
+  margin-bottom: 6rem;
+  top: 5rem;
+  right: -3rem;
+  text-align: center;
+}
+.main-message .profl_main .sm-pp__box {
+  width: 8rem;
+  height: 8rem;
+  z-index: 100000000;
+}
+.main-message .profl_main .sm-pp {
+  width: 6rem;
+  height: 6rem;
+}
+.main-message .profl_main .profil_info {
+  padding: 1rem;
+}
+.main-message .messages__text {
+  margin-top: -2rem;
+}
+.main-message .messages__numbers {
+  font-size: 2rem;
+  font-family: muli, Helvetica, Arial, sans-serif;
+}
+.main-message .main-message__messages {
+  text-align: right;
+}
+.main-message .ra {
+  color: #405D8D;
+}
+.main-message .hu {
+  color: #FFB37B;
+}
+.main-message .sl {
+  color: #206F12;
+}
+.main-message .gr {
+  color: #9B2727;
+}
+
+.main-message {
+  width: 90%;
+  max-width: 100rem;
+  min-width: 30rem;
+  margin: 2rem auto;
+}
+.main-message .main-message__profil {
+  width: 30%;
+}
+.main-message .main-message__text {
+  background: #F5F5F5;
+  box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
+  width: 70%;
+  padding: 7rem 6rem 10rem 8rem;
+  margin: 2rem;
+  position: relative;
+}
+
+.message-like {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.message-like button {
+  background: none;
+  border: none;
+}
+
 .sm-pp__box {
   background: #F5F5F5;
   box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
@@ -1015,6 +1119,22 @@ h3 a {
   border-radius: 5.5rem;
   margin: 0 0.5rem;
   position: relative;
+}
+
+.main-message__profil .ra {
+  background: linear-gradient(130deg, #1484BF, #405D8D);
+}
+
+.main-message__profil .sl {
+  background: linear-gradient(130deg, #1484BF, #405D8D);
+}
+
+.main-message__profil .hu {
+  background: linear-gradient(130deg, #1484BF, #405D8D);
+}
+
+.main-message__profil .gr {
+  background: linear-gradient(130deg, #1484BF, #405D8D);
 }
 
 .sm-pp {
@@ -1128,7 +1248,10 @@ h3 a {
   color: #A5880F;
   text-shadow: 0px 10px 14px rgba(255, 255, 255, 0.31);
 }
-.head-sec .separation {
+.head-sec .main_title__logged {
+  color: #fff;
+}
+.head-sec .separation_gold {
   position: fixed;
   top: 28rem;
   width: 100%;
@@ -1178,6 +1301,87 @@ h3 a {
   bottom: 0;
   right: 0;
   left: 0;
+}
+
+.separation {
+  display: flex;
+  flex: 1;
+  width: 10%;
+  margin: 0 auto;
+  margin-bottom: 10px;
+  transition: 1s;
+}
+
+header .separation {
+  margin-top: -110px;
+}
+
+.separation::before {
+  display: block;
+  content: "";
+  flex: 1;
+  height: 4px;
+  align-self: center;
+  border-bottom: 1px solid;
+}
+
+.separation::after {
+  display: block;
+  content: "";
+  flex: 1;
+  height: 4px;
+  align-self: center;
+  border-bottom: 1px solid;
+}
+
+.animation_suite.separation {
+  width: 85%;
+}
+
+.annimation {
+  opacity: 0;
+  transform: translateY(50px);
+}
+
+.animation_suite {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: transform 1s;
+}
+
+.filters {
+  align-items: center;
+  justify-content: space-between;
+}
+.filters a {
+  color: black;
+  font-size: 1.4rem;
+  padding: 1rem;
+}
+
+.under a {
+  text-decoration: none;
+  display: inline-block;
+}
+
+.under a:after {
+  content: "";
+  display: block;
+  margin: 0.1rem 0rem;
+  height: 2px;
+  width: 0;
+  background: transparent;
+  transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.under .active:after {
+  width: 100%;
+  background: #9165DF;
+}
+
+.under a:hover:after {
+  width: 100%;
+  background: #9165DF;
 }
 
 .visually-hidden {

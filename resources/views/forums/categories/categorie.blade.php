@@ -24,21 +24,26 @@ Cat Name |
             @foreach($categorie->topics as $topic)
                 <section class="topic-list">
                     <div class="cat-box_new">
-                        <img src="" alt="new message">
+                        <img src="{{ asset('img/new.svg')}}" alt="new message">
                     </div>
                     <div class="sm-pp__box">
                         <a href="#" name="xxx profil">
-                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                            <img src="{{ asset('img/pp1.jpg')}}" alt="" class="sm-pp">
                         </a>
                     </div>
-                    <div>
-                        <h3><a href="/{{ $forum->slug }}/{{ $categorie->slug }}/{{ $topic->slug }}">{{$topic->title}}</a></h3>
-                        <p class="topix-preview__author__name">by<span><a href="#">Name</a></span></p>
-                        <p class="topix-preview__author__messages">230messages</p>
+                    <div class="topic-main_box">
+                        <div class="flex">
+                            <h3><a href="/{{ $forum->slug }}/{{ $categorie->slug }}/{{ $topic->slug }}">{{$topic->title}}</a></h3> 
+                            @if($topic->user->id === auth()->id() || auth()->user()->is_admin )    
+                                <a href=""><img class="icone" src="{{ asset('img/edit.svg')}}" alt=""></a><a href=""><img class="icone" src="{{ asset('img/delete.svg')}}" alt=""></a>
+                            @endif
+                        </div>
+                        <p class="topix-preview__author__name">by<span><a href="#">{{ $topic->user->name }}</a></span></p>
+                        <p class="topix-preview__author__messages">{{ $topic->posts_count }} messages</p>
                     </div>
 
-                    <div>
-                        <p class="topix-preview__author__name">last message by<span><a href="#">Name</a></span></p>
+                    <div class="latest-message">
+                        <p class="topix-preview__author__name">latest message by<span><a href="#">Name</a></span></p>
                         <p class="topix-preview__author__messages">yesterday</p>
                 
                     </div>

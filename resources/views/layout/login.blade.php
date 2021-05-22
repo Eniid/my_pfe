@@ -31,9 +31,9 @@
             
                 <div class="bg-color"></div>
             
-                <div class="logo_img"><img src="{{ asset('img/sw/asset 167.png') }}" alt=""></div>
+                <div class="logo_img"><img src="img/asset167.png" alt=""></div>
                 <h1 class="main_title">Wizarding World <span>ONLINE</span> </h1>
-                <div class="separation"><img src="{{ asset('img/sep.svg') }}" alt=""></div>
+                <div class="separation_gold"><img src="{{ asset('img/sep.svg') }}" alt=""></div>
             
             
             
@@ -44,7 +44,7 @@
                     <div class="log-cta">
                         <a href="{{ route('register') }}">Become Beta Tester</a> 
                     </div>
-                </div>
+                </div> 
             
             
                 <div class="login_btn">

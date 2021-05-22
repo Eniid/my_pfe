@@ -1,0 +1,43 @@
+.filters {
+    align-items: center;
+    justify-content: space-between;
+ 
+    a {
+        color: black;
+        font-size: 1.4rem;
+        padding: 1rem;
+    }
+
+
+}
+
+
+.under a {
+    text-decoration: none;
+    display: inline-block;
+}
+
+
+.under a:after {
+    content: "";
+    display: block;
+    margin: 0.1rem 0rem;
+    height: 2px;
+    width: 0;
+    background: transparent;
+    transition: width 0.5s ease, background-color 0.5s ease;
+}
+
+.under .active:after {
+
+    width: 100%;
+    background: $c_main;
+
+
+}
+
+ .under a:hover:after {
+    width: 100%;
+    background: $c_main;
+}
+

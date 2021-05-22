@@ -16,6 +16,11 @@ class CategorieController extends Controller
     public function show(Forum $forum, Categorie $categorie){
 
         $categorie->load('topics');
+        $categorie->topics->load('user'); 
+        $categorie->topics->loadCount('posts'); 
+        $categorie->topics->load(['posts' => function($query){
+            $query->orderByDesc('created_at')->first();
+         }]);
 
 
         return view('forums.categories.categorie', compact('categorie', 'forum'));

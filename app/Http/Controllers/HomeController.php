@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Event;
+use App\Models\Post;
 
 class HomeController extends Controller
 {
@@ -23,7 +25,27 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $events = Event::latest()->take(5)->get();
+        //$latestEvents = $event->sortByDesc('created_at')->;
+        $posts = Post::latest()->where('postable_type', 'App\Models\Topic')->take(10)->get();
+        $posts->load('postable');
+        $posts->load(['postable' => function($query){
+            $query->with(['categorie' => function($query){
+                $query->with('forum');
+             }]);
+         }]);
+        $posts->load(['user' => function($query){
+            $query->withCount('posts');
+         }]);
+
+
+
+        $events = Event::latest()->take(10)->get();
+
+
+        //dd($posts);
+
+        return view('home', compact('events', 'posts'));
     }
 
     public function tp()

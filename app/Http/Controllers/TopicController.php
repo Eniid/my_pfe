@@ -15,12 +15,19 @@ class TopicController extends Controller
     public function show (Forum $forum, Categorie $categorie, Topic $topic){
 
         $topic->load('posts');
-
+        $topic->posts->load('likes');
+        $topic->posts->load(['user' => function($query){
+            $query->withCount('posts');
+         }]);
+//        $topic->posts->user->loadCount('posts');
 
 
         return view('forums.categories.topics.topic', compact('categorie', 'forum', 'topic'));
     }
 
+
+
+    
     public function create(Forum $forum, Categorie $categorie){
 
         return view('forums.categories.topics.topic-post-form', compact('categorie', 'forum'));

@@ -70,13 +70,17 @@ Event Name |
 
     <!-- Last topic -->
     <section class="last-topics">
-        <h2>Last Topics</h2>
+        <h2>Latest events</h2>
+
+
+        
+        @foreach($events as $event)
         <section class="topic-preview">
-            <h3 class="lt__title">Topic title</h3>
-            <span class="lt__ariane">January 10 | 10.20 PM</span>
+            <h3 class="lt__title"> <a href="/events/{{$event->slug}}"> {{ $event->name }}</a></h3>
+            <span class="lt__ariane">{{ $event->date }}</span>
 
             <div class="topix-preview__content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e</p>
+                <p>{{ $event->desc }}</p>
             </div>
 
             <div class="flex">
@@ -105,7 +109,7 @@ Event Name |
                     </div>
                 </div>
 
-                <div class="CTA"><a href="#">Participer</a></div>
+                <div class="cta"><a href="#">Participer</a></div>
             </div>
             
 
@@ -126,7 +130,10 @@ Event Name |
                 
             </div>
         </section>
+        @endforeach
     </section>
+
+
 
 
  

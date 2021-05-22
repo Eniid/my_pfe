@@ -1,0 +1,93 @@
+.main-message {
+    .profl_main {
+        flex-direction: row-reverse;
+        position: relative;
+        margin-bottom: 6rem;
+        top: 5rem;
+        right: -3rem;
+        text-align: center;
+
+        .sm-pp__box  {
+            width: 8rem;
+            height: 8rem;
+            z-index: 100000000;
+        }
+        .sm-pp  {
+            width: 6rem;
+            height: 6rem;
+        }
+
+
+        .profil_info {
+            padding: 1rem;
+        }
+        
+    }
+
+    .messages__text {
+        margin-top: -2rem;
+    }
+
+    .messages__numbers {
+        font-size: 2rem;
+        font-family: $f_main-bold;
+    }
+
+    .main-message__messages {
+        text-align: right;
+    }
+
+    .ra{
+        color: $c_ravenclaw;
+    }
+
+
+    .hu{
+        color: $c_hufflepuff;
+    }
+
+
+    .sl{
+        color: $c_slytherin;
+    }
+
+
+    .gr{
+        color: $c_gryffondor;
+    }
+
+
+
+}
+
+
+.main-message {
+    width: 90%;
+    max-width: 100rem;
+    min-width: 30rem;
+    margin: 2rem auto;
+
+    .main-message__profil {
+        width:  30%;
+    }
+
+    .main-message__text {
+    @include nm; 
+    width: 70%;
+    padding: 7rem 6rem 10rem 8rem;    margin: 2rem;
+    position: relative;
+        
+    }
+    
+}
+
+.message-like {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+
+    button {
+        background: none;
+        border: none;
+    }
+}

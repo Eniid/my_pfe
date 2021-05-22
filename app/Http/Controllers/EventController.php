@@ -4,18 +4,27 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Event;
+use App\Models\Event_user;
 use Illuminate\Support\Str;
 
 class EventController extends Controller
 {
     public function index(){
-        return view('event.events');
+
+        $events = Event::all();
+
+
+        return view('event.events', compact('events'));
     }
 
     public function show(Event $event){
 
 
-        return view('event.event');
+
+
+
+
+        return view('event.event', compact('event'));
     }
 
     public function create(){
@@ -41,8 +50,8 @@ class EventController extends Controller
         
         $event -> name = request('name'); 
         $event -> slug = $slug; 
-        $event -> description = request('desc'); 
-        $event -> part_description = request('private_desc'); 
+        $event -> desc = request('desc'); 
+        $event -> private_desc = request('private_desc'); 
         $event -> date = request('date'); 
         $event -> place = request('place'); 
         $event -> link = request('private_desc'); 
@@ -56,6 +65,23 @@ class EventController extends Controller
 
     public function edit(){
         return view('event.new');
+    }
+
+    public function participation(Request $request){
+
+
+        $part = new Event_user(request()->validate(
+            [
+                'event_id' => 'required',
+            ]
+        ));
+
+        $part -> event_id = request('event_id'); 
+        $part -> user_id = auth()->id(); ; 
+        $part -> save();
+        
+
+        return redirect('/events');
     }
 
 

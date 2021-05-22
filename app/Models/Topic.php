@@ -25,4 +25,9 @@ class Topic extends Model
     {
         return $this->morphMany(Post::class, 'postable');
     }
+
+    public function categorie()
+    {
+        return $this->belongsTo(Categorie::class);
+    }
 }

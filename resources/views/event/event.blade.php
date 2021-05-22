@@ -12,25 +12,18 @@ Events |
     <div class="home-info">
         <div class="flex home-house_ev">
             <section class="house-cup">
-                <h2>Game Night</h2>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e</p>
-                </div>            
+                <h2>{{ $event->name }}</h2>
+                <p>{{ $event->desc }}</p>
+
+                <form action="/events/join" method="post">
+                    @csrf
+                    <input type="hidden" name="event_id" value="{{$event->id}}">
+                    <button class="cta">Participer</button>
+                </form>
+
+            </div>            
 
             </section>
-            <div class="event-info">
-                <h2>Event to come</h2>
-                <div class="last-event__flex-contener">
-                    <a href="#">
-                        <div class="sm-event">
-                            <div class="sm-event__date">
-                                <span class="sm-event__date__month">January</span>
-                                <span class="sm-event__date__day">10</span>
-                                <span class="sm-event__date__time">10.20AM</span>
-                            </div>
-                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
-                        </div>
-                    </a>
-                </div>
 
             </div>
         </section>
@@ -71,10 +64,9 @@ Events |
             </div>
        </aside>
 
-    <form action="">
-        <input type="text">
-        <input type="file">
-        <textarea name="" id="" cols="30" rows="10">Votre message</textarea>
+    <form action="/events/{{$event->slug}}" method="post">
+        @csrf
+        <textarea name="body" id="" cols="30" rows="10">Votre message</textarea>
         <button>Send</button>
      </form>
 

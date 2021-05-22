@@ -29,6 +29,9 @@ input {
     border : none; 
     padding: 1rem 2rem; 
     border-radius: .7rem;
+    
+    box-sizing: border-box;
+
 }
 
 input[type=text], input[type=password]{

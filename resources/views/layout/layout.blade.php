@@ -64,13 +64,16 @@
           @endauth  
 
 
+          
+
+
 
             <div class="bg head-sec">
                 <div class="bg-color" style="background: linear-gradient(#1484BF, #405D8D); opacity : .7;"></div>
             
-                <div class="logo_img"><img src="{{ asset('img/sw/asset 167.png') }}" alt=""></div>
-                <h1 class="main_title">Wizarding World <span>ONLINE</span> </h1>
-                <div class="separation"><img src="{{ asset('img/sep.svg') }}" alt=""></div>
+                <div class="logo_img"><img src="{{ asset('img/asset167.png') }}" alt=""></div>
+                <h1 class="main_title main_title__logged">Wizarding World <span>ONLINE</span> </h1>
+                <div class="separation_gold"><img src="{{ asset('img/sep.svg') }}" alt=""></div>
             
                 <p class="nmto">Nothing more to see here! </p>
                 <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a></p>

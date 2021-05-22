@@ -10,6 +10,28 @@
     position: relative;
 }
 
+
+.main-message__profil .ra {
+    background: linear-gradient(130deg, $g_ravenclaw);
+}
+
+.main-message__profil .sl {
+    background: linear-gradient(130deg, $g_ravenclaw);
+}
+
+
+.main-message__profil .hu {
+    background: linear-gradient(130deg, $g_ravenclaw);
+}
+
+
+.main-message__profil .gr {
+    background: linear-gradient(130deg, $g_ravenclaw);
+}
+
+
+
+
 .sm-pp {
     @include nmi;
     height: 3.5rem;
