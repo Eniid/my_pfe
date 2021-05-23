@@ -13,6 +13,8 @@
     <!-- House cup and last event -->
     <div class="home-info">
         <div class="flex home-house_ev">
+
+            <!-- House Cup  -->
             <section class="house-cup">
                 <h2>House Cup</h2>
                 <div class="house_cup__all">
@@ -70,6 +72,9 @@
                 </div>            
 
             </section>
+
+
+            <!-- House Cup  -->
             <section class="last-event">
                 <div class="flex filters">
                     <h2>Event to come</h2>
@@ -79,7 +84,6 @@
                     </div>
                 </div>
                 <div class="last-event__flex-contener">
-
                     @foreach ($events as $event)
                         <a href="#">
                             <section class="sm-event">
@@ -93,90 +97,65 @@
                             </section>
                         </a>
                     @endforeach
-
-
-
-                <a href="/events/create">
-                <div class="sm-event__add">
-                    <div class="sm-event__button">
-                        <img src="/img/plus.svg" alt="" width="50" height="50">
-                    </div>
-                    <span class="sm-event__add__text"> Add a new event</span>
+                        <a href="/events/create">
+                        <div class="sm-event__add">
+                            <div class="sm-event__button">
+                                <img src="/img/plus.svg" alt="" width="50" height="50">
+                            </div>
+                            <span class="sm-event__add__text"> Add a new event</span>
+                        </div>
+                        </a>
                 </div>
-                </a>
-            </div>
-        </section>
+            </section>
     </div>
-
-
 
 
 
        <!-- Users -->
        <aside class="qeel">
-        <h2 class="hidden">Users</h2>
-        <section class="online">
-            <h3 class="h2-like">Who's online ?</h3>
-                <div class="flex">
-                    <div class="sm-pp__box">
-                        <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                        <div class="sm-pp__info">
-                            User Name
-                        </div>
-                    </div>
-                    <div class="sm-pp__box">
-                        <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                        <div class="sm-pp__info">
-                            User Name
-                        </div>
-                    </div>
-                    <div class="sm-pp__box">
-                        <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                        <div class="sm-pp__info">
-                            User Name
-                        </div>
-                    </div>
-                    <div class="sm-pp__box">
-                        <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                        <div class="sm-pp__info">
-                            User Name
-                        </div>
-                    </div>
-                </div>
-        </div>
-        <section class="new-user">
-            <div>
+            <h2 class="hidden">Users</h2>
 
-            </div>
-            <h3 class="h2-like">New users</h2>
-            <p>Be nice with them, make them feel welcomed!</p>
-            <div class="flex">
-                <div class="sm-pp__box">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        User Name
+
+       <!-- Users -->
+
+               <!-- Online users -->
+                <section class="online">
+                    <h3 class="h2-like">Who's online ?</h3>
+                    <div class="flex">
+                            <div class="sm-pp__box ravenclaw_bg">
+                                <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                                <div class="sm-pp__info">
+                                    Enid
+                                </div>
+                            </div>
+                            <div class="sm-pp__box gryffindor_bg">
+                                <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                                <div class="sm-pp__info">
+                                    Eliie
+                                </div>
+                            </div>
                     </div>
-                </div>
-                <div class="sm-pp__box">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        User Name
+                </section>
+
+
+                <!-- Newest users  -->
+                <section class="new-user">
+                    <h3 class="h2-like">New users</h2>
+                    <p>Be nice with them, make them feel welcomed!</p>
+                    <div class="flex pp_flex">
+
+                        @foreach ($new_users as $user )
+                            <div class="sm-pp__box {{ $user->house}}_bg">
+                                <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                                <div class="sm-pp__info">
+                                    {{ $user->name }}
+                                </div>
+                            </div>    
+                        @endforeach
+
+
                     </div>
-                </div>
-                <div class="sm-pp__box">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        User Name
-                    </div>
-                </div>
-                <div class="sm-pp__box">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        User Name
-                    </div>
-                </div>
-            </div>
-        </div>
+                </secttion>
     </aside>
 
 
@@ -186,7 +165,7 @@
 
     <section class="last-topics">
         <div class="flex filters">
-            <h2>Latest topics</h2>
+            <h2>Latest messages</h2>
             <div class="under">
                 <a href="#" class="active">All</a>
                 <a href="#">Topics you follow</a>
@@ -197,7 +176,7 @@
         @foreach ($posts as $post)
         <section class="topic-preview">
             <h3 class="lt__title"><a href="{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}/{{ $post->postable->slug}}"> {{ $post->postable->title }}</a></h3>
-            <span class="lt__ariane">Forum ↣ category</span>
+            <span class="lt__ariane"> <a href="/{{ $post->postable->categorie->forum->slug}}">{{ $post->postable->categorie->forum->name}}</a> ↣ <a href="/{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}"> {{ $post->postable->categorie->name}} </a> </span>
 
             <div class="topix-preview__content">
                 {{ $post->body }}
@@ -232,12 +211,12 @@
             
 
             <div class="topix-preview__author flex">
-                <div>
-                    <p class="topix-preview__author__name">🐍<span><a href="#">{{ $post->user->name }}</a></span></p>
+                <div class="topix-preview_nm"> 
+                    <p class="topix-preview__author__name {{ $post->user->house }}_c"><span><a href="#">{{ $post->user->name }}</a></span></p>
                     <p class="topix-preview__author__messages">{{ $post->user->posts_count }} messages</p>
                         
                 </div>
-               <div class="sm-pp__box ra">
+               <div class="sm-pp__box {{ $post->user->house }}_bg">
                    <a href="#" name="xxx profil">
                         <img src="/img/pp1.jpg" alt="" class="sm-pp">
                     </a>

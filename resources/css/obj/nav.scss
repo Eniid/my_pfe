@@ -40,10 +40,14 @@ nav {
     right: 3rem;
     width: 15rem;
     height: 3rem;
+
+
         input {
             position : absolute; 
             border-radius: 4rem;
             top : 0rem;
+            box-sizing: content-box;
+
             height: 100%;
         }
         a {

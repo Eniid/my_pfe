@@ -7,35 +7,27 @@
     border-radius: 5.5rem;
     margin: 0 .5rem;
 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     position: relative;
 }
 
 
-.main-message__profil .ra {
-    background: linear-gradient(130deg, $g_ravenclaw);
+.pp_flex {
+    flex-wrap: wrap;
+
+    div {
+        margin-bottom: 1rem
+    }
 }
-
-.main-message__profil .sl {
-    background: linear-gradient(130deg, $g_ravenclaw);
-}
-
-
-.main-message__profil .hu {
-    background: linear-gradient(130deg, $g_ravenclaw);
-}
-
-
-.main-message__profil .gr {
-    background: linear-gradient(130deg, $g_ravenclaw);
-}
-
-
 
 
 .sm-pp {
     @include nmi;
-    height: 3.5rem;
-    width: 3.5rem;
+    height: 3.9rem;
+    width: 3.9rem;
     border-radius: 5rem;
     //padding: 1rem;
     border: $c_bg .3rem solid;

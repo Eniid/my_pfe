@@ -47,9 +47,12 @@
                    </li> 
 
                    <li>
-                        <div class="sm-pp__box">
+                        <div class="sm-pp__box {{ Auth::user()->house}}_bg">
                             <img src="/img/pp1.jpg" alt="" class="sm-pp">
                             <div class="sm-pp__info">
+                                <div>
+                                    {{ Auth::user()->name }}
+                                </div>
                                 <a href="/profil/{{auth()->id()}}">profil</a>
                                 <hr>
                                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
@@ -69,7 +72,7 @@
 
 
             <div class="bg head-sec">
-                <div class="bg-color" style="background: linear-gradient(#1484BF, #405D8D); opacity : .7;"></div>
+                <div class="bg-color {{ Auth::user()->house}}_full_bg"></div>
             
                 <div class="logo_img"><img src="{{ asset('img/asset167.png') }}" alt=""></div>
                 <h1 class="main_title main_title__logged">Wizarding World <span>ONLINE</span> </h1>

@@ -438,7 +438,7 @@ h4 {
 .main-sec {
   background-color: #F5F5F5;
   border-radius: 0.75rem;
-  margin-top: 40rem;
+  margin-top: 36rem;
   margin-bottom: 20rem;
   padding: 6rem;
   position: relative;
@@ -506,6 +506,7 @@ aside {
 
 .last-topics {
   width: 70%;
+  margin-top: 10rem;
 }
 
 .new-user {
@@ -690,10 +691,16 @@ aside {
   transition: 1s;
 }
 
+.last-event__flex-contener {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
 .topic-preview {
   background: #F5F5F5;
   box-shadow: 4px 4px 6px #dadada, -4px -4px 6px #fff;
-  margin: 0;
+  margin: 0 0 3rem 0;
   padding: 3rem 5rem;
   border-radius: 0.5rem;
   position: relative;
@@ -703,6 +710,7 @@ aside {
   font-family: muli_l, Helvetica, Arial, sans-serif;
   color: #9165DF;
   font-size: 2rem;
+  margin: 0;
 }
 
 .lt__ariane {
@@ -710,37 +718,46 @@ aside {
   top: -13;
   position: relative;
   opacity: 0.7;
+  margin-bottom: 2rem;
 }
 
 .topix-preview__content {
   font-size: 1.3rem;
   line-height: 2rem;
+  margin: 3rem 0;
 }
 
 .topix-preview__author {
   top: 2rem;
   right: 2rem;
   position: absolute;
+  font-size: 0rem;
+  align-items: flex-end;
+  text-align: right;
+}
+
+.topix-preview_nm {
+  padding: 0 0.6rem;
 }
 
 .topix-preview__author__name {
   font-size: 1.2rem;
+  font-family: muli, Helvetica, Arial, sans-serif;
 }
 .topix-preview__author__name a {
   text-decoration: none;
-  color: #405D8D;
 }
 .topix-preview__author__name a:after {
   content: "";
   display: block;
-  margin: 0.1rem 2rem;
+  margin: 0.1rem 0rem;
   height: 2px;
   width: 0;
   background: transparent;
   transition: width 0.5s ease, background-color 0.5s ease;
 }
 .topix-preview__author__name a:hover:after {
-  width: 50%;
+  width: 100%;
   background: #405D8D;
 }
 
@@ -792,6 +809,7 @@ nav .sm-pp__box:hover .sm-pp__info {
   position: absolute;
   border-radius: 4rem;
   top: 0rem;
+  box-sizing: content-box;
   height: 100%;
 }
 .searchbox a {
@@ -1118,30 +1136,24 @@ h3 a {
   width: 5.5rem;
   border-radius: 5.5rem;
   margin: 0 0.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 
-.main-message__profil .ra {
-  background: linear-gradient(130deg, #1484BF, #405D8D);
+.pp_flex {
+  flex-wrap: wrap;
 }
-
-.main-message__profil .sl {
-  background: linear-gradient(130deg, #1484BF, #405D8D);
-}
-
-.main-message__profil .hu {
-  background: linear-gradient(130deg, #1484BF, #405D8D);
-}
-
-.main-message__profil .gr {
-  background: linear-gradient(130deg, #1484BF, #405D8D);
+.pp_flex div {
+  margin-bottom: 1rem;
 }
 
 .sm-pp {
   background: #F5F5F5;
   box-shadow: inset 4px 4px 6px #dadada, inset -4px -4px 6px #fff;
-  height: 3.5rem;
-  width: 3.5rem;
+  height: 3.9rem;
+  width: 3.9rem;
   border-radius: 5rem;
   border: #F5F5F5 0.3rem solid;
   margin: 0.7rem;
@@ -1382,6 +1394,86 @@ header .separation {
 .under a:hover:after {
   width: 100%;
   background: #9165DF;
+}
+
+.ravenclaw_bg {
+  background: linear-gradient(130deg, #1484BF, #405D8D) !important;
+}
+
+.slytherin_bg {
+  background: linear-gradient(130deg, #91BF14, #206F12) !important;
+}
+
+.hufflepuff_bg {
+  background: linear-gradient(130deg, #FFE200, #FFB37B) !important;
+}
+
+.gryffindor_bg {
+  background: linear-gradient(130deg, #EF0E6D, #9B2727) !important;
+}
+
+.ravenclaw_full_bg {
+  background: linear-gradient(#405D8D, #1484BF, #1484BF) !important;
+  opacity: 0.8;
+}
+
+.slytherin_full_bg {
+  background: linear-gradient(#206F12, #91BF14, #91BF14) !important;
+  opacity: 0.8;
+}
+
+.hufflepuff_full_bg {
+  background: linear-gradient(#FFB37B, #FFE200, #FFE200) !important;
+  opacity: 0.8;
+}
+
+.gryffindor_full_bg {
+  background: linear-gradient(#9B2727, #EF0E6D, #EF0E6D) !important;
+  opacity: 0.8;
+}
+
+.ravenclaw_c {
+  color: #405D8D !important;
+}
+.ravenclaw_c a:hover:after {
+  background: #405D8D;
+}
+
+.slytherin_c {
+  color: #206F12 !important;
+}
+.slytherin_c a:hover:after {
+  background: #206F12;
+}
+
+.hufflepuff_c {
+  color: #FFB37B !important;
+}
+.hufflepuff_c a:hover:after {
+  background: #FFB37B;
+}
+
+.gryffindor_c {
+  color: #9B2727 !important;
+}
+.gryffindor_c a:hover:after {
+  background: #9B2727;
+}
+
+.ravenclaw_c a {
+  color: #405D8D !important;
+}
+
+.slytherin_c a {
+  color: #206F12 !important;
+}
+
+.hufflepuff_c a {
+  color: #FFB37B !important;
+}
+
+.gryffindor_c a {
+  color: #9B2727 !important;
 }
 
 .visually-hidden {

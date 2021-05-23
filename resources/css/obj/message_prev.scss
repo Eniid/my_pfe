@@ -1,10 +1,11 @@
 .topic-preview{
     @include nm; 
     //width: 65%;
-    margin: 0; 
+    margin: 0 0 3rem 0; 
     padding: 3rem 5rem;
     border-radius: .5rem;
     position: relative;
+
 }
 
 
@@ -12,43 +13,53 @@
     font-family: $f_main-light;
     color: $c_main;
     font-size: 2rem;
+    margin:0; 
 }
 
 .lt__ariane {
     font-size: 1.1rem;
     @include relative(top -13);
     opacity: .7;
+    margin-bottom: 2rem;
 }
 
 .topix-preview__content {
     font-size: 1.3rem;
     line-height: 2rem;
+    margin: 3rem 0;
 }
 
 
 .topix-preview__author {
     @include absolute(top 2rem right 2rem);
+    font-size: 0rem;
+    align-items: flex-end;
+    text-align: right;
 
+}
+
+.topix-preview_nm {
+    padding: 0 .6rem;
 }
 
 .topix-preview__author__name {
     font-size: 1.2rem;
+    font-family: $f_main_bold;
 
     a{
         text-decoration: none;
-        color: $c_ravenclaw;
     }
     a:after {
         content: '';
         display: block;
-        margin: .1rem 2rem;
+        margin: .1rem 0rem;
         height: 2px;
         width: 0;
         background: transparent;
         transition: width .5s ease, background-color .5s ease;
       }
       a:hover:after {
-        width: 50%;
+        width: 100%;
         background:$c_ravenclaw;
       }
 }

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Post;
+use App\Models\user;
 
 class HomeController extends Controller
 {
@@ -39,13 +40,14 @@ class HomeController extends Controller
          }]);
 
 
+        $new_users = User::latest()->take(10)->get();
 
         $events = Event::latest()->take(10)->get();
 
 
         //dd($posts);
 
-        return view('home', compact('events', 'posts'));
+        return view('home', compact('events', 'posts', 'new_users'));
     }
 
     public function tp()
