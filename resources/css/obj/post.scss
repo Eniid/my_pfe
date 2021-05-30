@@ -1,7 +1,6 @@
 .main-message {
     .profl_main {
         flex-direction: row-reverse;
-        position: relative;
         margin-bottom: 6rem;
         top: 5rem;
         right: -3rem;
@@ -93,29 +92,46 @@
     }
 }
 
-.message__box {
-    width : 82%;
-    margin: auto;
-    justify-content: flex-end;
-    align-items: flex-end;
-    text-align: right;
 
-    .message__border{
-        width: 77%;
-         @include nm; 
-         text-align: center;
-        
 
-        textarea {
-            margin: 2rem;
-            width: 90%;
-            padding: 2rem;
+.last-post_event{
+
+    .sm-pp__box {
+        height: 7rem;
+        width: 7rem;
+    }
+
+    .sm-pp {
+        height: 5rem;
+        width: 5rem;
+    }
+
+    .main-message{
+        width: 95%;
+        margin: 2rem 0 2rem 5%;
+
+        .topix-preview__author {
+
+            left: -5%;
+            right: auto;
+            text-align: left;
+
+            flex-direction: row-reverse;
+        }
+
+
+        .main-message__text {
+            margin : 0; 
+            width: 100%;
+            position: relative;
+            padding: 4rem 10rem 5rem 7rem;
+        }
+
+        .profl_main {
+            text-align: left;
+            margin-top: 4rem;
+
         }
     }
 
-    button {
-        margin: 0rem 2rem 2rem 88%; 
-       }
-    
 }
-

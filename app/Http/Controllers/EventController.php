@@ -19,17 +19,30 @@ class EventController extends Controller
         return view('event.events', compact('events'));
     }
 
+
+
+
+
+    
     public function show(Event $event){
 
 
         $event->load('event_user');        
         $event->load('posts');
+        $event->posts->load(['user' => function($query){
+            $query->withCount('posts');
+         }]);
 
 
 
 
         return view('event.event', compact('event'));
     }
+
+
+
+
+
 
     public function create(){
 
@@ -38,6 +51,14 @@ class EventController extends Controller
 
         return view("/event.new");
     }
+
+
+
+
+
+
+
+
 
     public function store(Request $request){
         $event = new Event(request()->validate(

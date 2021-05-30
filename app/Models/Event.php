@@ -23,7 +23,7 @@ class Event extends Model
      public function posts()
      {
          return $this->morphMany(Post::class, 'postable');
-     }
+     } 
 
      public function user()
      {

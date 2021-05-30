@@ -1197,11 +1197,11 @@ h3 a {
   position: absolute;
   right: 0.5rem;
   bottom: 0.5rem;
+  text-align: right;
 }
 
 .main-message .profl_main {
   flex-direction: row-reverse;
-  position: relative;
   margin-bottom: 6rem;
   top: 5rem;
   right: -3rem;
@@ -1271,26 +1271,33 @@ h3 a {
   border: none;
 }
 
-.message__box {
-  width: 82%;
-  margin: auto;
-  justify-content: flex-end;
-  align-items: flex-end;
-  text-align: right;
+.last-post_event .sm-pp__box {
+  height: 7rem;
+  width: 7rem;
 }
-.message__box .message__border {
-  width: 77%;
-  background: #F5F5F5;
-  box-shadow: 4px 4px 6px #0000001f, -4px -4px 6px #fff;
-  text-align: center;
+.last-post_event .sm-pp {
+  height: 5rem;
+  width: 5rem;
 }
-.message__box .message__border textarea {
-  margin: 2rem;
-  width: 90%;
-  padding: 2rem;
+.last-post_event .main-message {
+  width: 95%;
+  margin: 2rem 0 2rem 5%;
 }
-.message__box button {
-  margin: 0rem 2rem 2rem 88%;
+.last-post_event .main-message .topix-preview__author {
+  left: -5%;
+  right: auto;
+  text-align: left;
+  flex-direction: row-reverse;
+}
+.last-post_event .main-message .main-message__text {
+  margin: 0;
+  width: 100%;
+  position: relative;
+  padding: 4rem 10rem 5rem 7rem;
+}
+.last-post_event .main-message .profl_main {
+  text-align: left;
+  margin-top: 4rem;
 }
 
 .profil__main-sec {
@@ -1405,6 +1412,11 @@ h3 a {
   width: 100%;
   color: #fff;
   padding: 0.5rem;
+}
+
+.cta_l {
+  padding: 0.5rem;
+  width: 100%;
 }
 
 .login_registration {
@@ -1727,6 +1739,50 @@ header .separation {
 
 .pph_n {
   margin-bottom: 2rem;
+}
+
+.message__box {
+  width: 82%;
+  margin: auto;
+  justify-content: flex-end;
+  align-items: flex-end;
+  text-align: right;
+}
+.message__box .message__border {
+  width: 77%;
+  background: #F5F5F5;
+  box-shadow: 4px 4px 6px #0000001f, -4px -4px 6px #fff;
+  text-align: center;
+}
+.message__box .message__border textarea {
+  margin: 2rem;
+  width: 90%;
+  padding: 2rem;
+}
+.message__box button {
+  margin: 0rem 2rem 2rem 88%;
+}
+
+.event-message .message__box {
+  width: 100%;
+  border-radius: 0.5rem;
+  position: relative;
+  margin-bottom: 3rem;
+}
+.event-message .message__border {
+  width: 100%;
+  background: #F5F5F5;
+  box-shadow: 4px 4px 6px #0000001f, -4px -4px 6px #fff;
+  text-align: center;
+}
+.event-message textarea {
+  height: 6rem;
+}
+.event-message .cta {
+  padding: 1rem 3rem;
+  position: absolute;
+  right: 1rem;
+  bottom: 1rem;
 }
 
 .visually-hidden {

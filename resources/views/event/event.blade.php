@@ -16,23 +16,24 @@ Events |
                 <p>{{ $event->desc }}</p>
 
                 {{ $event->event_user }}
-                {{ $event->posts }}
 
 
 
                 @if($event->event_user->contains(auth()->id()))
-                    <form action="/events/{{$event->slug}}/leave" method="post">
-                        @csrf
-                        <input type="hidden" name="event_id" value="{{$event->id}}">
-                        <button class="cta">leave</button>
-                    </form>
+
                 @else
+                @endif
+
+                <form action="/events/{{$event->slug}}/leave" method="post">
+                    @csrf
+                    <input type="hidden" name="event_id" value="{{$event->id}}">
+                    <button class="cta cta_i">leave</button>
+                </form>
                     <form action="/events/{{$event->slug}}/join" method="post">
                         @csrf
                         <input type="hidden" name="event_id" value="{{$event->id}}">
-                        <button class="cta">Participer</button>
+                        <button class="cta cta_l">Join the event</button>
                     </form>
-                @endif
 
             </div>            
 
@@ -77,35 +78,56 @@ Events |
             </div>
        </aside>
 
-    <form action="/events/{{$event->slug}}" method="post">
-        @csrf
-        <textarea name="body" id="" cols="30" rows="10">Votre message</textarea>
-        <button>Send</button>
-     </form>
 
     <!-- Last topic -->
-    <section class="last-topics">
+    <section class="last-topics last-post_event">
         <h2>Messages</h2>
 
-        @foreach ($event->posts as $post)
-        <section class="topic-preview">
-            <div class="topix-preview__content">
-                <p>{{$post->body}}</p>
-            </div>
-
-            <div class="CTA"><a href="#">Participer</a></div>
-            </div>
-            
-
-            <div class="topix-preview__author flex">
-                <div>
-                    <p class="topix-preview__author__name">🐍 <span><a href="#">Name</a></span></p>
-                    <p class="topix-preview__author__messages">230messages</p>
-                        
+        <form action="/events/{{$event->slug}}" method="post" class="event-message">
+            @csrf
+            <div class="message__box">
+                <div class="message__border">
+                    <textarea name="body" id="" cols="30" rows="10" placeholder="Type your new message here!"></textarea>
+                    <button   class="cta cta_m">Send</button>
                 </div>
             </div>
+         </form>
 
-        </section>
+        @foreach ($event->posts as $post)
+        <div class="main-message flex">
+            <!-- Profil -->
+
+
+            <!-- Message -->
+            <div class="main-message__text">
+                
+
+                <div class="topix-preview__author flex">
+                    <div class="topix-preview_nm"> 
+                        
+                            
+                    </div>
+                   <div class="sm-pp__box {{ $post->user->house }}_bg">
+                       <a href="#" name="xxx profil">
+                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                        </a>
+                    </div>
+                </div>
+
+                <div>
+                    <span class="topix-preview__author__name under {{ $post->user->house }}_c"><span><a href="/profil/{{$post->user->id }}">{{ $post->user->name }}</a></span> : </span> {{ $post->body }}
+
+                </div>
+
+                <div class="edit-btn__topic">
+                @if($post->user->id === auth()->id() || auth()->user()->is_admin )    
+                <hr>
+
+                    <a href=""><img class="icone" src="{{ asset('img/edit.svg')}}" alt=""></a><a href=""><img class="icone" src="{{ asset('img/delete.svg')}}" alt=""></a>
+                    @endif
+                </div>
+            </div>
+        </div>
         @endforeach
 
 

@@ -1,0 +1,55 @@
+
+.message__box {
+    width : 82%;
+    margin: auto;
+    justify-content: flex-end;
+    align-items: flex-end;
+    text-align: right;
+
+    .message__border{
+        width: 77%;
+         @include nm; 
+         text-align: center;
+        
+
+        textarea {
+            margin: 2rem;
+            width: 90%;
+            padding: 2rem;
+        }
+    }
+
+    button {
+        margin: 0rem 2rem 2rem 88%; 
+       }
+    
+}
+
+
+.event-message{
+    .message__box {
+        width : 100%;
+        border-radius: 0.5rem;
+        position: relative;
+        margin-bottom: 3rem;
+    }     
+
+    .message__border{
+        width: 100%;
+         @include nm; 
+         text-align: center;
+    }
+
+
+    textarea {
+        height: 6rem;
+    }
+    
+    .cta {
+        padding: 1rem 3rem;
+        position: absolute;
+        right: 1rem;
+        bottom: 1rem;
+    }
+
+}
