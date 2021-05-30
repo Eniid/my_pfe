@@ -6,21 +6,54 @@
     margin: auto;
 }
 
+.cat-box_out {
+    position: relative;
+    width: 90%;
+    max-width: 55rem;
+    line-height: 2rem;
+    margin: 3rem 0 12rem 0;
+
+}
+
 .cat-box {
     position: relative;
     @include nm; 
-    width: 90%;
-    max-width: 55rem;
     border-radius: 0.7rem;
     font-size: 1.4rem;
-    line-height: 2rem;
-    margin: 3rem 0;
+    
 
     h3{
         font-size: 2.5rem;
         margin-top: 3.5rem;
     }
 }
+
+.cat-box_out:hover {
+    
+    .cat-box_img{
+        bottom: -10rem;
+        transition: 1s;
+    }    
+
+}
+
+
+
+    .cat-box_img{
+        position: absolute;
+        bottom: -6rem;
+        width: 100%;
+        text-align: center;
+        transition: 1s;
+
+
+        img {
+            width: 90%;
+            max-width: 45rem;
+            border-radius: 2rem;
+        }
+    }
+
 
 
 
@@ -62,6 +95,51 @@ h3 {
 
 
 
+
+//* Forum  **// 
+
+
+
+
+.forum_desc {
+    width: 55rem;
+    color: #6b6b6b;
+    margin-top: 0;
+    position: relative;
+    top: -1rem;
+
+}
+
+
+
 //* Categorie -> Affichage des topics  **// 
 
+.topic {
+    .lt__ariane {
+        position: relative;
+        top: -2rem;   
+        margin-left: 2rem;
 
+    }
+
+    h2 {
+        margin-left: 2rem;
+    }
+}
+
+.topic-add {
+    width: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+
+    .sm-event__button {
+        width: auto;
+        margin: 0 2rem;
+    }
+
+    .forum_desc {
+        margin: 2rem;
+    }
+}

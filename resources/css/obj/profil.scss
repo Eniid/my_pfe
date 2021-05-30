@@ -1,0 +1,27 @@
+.profil__main-sec {
+    position: relative;
+
+    .main-message__profil {
+        position: absolute;
+        top: -4rem;
+        left: 4rem;
+
+
+        .sm-pp__box {
+            @include nm; 
+            background: $c_bg;
+            height: 5.5rem;
+            width: 5.5rem;
+            border-radius: 5.5rem;
+            margin: 0 .5rem;
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            position: relative;
+        }
+    }
+
+
+}

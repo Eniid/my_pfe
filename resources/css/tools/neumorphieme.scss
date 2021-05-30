@@ -1,4 +1,4 @@
-@mixin nm($color1: #dadada, $color2 : #fff) {
+@mixin nm($color1: #0000001f, $color2 : #fff) {
     background: #F5F5F5;
     box-shadow:  4px 4px 6px $color1,
              -4px -4px 6px $color2;

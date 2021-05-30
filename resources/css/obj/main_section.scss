@@ -65,18 +65,26 @@ aside {
 
 }
 
+.new-user_title {
+    position: relative;
+    top: 1rem;
+}
+
 .home-house_ev{ 
     width: 70%;
     justify-content: space-between;
 }
 
 .last-event{
-    margin: 0 4rem;
+    margin: 0 5rem;
+    width: 46.8rem;
 }
 
 .last-topics {
     width: 70%;
-    margin-top: 10rem;
+    hr {
+        margin: 5rem 10rem 4rem 10rem;
+    }
 }
 
 .new-user {
@@ -111,3 +119,13 @@ aside {
     justify-content: space-between;
     }
 }
+
+
+.dash_sep {
+    width: 100%;
+    text-align: center;
+
+    margin-top: 4rem;
+    margin-bottom: 2rem;
+}
+

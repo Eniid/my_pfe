@@ -29,7 +29,7 @@ class TopicFactory extends Factory
         return [
             'title' => $title, 
             'slug' => $slug,
-            'user_id' => $this->faker->randomElement([1, 2, 3, 4, 5, 6]),
+            'user_id' => $this->faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8]),
             'categorie_id' => $this->faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8, 9, 10]),
 
         ];

@@ -1,0 +1,49 @@
+.pph_user-name {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.pph_p {
+    margin-top: 1.2rem;
+}
+
+.pph_texte {
+
+
+    a {
+        color: black;
+        font-size: 1.2rem;
+        margin: .1rem 0;
+        padding: .5rem;
+        //text-transform: uppercase;
+
+    }
+
+    label {
+        color: black;
+        font-size: 1.2rem;
+        letter-spacing: 0;
+        margin: .1rem 0;
+        text-transform: none;
+    }
+
+}
+
+
+.body_test {
+    .pph:hover {
+        .sm-pp__info {
+            top: 5rem;
+            left: -13rem;
+            bottom: auto;
+            padding: 2rem;
+            width: 16rem;
+            height: 12rem;    
+        }
+    }
+}
+
+
+.pph_n {
+    margin-bottom: 2rem;
+}

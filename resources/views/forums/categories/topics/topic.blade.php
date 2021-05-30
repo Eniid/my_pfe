@@ -11,7 +11,7 @@ Topic Name |
     <!-- Cathegories -->
     <section>
         <h2>{{ $topic->title }}</h2>
-        <span class="lt__ariane">
+        <span class="lt__ariane under">
             <a href="/{{ $forum->slug }}">{{ $forum->name }} </a> ↣ <a href="/{{ $forum->slug}}/{{$categorie->slug}}">{{ $categorie->name }}</a> ↣ {{ $topic->title }}
         </span>
 
@@ -23,7 +23,7 @@ Topic Name |
                     <div>
                         <div class="flex profl_main">
                             <div class="main-message__profil">
-                                <div class="sm-pp__box ra">
+                                <div class="sm-pp__box ra {{$post->user->house}}_bg">
                                     <img src="/img/pp1.jpg" alt="" class="sm-pp">
                                 </div>
                             </div>
@@ -56,21 +56,29 @@ Topic Name |
                                 @csrf
                                 @method('delete')
                                 <input type="hidden" name="post_id" value="{{ $post->id }}">
-                                <button><img src="{{ asset('img/liked.svg')}}" alt=""></button>
-                                {{ $post->likes->count()}} likes
+                                <button><img src="{{ asset('img/liked.svg')}}" alt=""></button><br>
+                                {{ $post->likes->count()}}
                             </form>
 
                         @else
                         <form class="message-like"  action="/{{ $forum->slug}}/{{$categorie->slug}}/{{ $topic->slug }}/like" method="post">
                             @csrf
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
-                            <button><img src="{{ asset('img/not_like.svg')}}" alt=""></button>
-                            {{ $post->likes->count()}} likes
+                            <button><img src="{{ asset('img/not_like.svg')}}" alt=""></button><br>
+                            {{ $post->likes->count()}} 
                         </form>
                         @endif
                         <div>
                             {{ $post->body }}
     
+                        </div>
+
+                        <div class="edit-btn__topic">
+                        @if($post->user->id === auth()->id() || auth()->user()->is_admin )    
+                        <hr>
+
+                            <a href=""><img class="icone" src="{{ asset('img/edit.svg')}}" alt=""></a><a href=""><img class="icone" src="{{ asset('img/delete.svg')}}" alt=""></a>
+                            @endif
                         </div>
                     </div>
                 </div>
@@ -85,9 +93,12 @@ Topic Name |
     <!-- NEW -->
         <form action="/{{$forum->slug}}/{{$categorie->slug}}/{{$topic->slug}}" method='post'>
             @csrf
-
-            <textarea name="body" id="" cols="30" rows="10"></textarea>
-            <button class="cta">Send</button>
+            <div class="message__box flex">
+                <div class="message__border">
+                    <textarea name="body" id="" cols="30" rows="10" placeholder="Type your new message here!"></textarea>
+                    <button   class="cta cta_m">Send</button>
+                </div>
+            </div>
         </form>
 
 

@@ -4,7 +4,7 @@
     border-radius: .5rem;
     align-items: center;
     margin: 2rem;
-
+    position: relative;
 
     .cat-box_new {
         img{
@@ -33,4 +33,11 @@
 
 .latest-message {
     padding: 2rem;
+}
+
+
+.edit-btn__topic {
+    position: absolute;
+    right: .5rem;
+    bottom: .5rem;
 }

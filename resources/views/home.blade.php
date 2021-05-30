@@ -16,7 +16,14 @@
 
             <!-- House Cup  -->
             <section class="house-cup">
-                <h2>House Cup</h2>
+                <div class="flex filters">
+                    <h2>House Cup</h2>
+                    <div class="under">
+                        <div class="neu_r"> 
+                            <a href="#">?</a>
+                        </div>
+                    </div>
+                </div>
                 <div class="house_cup__all">
                     <div class="house-cup__rav house-cup__h">
                         <div class="house-cup__hourglass">
@@ -87,13 +94,13 @@
                     @foreach ($events as $event)
                         <a href="#">
                             <section class="sm-event">
-                                <h3 class="sm-event__title">Event title</h3>
+                                <h3 class="sm-event__title">{{$event->name}}</h3>
                                 <div class="sm-event__date">
                                     <span class="sm-event__date__month">January</span>
                                     <span class="sm-event__date__day">10</span>
                                     <span class="sm-event__date__time">10.20AM</span>
                                 </div>
-                                <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
+                                <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">{{$event->place}}</span>
                             </section>
                         </a>
                     @endforeach
@@ -140,17 +147,19 @@
 
                 <!-- Newest users  -->
                 <section class="new-user">
-                    <h3 class="h2-like">New users</h2>
+                    <h3 class="h2-like new-user_title">New users</h2>
                     <p>Be nice with them, make them feel welcomed!</p>
                     <div class="flex pp_flex">
 
                         @foreach ($new_users as $user )
+                        <a href="/profil/{{ $user->id}}">
                             <div class="sm-pp__box {{ $user->house}}_bg">
                                 <img src="/img/pp1.jpg" alt="" class="sm-pp">
                                 <div class="sm-pp__info">
                                     {{ $user->name }}
                                 </div>
                             </div>    
+                        </a>
                         @endforeach
 
 
@@ -163,7 +172,14 @@
 
     <!-- Last topic -->
 
+
     <section class="last-topics">
+
+        <div class="dash_sep">
+            <img src="{{ asset('img/sep.svg') }}" alt="">
+        </div>
+
+
         <div class="flex filters">
             <h2>Latest messages</h2>
             <div class="under">
@@ -176,7 +192,7 @@
         @foreach ($posts as $post)
         <section class="topic-preview">
             <h3 class="lt__title"><a href="{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}/{{ $post->postable->slug}}"> {{ $post->postable->title }}</a></h3>
-            <span class="lt__ariane"> <a href="/{{ $post->postable->categorie->forum->slug}}">{{ $post->postable->categorie->forum->name}}</a> ↣ <a href="/{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}"> {{ $post->postable->categorie->name}} </a> </span>
+            <span class="lt__ariane under"> <a href="/{{ $post->postable->categorie->forum->slug}}">{{ $post->postable->categorie->forum->name}}</a> ↣ <a href="/{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}"> {{ $post->postable->categorie->name}} </a> </span>
 
             <div class="topix-preview__content">
                 {{ $post->body }}
@@ -212,7 +228,7 @@
 
             <div class="topix-preview__author flex">
                 <div class="topix-preview_nm"> 
-                    <p class="topix-preview__author__name {{ $post->user->house }}_c"><span><a href="#">{{ $post->user->name }}</a></span></p>
+                    <p class="topix-preview__author__name {{ $post->user->house }}_c"><span><a href="/profil/{{$post->user->id }}">{{ $post->user->name }}</a></span></p>
                     <p class="topix-preview__author__messages">{{ $post->user->posts_count }} messages</p>
                         
                 </div>

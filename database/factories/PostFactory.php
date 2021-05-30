@@ -23,7 +23,7 @@ class PostFactory extends Factory
     {
         return [
             'body' => $this->faker->text,
-            'user_id' => $this->faker->randomElement([1, 2, 3, 4, 5, 6]),
+            'user_id' => $this->faker->randomElement([1, 2, 3, 4, 5, 6, 7, 8]),
             'postable_id' => $this->faker->randomElement([1, 2, 3, 4, 5, 6]),
             'postable_type' => $this->faker->randomElement(['App\Models\Topic', 'App\Models\Event']),
         ];

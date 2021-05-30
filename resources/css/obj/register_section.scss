@@ -66,3 +66,31 @@
 .registration__password {
     margin-top: .5rem;
 }
+
+/**** HOUSE *****/ 
+
+
+
+
+.house_img {
+    @include nm; 
+    margin: 0 auto
+}
+
+.login_btn .login_img{
+    margin: 1rem auto; 
+}
+
+.house_img {
+    @include nm; 
+    width: 100%;
+}
+
+
+.login_btn input:checked ~  .login_img{
+    @include nmi; 
+}
+
+input[type=radio] {
+    display: none;
+}

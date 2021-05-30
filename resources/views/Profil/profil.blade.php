@@ -5,11 +5,16 @@
 @endsection
 
 @section('content')
-<main class="main-sec">
+<main class="main-sec profil__main-sec">
     <!-- House cup and last event -->
     <div class="home-info">
         <div class="flex home-house_ev">
             <section class="profil_info">
+                <div class="main-message__profil">
+                    <div class="sm-pp__box ra {{$user->house}}_bg">
+                        <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                    </div>
+                </div>
                 <h2 class="profil__user-name">{{ $user->name }}</h2>
                 <img src="" alt="">
                 <img src="" alt="">

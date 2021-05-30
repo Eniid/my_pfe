@@ -57,7 +57,7 @@ Auth::routes();
 
     //* Events
 
-            Route::post('/events/join', [EventController::class, 'participation'])->middleware('auth');
+
 
            // Events
            Route::get('/events', [EventController::class, 'index'])->middleware('auth');
@@ -76,6 +76,10 @@ Auth::routes();
            Route::get('/events/{event:slug}', [EventController::class, 'show'])->middleware('auth');
            Route::post('/events/{event:slug}', [PostController::class, 'store_event'])->middleware('auth');
    
+
+           Route::post('/events/{event:slug}/join', [EventController::class, 'participation'])->middleware('auth');
+           Route::post('/events/{event:slug}/leave', [EventController::class, 'leave'])->middleware('auth');
+
 
     //* Profil
             // profil

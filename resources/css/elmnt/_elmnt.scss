@@ -18,6 +18,17 @@ body{
 h3 {
     font-family: $f_main-light;
     color: $c_main;
+
+    a:hover {
+        padding-left: 1rem;
+        transition: 1s;
+    }
+}
+
+
+hr {
+    border-top: 3px double #A5880F;
+
 }
 
 
@@ -67,7 +78,9 @@ h4 {
     margin: 4rem 0rem 1rem 0rem;
     font-family: $f_main-bold;
 
-
+    a {
+        transform: scale(1.2);
+    }
 }
 
 .sub {
@@ -84,6 +97,11 @@ h4 {
 
 
 
+h2 {
+    a:hover {
+        transform: scale(1.2);
+    }
+}
 
 // .bg{
 
@@ -93,3 +111,10 @@ h4 {
 //     right: 0;
 //     left: 0;
 // }
+
+
+textarea {
+    @include nmi; 
+    border : none; 
+    width: 100%;
+}

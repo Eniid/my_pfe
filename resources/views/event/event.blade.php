@@ -15,11 +15,24 @@ Events |
                 <h2>{{ $event->name }}</h2>
                 <p>{{ $event->desc }}</p>
 
-                <form action="/events/join" method="post">
-                    @csrf
-                    <input type="hidden" name="event_id" value="{{$event->id}}">
-                    <button class="cta">Participer</button>
-                </form>
+                {{ $event->event_user }}
+                {{ $event->posts }}
+
+
+
+                @if($event->event_user->contains(auth()->id()))
+                    <form action="/events/{{$event->slug}}/leave" method="post">
+                        @csrf
+                        <input type="hidden" name="event_id" value="{{$event->id}}">
+                        <button class="cta">leave</button>
+                    </form>
+                @else
+                    <form action="/events/{{$event->slug}}/join" method="post">
+                        @csrf
+                        <input type="hidden" name="event_id" value="{{$event->id}}">
+                        <button class="cta">Participer</button>
+                    </form>
+                @endif
 
             </div>            
 
@@ -73,9 +86,11 @@ Events |
     <!-- Last topic -->
     <section class="last-topics">
         <h2>Messages</h2>
+
+        @foreach ($event->posts as $post)
         <section class="topic-preview">
             <div class="topix-preview__content">
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore e</p>
+                <p>{{$post->body}}</p>
             </div>
 
             <div class="CTA"><a href="#">Participer</a></div>
@@ -91,6 +106,9 @@ Events |
             </div>
 
         </section>
+        @endforeach
+
+
     </section>
 </main>
 @endsection

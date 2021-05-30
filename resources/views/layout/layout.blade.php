@@ -25,7 +25,8 @@
         <title>@yield('title') Wizarding World Online</title>
     </head>
 
-    <body class="body->test">
+
+    <body class="body_test">
         <header>
         @auth
             <nav>
@@ -47,24 +48,52 @@
                    </li> 
 
                    <li>
-                        <div class="sm-pp__box {{ Auth::user()->house}}_bg">
+                        <div class="sm-pp__box pph {{ Auth::user()->house}}_bg">
                             <img src="/img/pp1.jpg" alt="" class="sm-pp">
                             <div class="sm-pp__info">
-                                <div>
+                                <div class="{{ Auth::user()->house}}_c pph_user-name">
                                     {{ Auth::user()->name }}
                                 </div>
-                                <a href="/profil/{{auth()->id()}}">profil</a>
+
                                 <hr>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+
+                                <div class="pph_texte pph_p">
+                                    <a href="/profil/{{auth()->id()}}">profil</a>
+                                </div>
+
+                                <!-- //? BIGINING OF NOTIFICATIONS  -->
+
+                                <div class="login_btn">
+                                    <input type="checkbox" id="login_img" class="login_checkbox">
+                                    <div class="login_btn pph_texte pph_n">
+                                        <label for="login_img" class="login_text">‍Notifications</label>
+                                    </div>
+                                    <div class="login_content">
+                                        <div class="bg-color {{ Auth::user()->house}}_full_bg">
+                                            <div class="main-sec registration-sec notification_box">
+                                                teste
+                                            </div>
+                                        </div>
+                                        
+
+                                        
+                                    </div>
+                                </div>
+
+                                <!-- //? END OF NOTIFICATIONS  -->
+
+
+
+                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none .cat-cta_contener">
                                     @csrf
-                                    <button>logout</button>
+                                    <button class="cta cta_i">logout</button>
                                 </form>
                             </div>
                         </div>
                    </li> 
                 </ol>
             </nav>
-          @endauth  
+        @endauth  
 
 
           
@@ -76,7 +105,7 @@
             
                 <div class="logo_img"><img src="{{ asset('img/asset167.png') }}" alt=""></div>
                 <h1 class="main_title main_title__logged">Wizarding World <span>ONLINE</span> </h1>
-                <div class="separation_gold"><img src="{{ asset('img/sep.svg') }}" alt=""></div>
+                <div class="separation_gold"><img src="{{ asset('img/sep_w.svg') }}" alt=""></div>
             
                 <p class="nmto">Nothing more to see here! </p>
                 <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a></p>

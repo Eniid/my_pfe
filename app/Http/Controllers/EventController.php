@@ -14,12 +14,16 @@ class EventController extends Controller
         $events = Event::all();
 
 
+
+
         return view('event.events', compact('events'));
     }
 
     public function show(Event $event){
 
 
+        $event->load('event_user');        
+        $event->load('posts');
 
 
 
@@ -67,7 +71,24 @@ class EventController extends Controller
         return view('event.new');
     }
 
-    public function participation(Request $request){
+    public function participation(Event $event,Request $request){
+
+
+        $part = new Event_user(request()->validate(
+            [
+                'event_id' => 'required',
+            ]
+        )); 
+
+        $part -> event_id = request('event_id'); 
+        $part -> user_id = auth()->id(); ; 
+        $part -> save();
+        
+
+        return redirect('/events/'.$event->slug);
+    }
+
+    public function leave(Event $event,Request $request){
 
 
         $part = new Event_user(request()->validate(
@@ -76,12 +97,11 @@ class EventController extends Controller
             ]
         ));
 
-        $part -> event_id = request('event_id'); 
-        $part -> user_id = auth()->id(); ; 
-        $part -> save();
+        $part = Event_user::where('event_id', request('event_id'))->where('user_id', auth()->id())->first();
+        $part -> delete();
         
 
-        return redirect('/events');
+        return redirect('/events/'.$event->slug);
     }
 
 

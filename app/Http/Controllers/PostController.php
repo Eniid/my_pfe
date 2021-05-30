@@ -75,7 +75,7 @@ class PostController extends Controller
         $like -> post_id = request('post_id'); 
         $like -> user_id = auth()->id(); 
         $like -> save();
-            
+              
             
         return redirect('/'.$forum->slug.'/'.$categorie->slug.'/'.$topic->slug);
     }
