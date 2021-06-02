@@ -31,7 +31,12 @@
                     </div>
                     <div class="sm-pp__box {{ $topic->user->house}}_bg">
                         <a href="#" name="xxx profil">
-                            <img src="{{ asset('img/pp1.jpg')}}" alt="" class="sm-pp">
+                            <img src="
+                            @if ($topic->user->img)
+                            /{{$topic->user->img}}
+                            @else
+                                    {{'https://eu.ui-avatars.com/api/?name=' . urlencode($topic->user->name) . '&size=120&background=9165DF&color=ffffff'}}
+                            @endif" alt="" class="sm-pp">
                         </a>
                     </div>
                     <div class="topic-main_box">

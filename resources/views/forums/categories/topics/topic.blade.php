@@ -9,7 +9,7 @@ Topic Name |
 <main class="main-sec">
    
     <!-- Cathegories -->
-    <section>
+    <section class="topic_box">
         <h2>{{ $topic->title }}</h2>
         <span class="lt__ariane under">
             <a href="/{{ $forum->slug }}">{{ $forum->name }} </a> ↣ <a href="/{{ $forum->slug}}/{{$categorie->slug}}">{{ $categorie->name }}</a> ↣ {{ $topic->title }}
@@ -20,25 +20,30 @@ Topic Name |
             @foreach($topic->posts as $post)
                 <div class="main-message flex">
                     <!-- Profil -->
-                    <div>
+                    <div class="post_profil">
                         <div class="flex profl_main">
                             <div class="main-message__profil">
                                 <div class="sm-pp__box ra {{$post->user->house}}_bg">
-                                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                                    <img src="@if ($post->user->img)
+                                    /{{$post->user->img}}
+                                    @else
+                                            {{'https://eu.ui-avatars.com/api/?name=' . urlencode($post->user->name) . '&size=120&background=9165DF&color=ffffff'}}
+                                    @endif" alt="" class="sm-pp">
                                 </div>
                             </div>
                             <div class="profil_info">
-                                <div class="main-message__user-name ra">{{$post->user->name}}</div>
-                                <div class="main-message__title">Rang de l'utilisateur</div>
+                                <div class="main-message__user-name ra under {{$post->user->house}}_c">
+                                    <a href="/profil/{{$post->user->id}}" class="name">{{$post->user->name}}</a></div>
+                                <div class="main-message__title rang">Rang</div>
                             </div>
                         </div>
 
                         <div class="main-message__messages">
-                            <p class="messages__numbers ra">{{$post->user->posts_count}}</p>
+                            <p class="messages__numbers">{{$post->user->posts_count}}</p>
                             <p class="messages__text">messages</p>
                         </div>
                         <div class="main-message__messages">
-                            <p class="messages__numbers">{{$post->user->house_point}}</p>
+                            <p class="messages__numbers {{$post->user->house}}_c">{{$post->user->house_point}}</p>
                             <p class="messages__text">House Point</p>
                         </div>
                     </div>

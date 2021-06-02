@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <filter id="Neuo_dark_shade_" x="10" y="10" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Neuo_white_shade_" x="8" y="8" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset dx="-1" dy="-1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-2"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Button_background" x="0" y="0" width="56" height="56" filterUnits="userSpaceOnUse">
+      <feOffset dx="-3" dy="-3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9b2727"/>
+      <stop offset="1" stop-color="#ef0e6d"/>
+    </linearGradient>
+  </defs>
+  <g id="Groupe_119" data-name="Groupe 119" transform="translate(-258 -583)">
+    <g id="Button_round" data-name="Button round" transform="translate(270 595)">
+      <g id="Button" transform="translate(-131 -314)">
+        <g transform="matrix(1, 0, 0, 1, 119, 302)" filter="url(#Neuo_dark_shade_)">
+          <rect id="Neuo_dark_shade_2" data-name="Neuo (dark shade)" width="38" height="38" rx="19" transform="translate(12 12)" fill="#f5f5f5"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 119, 302)" filter="url(#Neuo_white_shade_)">
+          <rect id="Neuo_white_shade_2" data-name="Neuo (white shade)" width="38" height="38" rx="19" transform="translate(12 12)" fill="#f5f5f5"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 119, 302)" filter="url(#Button_background)">
+          <rect id="Button_background-2" data-name="Button background" width="38" height="38" rx="19" transform="translate(12 12)" fill="#f5f5f5"/>
+        </g>
+      </g>
+    </g>
+    <path id="Icon_awesome-user-plus" data-name="Icon awesome-user-plus" d="M21.565,7.188H19.353V4.977a.555.555,0,0,0-.553-.553H17.695a.555.555,0,0,0-.553.553V7.188H14.93a.555.555,0,0,0-.553.553V8.847a.555.555,0,0,0,.553.553h2.212v2.212a.555.555,0,0,0,.553.553H18.8a.555.555,0,0,0,.553-.553V9.4h2.212a.555.555,0,0,0,.553-.553V7.741A.555.555,0,0,0,21.565,7.188ZM7.741,8.847A4.424,4.424,0,1,0,3.318,4.424,4.423,4.423,0,0,0,7.741,8.847Zm3.1,1.106h-.577a6.016,6.016,0,0,1-5.039,0H4.645A4.646,4.646,0,0,0,0,14.6v1.438a1.659,1.659,0,0,0,1.659,1.659H13.824a1.659,1.659,0,0,0,1.659-1.659V14.6A4.646,4.646,0,0,0,10.838,9.953Z" transform="translate(279 605.306)" fill="url(#linear-gradient)"/>
+  </g>
+</svg>

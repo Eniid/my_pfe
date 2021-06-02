@@ -154,7 +154,12 @@
                         @foreach ($new_users as $user )
                         <a href="/profil/{{ $user->id}}">
                             <div class="sm-pp__box {{ $user->house}}_bg">
-                                <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                                <img src="
+                                @if ($user->img)
+                                /{{$user->img}}
+                                @else
+                                        {{'https://eu.ui-avatars.com/api/?name=' . urlencode($user->name) . '&size=120&background=9165DF&color=ffffff'}}
+                                @endif" alt="" class="sm-pp">
                                 <div class="sm-pp__info">
                                     {{ $user->name }}
                                 </div>
@@ -198,39 +203,30 @@
                 {{ $post->body }}
             </div>
 
-            {{-- <div class="flex">
-                <div class="sm-pp__box">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        User Name
-                    </div>
-                </div>
-                <div class="sm-pp__box">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        User Name
-                    </div>
-                </div>
-                <div class="sm-pp__box">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        User Name
-                    </div>
-                </div>
-                <div class="sm-pp__box">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        User Name
-                    </div>
-                </div>
-            </div> --}}
             
 
             
 
-            <div class="topix-preview__participents">
+
+                <div class="topix-preview__author flex">
+                    <div class="topix-preview_nm"> 
+                        <p class="topix-preview__author__name {{ $post->user->house }}_c"><span><a href="/profil/{{$post->user->id }}">{{ $post->user->name }}</a></span></p>
+                        <p class="topix-preview__author__messages">{{ $post->user->posts_count }} messages</p>
+    
+                    </div>
+                   <div class="sm-pp__box {{ $post->user->house }}_bg">
+                       <a href="#" name="xxx profil">
+                            <img src="
+                            @if ($post->user->img)
+                            /{{$post->user->img}}
+                            @else
+                                    {{'https://eu.ui-avatars.com/api/?name=' . urlencode($post->user->name) . '&size=120&background=9165DF&color=ffffff'}}
+                            @endif
+                        " alt="" class="sm-pp">
+                        </a>
+                    </div>
+                </div>
                 
-            </div>
         </section>
         @endforeach
     </section>

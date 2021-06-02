@@ -19,6 +19,7 @@
 
         .profil_info {
             padding: 1rem;
+            text-align: right;
         }
         
     }
@@ -66,6 +67,10 @@
     min-width: 30rem;
     margin: 2rem auto;
 
+    .main-message__messages {
+        position: relative;
+        top: -5rem; 
+    }
     .main-message__profil {
         width:  30%;
     }
@@ -110,6 +115,8 @@
         width: 95%;
         margin: 2rem 0 2rem 5%;
 
+
+
         .topix-preview__author {
 
             left: -5%;
@@ -134,4 +141,18 @@
         }
     }
 
+}
+
+
+.post_profil{
+    width: 10rem;
+
+    .rang {
+        font-size: 1.4rem;
+    }
+
+    .name{
+        font-size: 2rem;
+        font-weight: bold;
+    }
 }

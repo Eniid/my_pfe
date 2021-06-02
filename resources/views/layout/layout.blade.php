@@ -23,6 +23,8 @@
 
         <!-- //? Document title  -->
         <title>@yield('title') Wizarding World Online</title>
+        @livewireStyles
+
     </head>
 
 
@@ -49,7 +51,12 @@
 
                    <li>
                         <div class="sm-pp__box pph {{ Auth::user()->house}}_bg">
-                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                            <img src="
+                            @if (Auth::user()->img)
+                            /{{ Auth::user()->img}}
+                            @else
+                                    {{'https://eu.ui-avatars.com/api/?name=' . urlencode(Auth::user()->name) . '&size=120&background=9165DF&color=ffffff'}}
+                            @endif" alt="" class="sm-pp">
                             <div class="sm-pp__info">
                                 <div class="{{ Auth::user()->house}}_c pph_user-name">
                                     {{ Auth::user()->name }}
@@ -114,6 +121,11 @@
 
         <!-- //?CONTENT   -->
         @yield('content')
+
+
+        <script src="{{ asset('js/app.js') }}"></script>
+
+        @livewireScripts
 
     </body>
 

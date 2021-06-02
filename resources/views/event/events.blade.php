@@ -77,6 +77,8 @@ Event Name |
             <div class="under">
                 <a href="#" class="active">All</a>
                 <a href="#">Events with your friends</a>
+                <a href="#">Virtual events</a>
+                <a href="#">Event in real world</a>
             </div>
         </div>
 

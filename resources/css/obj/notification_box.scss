@@ -1,0 +1,64 @@
+.bg-color {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+}
+
+.home-info .login_content {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+
+    background-color: rgba(255, 0, 0, 0);
+
+}
+
+.edit__p {
+    .notification_box label{
+        margin: 3rem 0 1rem 0;
+    }
+}
+
+.notification_box {
+    z-index: 100000000000000000000000000000000000000000000000000000000;
+    margin: 7rem auto;
+    padding: .2rem 5rem .2rem 5rem;
+
+
+
+    .cta {
+        margin: 3rem auto;
+    }
+
+
+    .ravenclaw_bg{
+        box-shadow: 2px 2px 6px #1484BF38, -2px -2px 6px #405D8D38;
+    }
+
+
+}
+
+.cross {
+    display: none;
+}
+
+.login_checkbox:checked ~ .login_text{
+
+    .cross{
+        display: block;
+        position: fixed;
+        width: 100%;
+        text-align: center;
+        top: 11rem;
+        left: 15rem;
+        z-index: 100000000000000000000000000;
+        color: black;
+        font-size: 1.4rem;
+
+    }
+}

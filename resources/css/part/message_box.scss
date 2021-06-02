@@ -7,9 +7,11 @@
     text-align: right;
 
     .message__border{
-        width: 77%;
+        width: 92.5%;
          @include nm; 
          text-align: center;
+         position: relative;
+         right: -2rem; 
         
 
         textarea {

@@ -9,10 +9,10 @@ Events |
 
 <main class="main-sec">
     <!-- House cup and last event -->
-    <div class="home-info">
-        <div class="flex home-house_ev">
-            <section class="house-cup">
-                <h2>{{ $event->name }}</h2>
+    <section class="home-info">
+        <h2 class="event_name">{{$event->name}}</h2>
+        <section class="flex home-house_ev">
+            <div class="house-cup">
                 <p>{{ $event->desc }}</p>
 
                 {{ $event->event_user }}
@@ -35,13 +35,24 @@ Events |
                         <button class="cta cta_l">Join the event</button>
                     </form>
 
-            </div>            
+            </div>  
+            
+            <div>
+                <div class="nm">
+                    <div class="sm-event__date">
+                        <span class="sm-event__date__month">January</span>
+                        <span class="sm-event__date__day">10</span>
+                        <span class="sm-event__date__time">10.20AM</span>
+                    </div>
 
-            </section>
+                    <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">{{$event->place}}</span>
 
+                    
+                </div>
             </div>
+
         </section>
-    </div>
+    </section>
 
 
        <!-- Users -->
@@ -81,6 +92,12 @@ Events |
 
     <!-- Last topic -->
     <section class="last-topics last-post_event">
+
+        <div class="dash_sep">
+            <img src="{{ asset('img/sep.svg') }}" alt="">
+        </div>
+
+
         <h2>Messages</h2>
 
         <form action="/events/{{$event->slug}}" method="post" class="event-message">
@@ -109,7 +126,11 @@ Events |
                     </div>
                    <div class="sm-pp__box {{ $post->user->house }}_bg">
                        <a href="#" name="xxx profil">
-                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                            <img src="@if ($post->user->img)
+                            /{{$post->user->img}}
+                            @else
+                                    {{'https://eu.ui-avatars.com/api/?name=' . urlencode($post->user->name) . '&size=120&background=9165DF&color=ffffff'}}
+                            @endif" alt="" class="sm-pp">
                         </a>
                     </div>
                 </div>
