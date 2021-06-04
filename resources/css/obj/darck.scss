@@ -29,9 +29,24 @@
         background: #3a3a40;
     }
 
+
+    textarea::placeholder {
+        color: rgb(241, 241, 241);
+
+    }
+
     .cta_l {
         box-shadow: $nm;
         background: $c_main;
+    }
+
+    .forum_desc {
+        color: #fff;
+    }
+    
+    .message__box .message__border{
+        box-shadow: $nm;
+        background: $c_bg;
     }
 
     .sm-pp__box:hover .sm-pp__info {

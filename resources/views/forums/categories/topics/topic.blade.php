@@ -62,7 +62,7 @@ Topic Name |
                                 @csrf
                                 @method('delete')
                                 <input type="hidden" name="post_id" value="{{ $post->id }}">
-                                <button><img src="{{ asset('img/liked.svg')}}" alt=""></button><br>
+                                <button><img src="{{ asset('img/liked.svg')}}" class="lm_img" alt="like the message"><img src="{{ asset('img/d_like.svg')}}" class="dm_img" alt="like the message"></button><br>
                                 {{ $post->likes->count()}}
                             </form>
 
@@ -70,7 +70,7 @@ Topic Name |
                         <form class="message-like"  action="/{{ $forum->slug}}/{{$categorie->slug}}/{{ $topic->slug }}/like" method="post">
                             @csrf
                             <input type="hidden" name="post_id" value="{{ $post->id }}">
-                            <button><img src="{{ asset('img/not_like.svg')}}" alt=""></button><br>
+                            <button><img src="{{ asset('img/not_like.svg')}}" class="lm_img" alt="Unlike the message"><img src="{{ asset('img/d_unlike.svg')}}" class="dm_img" alt="Unlike the message"></button><br>
                             {{ $post->likes->count()}} 
                         </form>
                         @endif
@@ -83,7 +83,7 @@ Topic Name |
                         @if($post->user->id === auth()->id() || auth()->user()->is_admin )    
                         <hr>
 
-                            <a href=""><img class="icone" src="{{ asset('img/edit.svg')}}" alt=""></a><a href=""><img class="icone" src="{{ asset('img/delete.svg')}}" alt=""></a>
+                        <a href=""><img class="icone lm_img" src="{{ asset('img/edit.svg')}}" alt="edit the topic"><img class="icone dm_img" src="{{ asset('img/d_edit.svg')}}" alt="edit the topic" class="dm_img"></a><a href=""><img class="icone lm_img" src="{{ asset('img/delete.svg')}}" alt="delete topic"><img class="icone dm_img" src="{{ asset('img/d_delete.svg')}}" alt="delete topic" ></a>
                             @endif
                         </div>
                     </div>

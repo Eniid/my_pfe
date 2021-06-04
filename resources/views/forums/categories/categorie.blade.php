@@ -56,7 +56,7 @@
 
                     @if($topic->user->id === auth()->id() || auth()->user()->is_admin )    
                     <div class="edit-btn__topic">
-                        <a href=""><img class="icone" src="{{ asset('img/edit.svg')}}" alt=""></a><a href=""><img class="icone" src="{{ asset('img/delete.svg')}}" alt=""></a>
+                        <a href=""><img class="icone lm_img" src="{{ asset('img/edit.svg')}}" alt="edit the topic"><img class="icone dm_img" src="{{ asset('img/d_edit.svg')}}" alt="edit the topic" class="dm_img"></a><a href=""><img class="icone lm_img" src="{{ asset('img/delete.svg')}}" alt="delete topic"><img class="icone dm_img" src="{{ asset('img/d_delete.svg')}}" alt="delete topic" ></a>
                     </div>
                     @endif
 

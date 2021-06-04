@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="46" height="46" viewBox="0 0 46 46">
+  <defs>
+    <filter id="Neuo_dark_shade_" x="2" y="2" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Neuo_white_shade_" x="0" y="0" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset dx="-1" dy="-1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-2"/>
+      <feFlood flood-color="#fff" flood-opacity="0.231"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#9b2727"/>
+      <stop offset="1" stop-color="#ef0e6d"/>
+    </linearGradient>
+  </defs>
+  <g id="Groupe_149" data-name="Groupe 149" transform="translate(-183 -466)">
+    <g id="Button_round" data-name="Button round" transform="translate(187 470)">
+      <g id="Button" transform="translate(-131 -314)">
+        <g transform="matrix(1, 0, 0, 1, 127, 310)" filter="url(#Neuo_dark_shade_)">
+          <rect id="Neuo_dark_shade_2" data-name="Neuo (dark shade)" width="38" height="38" rx="19" transform="translate(4 4)" fill="#f5f5f5"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, 127, 310)" filter="url(#Neuo_white_shade_)">
+          <rect id="Neuo_white_shade_2" data-name="Neuo (white shade)" width="38" height="38" rx="19" transform="translate(4 4)" fill="#3f3f47"/>
+        </g>
+        <rect id="Button_background" data-name="Button background" width="38" height="38" rx="19" transform="translate(131 314)" fill="#3f3f47"/>
+      </g>
+    </g>
+    <g id="Button_round_pressed_" data-name="Button round (pressed)" transform="translate(198.5 483.787)">
+      <g id="Button_pressed_" data-name="Button (pressed)" transform="translate(-64 -407)">
+        <path id="Icon_ionic-ios-heart" data-name="Icon ionic-ios-heart" d="M14.337,3.938H14.3a4.1,4.1,0,0,0-3.425,1.875A4.1,4.1,0,0,0,7.45,3.938H7.413A4.077,4.077,0,0,0,3.375,8.012,8.777,8.777,0,0,0,5.1,12.8a30.2,30.2,0,0,0,5.776,5.564A30.2,30.2,0,0,0,16.651,12.8a8.777,8.777,0,0,0,1.724-4.785A4.077,4.077,0,0,0,14.337,3.938Z" transform="translate(60.625 403.063)" fill="url(#linear-gradient)"/>
+      </g>
+    </g>
+  </g>
+</svg>

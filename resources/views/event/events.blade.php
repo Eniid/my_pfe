@@ -25,7 +25,7 @@ Event Name |
                                 <span class="sm-event__date__day">10</span>
                                 <span class="sm-event__date__time">10.20AM</span>
                             </div>
-                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
+                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">Discord</span>
                         </section>
                     </a>
                     <a href="#">

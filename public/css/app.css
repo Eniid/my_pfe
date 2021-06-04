@@ -1657,9 +1657,25 @@ input[type=checkbox] {
   box-shadow: inset 2px 2px 6px #000000a3, inset -2px -2px 6px #ffffff3b;
   background: #3a3a40;
 }
+.dark textarea::-moz-placeholder {
+  color: #f1f1f1;
+}
+.dark textarea:-ms-input-placeholder {
+  color: #f1f1f1;
+}
+.dark textarea::placeholder {
+  color: #f1f1f1;
+}
 .dark .cta_l {
   box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
   background: #d2b9ff;
+}
+.dark .forum_desc {
+  color: #fff;
+}
+.dark .message__box .message__border {
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+  background: #3f3f47;
 }
 .dark .sm-pp__box:hover .sm-pp__info {
   box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;

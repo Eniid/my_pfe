@@ -35,14 +35,14 @@
                    <li><a href="/ww">Wizarding World</a></li> 
                    <li><a href="/bs">Between us</a></li> 
                    <li><a href="/rp">Role Play</a></li> 
-                   <li><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}" alt=""></a></li> 
+                   <li><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}" class="lm_img" alt=""><img src="{{ asset('img/d_house.svg') }}" alt="home_page" class="dm_img"></a></li> 
                    <li><a href="{{ url('events') }}">Events</a></li> 
                    <li><a href="/">Owls</a></li> 
                    <li>
                         <form action="" class="search-form">
                             <div class="searchbox">
                                 <input type="text" name="" id="" placeholder="search">
-                                <a href="#"><img src="{{ asset('img/search.svg') }}" alt="search"></a>
+                                <a href="#"><img src="{{ asset('img/search.svg') }}" alt="search" class="lm_img"><img src="{{ asset('img/d_search.svg') }}" class="dm_img" alt="search"></a>
                             </div>
                         </form>
                    </li> 

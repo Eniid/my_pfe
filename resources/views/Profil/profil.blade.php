@@ -33,16 +33,20 @@
                                 >
                                 <label for="edit" class="login_text">‍
                                     @if ($user->house === 'ravenclaw')
-                                    <img src="{{ asset('img/edit_r.svg') }}" alt="">   
+                                        <img src="{{ asset('img/edit_r.svg') }}" alt="" class="lm_img">   
+                                        <img src="{{ asset('img/d_r_edit.svg') }}" alt="" class="dm_img">   
                                     @endif
                                     @if ($user->house === 'gryffindor')
-                                        <img src="{{ asset('img/edit_g.svg') }}" alt="">
+                                        <img src="{{ asset('img/edit_g.svg') }}" alt="" class="lm_img">   
+                                        <img src="{{ asset('img/d_g_edit.svg') }}" alt="" class="dm_img">   
                                     @endif
                                     @if ($user->house === 'slytherin')
-                                    <img src="{{ asset('img/edit_s.svg') }}" alt="">
+                                        <img src="{{ asset('img/edit_s.svg') }}" alt="" class="lm_img">   
+                                        <img src="{{ asset('img/d_s_edit.svg') }}" alt="" class="dm_img">  
                                     @endif
                                     @if ($user->house === 'hufflepuff')
-                                    <img src="{{ asset('img/edit_h.svg') }}" alt="">
+                                        <img src="{{ asset('img/edit_h.svg') }}" alt="" class="lm_img">   
+                                        <img src="{{ asset('img/d_h_edit.svg') }}" alt="" class="dm_img"> 
                                     @endif
                                     <span class="cross ">Close</span>
                                 </label>
@@ -105,21 +109,25 @@
                     <form action="" method="post" class="add_f">
                         <button>
                             @if ($user->house === 'ravenclaw')
-                                <img src="{{ asset('img/add_f_r.svg') }}" alt="">   
+                                <img src="{{ asset('img/add_f_r.svg') }}" alt="" class="lm_img">   
+                                <img src="{{ asset('img/d_r_add.svg') }}" alt="" class="dm_img">   
                             @endif
                             @if ($user->house === 'gryffindor')
-                                <img src="{{ asset('img/add_f_g.svg') }}" alt="">
+                                <img src="{{ asset('img/add_f_g.svg') }}" alt="" class="lm_img">   
+                                <img src="{{ asset('img/d_g_add.svg') }}" alt="" class="dm_img"> 
                             @endif
                             @if ($user->house === 'slytherin')
-                            <img src="{{ asset('img/aff_f_s.svg') }}" alt="">
+                                <img src="{{ asset('img/aff_f_s.svg') }}" alt="" class="lm_img">   
+                                <img src="{{ asset('img/d_s_add.svg') }}" alt="" class="dm_img"> 
                             @endif
                             @if ($user->house === 'hufflepuff')
-                            <img src="{{ asset('img/add_f_h.svg') }}" alt="">
+                                <img src="{{ asset('img/add_f_h.svg') }}" alt="" class="lm_img">   
+                                <img src="{{ asset('img/d_h_add.svg') }}" alt="" class="dm_img"> 
                             @endif
                         </button>
                     </form>
                     <form action="" method="post" class="add_f">
-                        <button><img src="{{ asset('img/remove_f.svg') }}" alt=""></button>
+                        <button><img src="{{ asset('img/remove_f.svg') }}" alt="" class="lm_img"><img src="{{ asset('img/d_remove.svg') }}" alt="" class="dm_img"></button>
                     </form>
                     @endif
 
@@ -220,7 +228,7 @@
                             <span class="sm-event__date__day">10</span>
                             <span class="sm-event__date__time">10.20AM</span>
                         </div>
-                        <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
+                        <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">Disocrd</span>
                     </section>
                 </a>
 
@@ -232,7 +240,7 @@
                             <span class="sm-event__date__day">10</span>
                             <span class="sm-event__date__time">10.20AM</span>
                         </div>
-                        <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Skype</span>
+                        <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">Skype</span>
                     </section>
                 </a>
             </div>
