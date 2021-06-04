@@ -29,3 +29,94 @@ console.log('coucou');
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
+ const annimElt = document.getElementsByClassName("annim"); 
+
+ console.log(annimElt);
+ 
+ function annime(){
+     console.log("coucou");
+     
+     oneElt.classList.add('annimation_suite')
+ }
+ 
+ for(var i= 0; i < annimElt.length; i++)
+ {
+     let oneElt = annimElt[i];
+     oneElt.classList.add('annimation')
+     console.log(oneElt);
+ }
+ 
+ 
+ window.addEventListener("scroll", e => { // On fait en sorte que l'action se passe lorsque qu'on scrolle
+ document.querySelectorAll(".annim").forEach(element => { // On boucle sur tous les éléments qui ont la class annim
+     const scrollDeLaPage = window.pageYOffset; // On récupère le scroll de la page
+     const positionDeLElement = element.offsetTop; // Puis la position de l'élément .annim
+     const tailleDeLaPage = window.innerHeight // et on prend la taille de la page
+     if (scrollDeLaPage >= positionDeLElement - tailleDeLaPage + 1500) { // Si on est plus bas que l'élément en bas + 200px (à modifier si tu veux que l'event se passe plus tôt)
+         element.classList.add("animation_suite"); // on ajoute la class
+     }
+
+     const teste = positionDeLElement - tailleDeLaPage + 1500; 
+     console.log("quand ça " + scrollDeLaPage);
+     console.log("est égale à" + teste);
+
+
+ })
+ }, false)
+
+
+
+
+ window.addEventListener("scroll", e => { // On fait en sorte que l'action se passe lorsque qu'on scrolle
+    document.querySelectorAll(".annim_home").forEach(element => { // On boucle sur tous les éléments qui ont la class annim
+        const scrollDeLaPage = window.pageYOffset; // On récupère le scroll de la page
+        const positionDeLElement = element.offsetTop; // Puis la position de l'élément .annim
+        const tailleDeLaPage = window.innerHeight // et on prend la taille de la page
+        if (scrollDeLaPage >= positionDeLElement - tailleDeLaPage + 300) { // Si on est plus bas que l'élément en bas + 200px (à modifier si tu veux que l'event se passe plus tôt)
+            element.classList.add("animation_suite_home"); // on ajoute la class
+        }
+   
+        const teste = positionDeLElement - tailleDeLaPage + 1500; 
+        console.log("quand ça " + scrollDeLaPage);
+        console.log("est égale à" + teste);
+   
+   
+    })
+    }, false)
+
+
+
+
+
+
+
+    // darkmode
+
+document.addEventListener("click", e=>{
+    const cb = document.querySelector("input#switch_cb")
+    if(cb.checked){
+        document.body.classList.add("dark")
+        window.localStorage.setItem("darkmode", "enable")
+    }else{
+        document.body.classList.remove("dark")
+        window.localStorage.removeItem("darkmode")
+    }
+}, false)
+document.body.onload = ()=>{
+const dm = window.localStorage.getItem("darkmode")
+if(dm){
+    const cb = document.querySelector("input#switch_cb")
+    cb.checked = true
+    document.body.classList.add("dark")
+}
+}
+
+
+
+
+const element = document.querySelector(".revers_scrool")
+element.addEventListener("wheel", e=>{
+    //e.preventDefault()
+    element.scrollLeft += e.deltaY
+}, true)

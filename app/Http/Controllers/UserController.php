@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\User;
+use App\Models\Post;
+use App\Models\Event_user;
 use Illuminate\Support\Facades\Hash;
 
 use Illuminate\Support\Facades\Auth;
@@ -15,11 +17,18 @@ class UserController extends Controller
     public function index(User $user){
 
         $user->loadCount('posts'); 
-        $user->load('posts'); 
+        $posts = Post::latest()->where('postable_type', 'App\Models\Topic')->where('user_id', $user->id)->with('postable')->take(10)->get();
+        //$posts->load('postable');
+        $posts->load(['postable' => function($query){
+            $query->with(['categorie' => function($query){
+                $query->with('forum');
+             }]);
+         }]);
+        
+         $parts = Event_user::latest()->where('user_id', $user->id)->with('event')->take(6)->get();
 
 
-
-        return view('profil.profil', compact('user'));
+        return view('profil.profil', compact('user', 'posts', 'parts' ));
     }
 
     public function store_desc(User $user, Request $request){

@@ -49,12 +49,7 @@
 
                    <li>
                         <div class="sm-pp__box pph {{ Auth::user()->house}}_bg">
-                            <img src="
-                            @if (Auth::user()->img)
-                            /{{ Auth::user()->img}}
-                            @else
-                                    {{'https://eu.ui-avatars.com/api/?name=' . urlencode(Auth::user()->name) . '&size=120&background=9165DF&color=ffffff'}}
-                            @endif" alt="" class="sm-pp">
+                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
                             <div class="sm-pp__info">
                                 <div class="{{ Auth::user()->house}}_c pph_user-name">
                                     {{ Auth::user()->name }}
@@ -113,7 +108,11 @@
                 <div class="separation_gold"><img src="{{ asset('img/sep_w.svg') }}" alt=""></div>
             
                 <p class="nmto">Nothing more to see here! </p>
-                <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a></p>
+                <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a>  <label class="switch">
+                    <input type="checkbox" id="switch_cb">
+                    <span class="slider round"></span>
+                      ICI!! <
+                  </label></p>
             </div>
         </header>
 
@@ -121,6 +120,7 @@
         @yield('content')
 
     </body>
+    <script src="{{ asset('js/app.js') }}"></script>
 
 
 </html>

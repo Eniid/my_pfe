@@ -86,11 +86,71 @@
     width: 100%;
 }
 
+.house_form{
+    .login_img{
+        letter-spacing: .1rem;
+        text-transform: uppercase;
+        text-align: left;
+        box-sizing: border-box;
+        padding-left: 5rem;
+        width: 25rem;
+
+
+    }
+
+
+}
+
+.register_sec{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+}
+
+.login_img:hover{
+    transform: scale(1.07);
+}
+
 
 .login_btn input:checked ~  .login_img{
     @include nmi; 
+    font-weight: bold;
+
+}
+
+.login_btn input:checked ~  .ravenclaw{
+    color: $c_ravenclaw;
+}
+
+.login_btn input:checked ~  .slytherin{
+    color: $c_slytherin;
+}
+
+.login_btn input:checked ~  .hufflepuff{
+    color: $c_hufflepuff;
+}
+
+
+.login_btn input:checked ~  .gryffindor{
+    color: $c_gryffondor;
 }
 
 input[type=radio] {
     display: none;
 }
+
+
+.fmh {
+    color: $c_main;
+    text-align: center;
+    font-weight: bold;
+}
+
+.fmh__box {
+    width: 100%;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+
+

@@ -16,4 +16,9 @@ class Event_user extends Model
 
      protected $table = 'event_user';
 
+     public function event()
+     {
+         return $this->belongsTo(Event::class);
+     }
+
 }

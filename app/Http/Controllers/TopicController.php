@@ -14,15 +14,23 @@ class TopicController extends Controller
 {
     public function show (Forum $forum, Categorie $categorie, Topic $topic){
 
-        $topic->load('posts');
-        $topic->posts->load('likes');
-        $topic->posts->load(['user' => function($query){
+
+        $posts = Post::with('likes')
+        ->with(['user' => function($query){
             $query->withCount('posts');
-         }]);
+         }])
+        ->where('postable_id', $topic->id)
+        ->where('postable_type', 'App\Models\Topic')
+        ->paginate(3);
+
+
+
+        //$topic->load('posts');
+
 //        $topic->posts->user->loadCount('posts');
 
 
-        return view('forums.categories.topics.topic', compact('categorie', 'forum', 'topic'));
+        return view('forums.categories.topics.topic', compact('categorie', 'forum', 'topic', 'posts'));
     }
 
 

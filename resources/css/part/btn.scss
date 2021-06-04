@@ -85,6 +85,10 @@
 }
 
 
+.log-cta:hover {
+    transform: scale(1.05)
+}
+
 .neu_r {
     @include nm; 
     border-radius: 2rem;

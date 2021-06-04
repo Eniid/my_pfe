@@ -59,6 +59,9 @@ Register |
             <label for="width">Lenghts</label>
             <input type="number" id="width" name="width" min="8" max="15"/> inches
             
+            <div class="fmh__box under">
+                Don't know what is your wand made of ? <a href="https://my.wizardingworld.com/register/age-gate" class="fmh" target="_blank"  rel="noreferrer noopener">Find out on Pottermore</a>
+            </div>
 
             @if ($errors->any())
                 <div class="alert alert-danger">
@@ -69,7 +72,9 @@ Register |
                     </ul>
                 </div>
             @endif
-            <button class="cta main-cta">Let's do some magic</button>
+            <div class="landing">   
+                <button class="cta register">Let's do magic</button>
+            </div> 
             
         </form>
     

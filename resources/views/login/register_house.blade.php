@@ -23,26 +23,31 @@ Register |
             <div>
                 <div class="login_btn">
                     <input type="radio" id="ravenclaw" name="house" value="ravenclaw">
-                    <label for="ravenclaw" class="login_img cta cta_r">🦅 Ravenclaw </label>
+                    <label for="ravenclaw" class="login_img cta cta_r ravenclaw">🦅 &nbsp; Ravenclaw &nbsp; </label>
                 </div>
                 <div class="login_btn">
                     <input type="radio" id="gryffindor" name="house" value="gryffindor">
-                    <label for="gryffindor" class="login_img cta">🦁 Gryffindor</label>
+                    <label for="gryffindor" class="login_img cta gryffindor">🦁 &nbsp; Gryffindor &nbsp;</label>
                 </div>
                 <div class="login_btn">
                     <input type="radio" id="slytherin" name="house" value="slytherin">
-                    <label for="slytherin" class="login_img cta cta_g">🐍 Slytherin</label>
+                    <label for="slytherin" class="login_img cta cta_g slytherin">🐍 &nbsp; Slytherin &nbsp;</label>
                 </div>
                 <div class="login_btn">
                     <input type="radio" id="hufflepuff" name="house" value="hufflepuff">
-                    <label for="hufflepuff" class="login_img cta">🦡 Hufflepuff</label>
+                    <label for="hufflepuff" class="login_img cta hufflepuff">🦡 &nbsp;  Hufflepuff &nbsp;</label>
                 </div>
             </div>
+            <div class="fmh__box under">
+                You don't know your house ?<a href="https://my.wizardingworld.com/register/age-gate" class="fmh" target="_blank"  rel="noreferrer noopener">Find out on Pottermore</a>
+            </div>
     
-            <button class="cta">Next</button>
-            
-            
+            <div class="landing">   
+                <button class="cta register">Next</button>
+            </div> 
         </form>
+
+
     
 
             

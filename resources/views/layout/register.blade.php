@@ -85,10 +85,13 @@
 
         </header>
 
-        <main>
+        <main class="register_sec">
             <!-- //?CONTENT   -->
             @yield('content_r')
         </main>
+
+
+        <script src="{{ asset('js/app.js') }}"></script>
 
     </body> 
  

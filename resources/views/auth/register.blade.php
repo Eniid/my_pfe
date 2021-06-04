@@ -20,8 +20,8 @@ Register |
         @csrf
         <div>
             <div>
-                <label for="name">Name</label>
-                <input type="text" id="name" name="name" value="{{ old('name') }}" required>
+                <label for="name">Pseudo</label>
+                <input type="text" id="name" name="name" value="{{ old('name') }}" required placeholder="Chose the name you want">
                 @error('name')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -51,7 +51,9 @@ Register |
         </div>
 
 
-        <button class="cta cta_register">Next</button>
+        <div class="landing">   
+            <button class="cta register">Next</button>
+        </div>
     </form>
 
         

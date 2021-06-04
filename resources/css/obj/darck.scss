@@ -1,0 +1,233 @@
+
+.dm_img{
+    display: none;
+}
+
+
+.dark {
+    .lm_img{
+        display: none;
+    }
+    .dm_img{
+        display: inline;
+    }
+
+    $c_bg: #3f3f47; 
+    $nmi : inset 2px 2px 6px #000000a3, inset -2px -2px 6px #ffffff3b;
+    $nm : 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+    $c_main : #d2b9ff;
+
+    color: #fff;
+
+
+    input {
+        box-shadow: $nmi;
+    }
+
+    textarea {
+        box-shadow: $nmi;
+        background: #3a3a40;
+    }
+
+    .cta_l {
+        box-shadow: $nm;
+        background: $c_main;
+    }
+
+    .sm-pp__box:hover .sm-pp__info {
+        box-shadow: $nm;
+        background: $c_bg;
+        a{
+            color: #fff;
+        }
+
+        .pph_texte label {
+            color: rgb(255, 255, 255);
+
+        }
+    }
+
+
+    h3 {
+        color: $c_main;
+    }
+
+    .sm-event__title {
+        color: $c_main;
+
+    }
+
+    .under a:hover:after {
+        background:$c_main;
+    }
+
+    .under .active:after {
+        background:$c_main;
+    }
+    
+    .lt__ariane a {
+        color: rgb(255, 255, 255);
+ 
+    }
+
+
+    .filters a {
+        color: #fff;
+    }
+
+
+    .sm-event__add {
+        background: $c_bg;
+        box-shadow: $nmi;
+
+    }
+
+    .sm-event__add:hover {
+        background: $c_bg;
+        box-shadow: $nmi;
+
+
+        .sm-event__button {
+            background: $c_bg;
+            box-shadow: $nm;
+        }
+    }
+
+    .sm-event__button {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+    .sm-event__button:hover {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+
+    .sm-event:hover {
+        background: $c_bg;
+        box-shadow: $nmi;
+    }
+
+    .cat-box {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+    .topic-list {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+    .nm {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+    .main-message .main-message__text {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+    .event-message .message__border {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+    
+    .main-sec {
+        background-color: $c_bg;
+    }
+
+    .topic-preview {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+
+    .sm-event {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+    .neu_r {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+
+    .house-cup__hourglass {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+
+    .sm-pp__box {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+
+    nav {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+    input {
+        background: $c_bg;
+
+    }
+
+    a {
+        color: #fff;
+    }
+
+
+
+
+
+
+
+
+
+
+
+    .ravenclaw_c {
+        color: #3a9cda !important;
+    }
+
+    .ravenclaw_c a {
+        color: #3a9cda !important;
+    }
+
+
+    .ravenclaw_c a:hover:after {
+        background: #3a9cda !important;
+    }
+
+    .gryffindor_c {
+        color: #f9578b !important;
+    }
+
+    .gryffindor_c a {
+        color: #f9578b !important;
+    }
+
+    .gryffindor_c a:hover:after {
+        background: #f9578b !important;
+    }
+
+    .slytherin_c {
+        color:  #5fbf4e !important;
+    }
+
+    .slytherin_c a {
+        color:  #5fbf4e !important;;
+    }
+
+    .slytherin_c a:hover:after {
+        background:  #5fbf4e !important;
+    }
+
+
+
+}

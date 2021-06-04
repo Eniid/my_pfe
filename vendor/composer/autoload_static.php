@@ -547,6 +547,7 @@ class ComposerStaticInitafaf701aa7c739e28a7e025fc92bab49
         'App\\Http\\Controllers\\TopicController' => __DIR__ . '/../..' . '/app/Http/Controllers/TopicController.php',
         'App\\Http\\Controllers\\UserController' => __DIR__ . '/../..' . '/app/Http/Controllers/UserController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
+        'App\\Http\\Livewire\\ShowPosts' => __DIR__ . '/../..' . '/app/Http/Livewire/ShowPosts.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => __DIR__ . '/../..' . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',

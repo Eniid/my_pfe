@@ -1045,13 +1045,61 @@ nav .sm-pp__box:hover .sm-pp__info {
   width: 100%;
 }
 
+.house_form .login_img {
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-align: left;
+  box-sizing: border-box;
+  padding-left: 5rem;
+  width: 25rem;
+}
+
+.register_sec {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.login_img:hover {
+  transform: scale(1.07);
+}
+
 .login_btn input:checked ~ .login_img {
   background: #F5F5F5;
   box-shadow: inset 4px 4px 6px #dadada, inset -4px -4px 6px #fff;
+  font-weight: bold;
+}
+
+.login_btn input:checked ~ .ravenclaw {
+  color: #405D8D;
+}
+
+.login_btn input:checked ~ .slytherin {
+  color: #206F12;
+}
+
+.login_btn input:checked ~ .hufflepuff {
+  color: #FFB37B;
+}
+
+.login_btn input:checked ~ .gryffindor {
+  color: #9B2727;
 }
 
 input[type=radio] {
   display: none;
+}
+
+.fmh {
+  color: #9165DF;
+  text-align: center;
+  font-weight: bold;
+}
+
+.fmh__box {
+  width: 100%;
+  text-align: center;
+  margin-top: 2rem;
 }
 
 .max-116 {
@@ -1498,6 +1546,254 @@ h3 a {
   margin: 0;
 }
 
+.landing__title {
+  width: 100%;
+  text-align: center;
+  font-size: 6rem;
+  font-family: cos, serif;
+  font-weight: 100;
+  margin: 7rem 0 1rem 0;
+}
+
+.landing_deco {
+  width: 100%;
+  text-align: center;
+}
+
+.landing__box {
+  position: relative;
+}
+
+.landing__text {
+  position: absolute;
+  top: 10rem;
+}
+
+.landing__content-box {
+  justify-content: space-around;
+}
+.landing__content-box div {
+  flex-grow: 1;
+  margin: 0 6rem 22rem 6rem;
+  max-width: 36%;
+}
+
+.landing__nm {
+  background: #F5F5F5;
+  box-shadow: 4px 4px 6px #0000001f, -4px -4px 6px #fff;
+  padding: 2rem;
+  height: 70%;
+  border-radius: 0.5rem;
+  padding: 6rem;
+  box-sizing: border-box;
+}
+
+.return_f {
+  flex-direction: row-reverse;
+}
+
+.landing .join_us {
+  background: linear-gradient(#a657d557, #7379eba3);
+  width: 15rem;
+  padding: 1.3rem;
+  margin: 5rem auto;
+  border: 1px solid #d3bae2;
+  box-shadow: 0px 11px 20px 4px rgba(169, 171, 239, 0.46);
+}
+.landing .join_us:hover {
+  box-shadow: -1px 4px 13px 4px rgba(169, 171, 239, 0.46);
+  transform: scale(0.97);
+}
+.landing .register {
+  background: linear-gradient(#a657d557, #7379eba3);
+  width: 15rem;
+  padding: 1.3rem;
+  margin: 5rem auto 0 auto;
+  border: 1px solid #d3bae2;
+  box-shadow: 0px 11px 20px 4px rgba(169, 171, 239, 0.46);
+  color: #fff;
+}
+.landing .register:hover {
+  box-shadow: -1px 4px 13px 4px rgba(169, 171, 239, 0.46);
+  transform: scale(0.97);
+}
+.landing .footer {
+  width: 100%;
+  text-align: center;
+  font-size: 1rem;
+  margin-top: 16rem;
+  margin-bottom: 0;
+}
+
+input[type=checkbox] {
+  display: inline;
+}
+
+.remember {
+  display: inline;
+}
+
+.form-check {
+  margin-top: 2rem;
+}
+
+.dm_img {
+  display: none;
+}
+
+.dark {
+  color: #fff;
+}
+.dark .lm_img {
+  display: none;
+}
+.dark .dm_img {
+  display: inline;
+}
+.dark input {
+  box-shadow: inset 2px 2px 6px #000000a3, inset -2px -2px 6px #ffffff3b;
+}
+.dark textarea {
+  box-shadow: inset 2px 2px 6px #000000a3, inset -2px -2px 6px #ffffff3b;
+  background: #3a3a40;
+}
+.dark .cta_l {
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+  background: #d2b9ff;
+}
+.dark .sm-pp__box:hover .sm-pp__info {
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+  background: #3f3f47;
+}
+.dark .sm-pp__box:hover .sm-pp__info a {
+  color: #fff;
+}
+.dark .sm-pp__box:hover .sm-pp__info .pph_texte label {
+  color: white;
+}
+.dark h3 {
+  color: #d2b9ff;
+}
+.dark .sm-event__title {
+  color: #d2b9ff;
+}
+.dark .under a:hover:after {
+  background: #d2b9ff;
+}
+.dark .under .active:after {
+  background: #d2b9ff;
+}
+.dark .lt__ariane a {
+  color: white;
+}
+.dark .filters a {
+  color: #fff;
+}
+.dark .sm-event__add {
+  background: #3f3f47;
+  box-shadow: inset 2px 2px 6px #000000a3, inset -2px -2px 6px #ffffff3b;
+}
+.dark .sm-event__add:hover {
+  background: #3f3f47;
+  box-shadow: inset 2px 2px 6px #000000a3, inset -2px -2px 6px #ffffff3b;
+}
+.dark .sm-event__add:hover .sm-event__button {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .sm-event__button {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .sm-event__button:hover {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .sm-event:hover {
+  background: #3f3f47;
+  box-shadow: inset 2px 2px 6px #000000a3, inset -2px -2px 6px #ffffff3b;
+}
+.dark .cat-box {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .topic-list {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .nm {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .main-message .main-message__text {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .event-message .message__border {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .main-sec {
+  background-color: #3f3f47;
+}
+.dark .topic-preview {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .sm-event {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .neu_r {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .house-cup__hourglass {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark .sm-pp__box {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark nav {
+  background: #3f3f47;
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+}
+.dark input {
+  background: #3f3f47;
+}
+.dark a {
+  color: #fff;
+}
+.dark .ravenclaw_c {
+  color: #3a9cda !important;
+}
+.dark .ravenclaw_c a {
+  color: #3a9cda !important;
+}
+.dark .ravenclaw_c a:hover:after {
+  background: #3a9cda !important;
+}
+.dark .gryffindor_c {
+  color: #f9578b !important;
+}
+.dark .gryffindor_c a {
+  color: #f9578b !important;
+}
+.dark .gryffindor_c a:hover:after {
+  background: #f9578b !important;
+}
+.dark .slytherin_c {
+  color: #5fbf4e !important;
+}
+.dark .slytherin_c a {
+  color: #5fbf4e !important;
+}
+.dark .slytherin_c a:hover:after {
+  background: #5fbf4e !important;
+}
+
 .sm-pp__box {
   background: #F5F5F5;
   box-shadow: 4px 4px 6px #0000001f, -4px -4px 6px #fff;
@@ -1628,6 +1924,10 @@ h3 a {
   font-size: 1.2rem;
 }
 
+.log-cta:hover {
+  transform: scale(1.05);
+}
+
 .neu_r {
   background: #F5F5F5;
   box-shadow: 4px 4px 6px #0000001f, -4px -4px 6px #fff;
@@ -1752,10 +2052,21 @@ header .separation {
 
 .annimation {
   opacity: 0;
-  transform: translateY(50px);
+  transform: translateY(150px);
 }
 
 .animation_suite {
+  opacity: 1;
+  transform: translateY(0px);
+  transition: transform 1s;
+}
+
+.annimation_home {
+  opacity: 0;
+  transform: translateY(100px);
+}
+
+.animation_suite_home {
   opacity: 1;
   transform: translateY(0px);
   transition: transform 1s;
@@ -1971,4 +2282,12 @@ header .separation {
   padding: 0 !important;
   overflow: hidden !important;
   clip: rect(0, 0, 0, 0) !important;
+}
+
+span.invalid-feedback {
+  font-size: 1.4rem;
+  color: red;
+  letter-spacing: normal;
+  top: -2rem;
+  padding: 2rem 0;
 }

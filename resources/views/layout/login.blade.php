@@ -48,7 +48,9 @@
             
             
                 <div class="login_btn">
-                    <input type="checkbox" id="login_img" class="login_checkbox">
+                    <input type="checkbox" id="login_img" class="login_checkbox"                                 @if ($errors->any())
+                    checked
+                @endif>
                     <div class="login_btn">
                         <label for="login_img" class="login_text">‍Login</label>
                     </div>
@@ -78,14 +80,15 @@
                                         <div class="form-check">
                                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                 
-                                            <label class="form-check-label" for="remember">
+                                            <label class="form-check-label remember" for="remember">
                                                 {{ __('Remember Me') }}
                                             </label>
                                         </div>
                                     </div>
                                 </div>
-                
-                                <button type="submit" class="cta">Enter the wizarding world</button>
+                                <div class="landing">   
+                                    <button class="cta register">Login</button>
+                                </div>
                             </form>
                     </div>
                 </div>
@@ -101,6 +104,9 @@
             <!-- //?CONTENT   -->
             @yield('content_l')
         </main>
+
+
+        <script src="{{ asset('js/app.js') }}"></script>
 
 
     </body> 

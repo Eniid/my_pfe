@@ -28,7 +28,11 @@ class EventController extends Controller
 
 
         $event->load('event_user');        
-        $event->load('posts');
+        //$event->load('posts');
+        $event->load(['posts' => function($query){
+            $query->latest();
+         }]);
+
         $event->posts->load(['user' => function($query){
             $query->withCount('posts');
          }]);

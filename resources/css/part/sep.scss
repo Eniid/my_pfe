@@ -42,10 +42,22 @@ header .separation {
 
  .annimation {
     opacity:0;
-    transform: translateY(50px);
+    transform: translateY(150px);
 }
 
  .animation_suite {
+    opacity:1;
+    transform: translateY(0px);
+    transition: transform 1s;
+}
+
+
+.annimation_home {
+    opacity:0;
+    transform: translateY(100px);
+}
+
+ .animation_suite_home {
     opacity:1;
     transform: translateY(0px);
     transition: transform 1s;

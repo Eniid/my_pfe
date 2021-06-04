@@ -100,7 +100,7 @@
                                     <span class="sm-event__date__day">10</span>
                                     <span class="sm-event__date__time">10.20AM</span>
                                 </div>
-                                <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">{{$event->place}}</span>
+                                <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">{{$event->place}}</span>
                             </section>
                         </a>
                     @endforeach
@@ -195,7 +195,7 @@
         </div>
 
         @foreach ($posts as $post)
-        <section class="topic-preview">
+        <section class="topic-preview annim_home annimation_home">
             <h3 class="lt__title"><a href="{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}/{{ $post->postable->slug}}"> {{ $post->postable->title }}</a></h3>
             <span class="lt__ariane under"> <a href="/{{ $post->postable->categorie->forum->slug}}">{{ $post->postable->categorie->forum->name}}</a> ↣ <a href="/{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}"> {{ $post->postable->categorie->name}} </a> </span>
 

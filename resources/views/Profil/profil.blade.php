@@ -259,7 +259,7 @@
         </div>
 
 
-        <section class="topic-preview">
+        <section class="topic-preview annim_home annimation_home">
             <h3 class="lt__title">Topic title</h3>
             <span class="lt__ariane">Forum ↣ category</span>
 

@@ -17,7 +17,8 @@ Topic Name |
 
     <!-- TOPIC -->
 
-            @foreach($topic->posts as $post)
+    {{ $posts->links() }}
+            @foreach($posts as $post)
                 <div class="main-message flex">
                     <!-- Profil -->
                     <div class="post_profil">

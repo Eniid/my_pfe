@@ -37,14 +37,14 @@
                    <li><a href="/ww">Wizarding World</a></li> 
                    <li><a href="/bs">Between us</a></li> 
                    <li><a href="/rp">Role Play</a></li> 
-                   <li><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}" alt=""></a></li> 
+                   <li><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}" alt="home_page" class="lm_img"><img src="{{ asset('img/d_house.svg') }}" alt="home_page" class="dm_img"></a></li> 
                    <li><a href="{{ url('events') }}">Events</a></li> 
                    <li><a href="/">Owls</a></li> 
                    <li>
                         <form action="" class="search-form">
                             <div class="searchbox">
                                 <input type="text" name="" id="" placeholder="search">
-                                <a href="#"><img src="{{ asset('img/search.svg') }}" alt="search"></a>
+                                <a href="#"><img src="{{ asset('img/search.svg') }}" class="lm_img" alt="search"><img src="{{ asset('img/d_search.svg') }}" class="dm_img" alt="search"></a>
                             </div>
                         </form>
                    </li> 
@@ -115,7 +115,14 @@
                 <div class="separation_gold"><img src="{{ asset('img/sep_w.svg') }}" alt=""></div>
             
                 <p class="nmto">Nothing more to see here! </p>
-                <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a></p>
+
+
+                <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a>
+                    <label class="switch">
+                      <input type="checkbox" id="switch_cb">
+                      <span class="slider round"></span>
+                        ICI!! <
+                    </label></p>
             </div>
         </header>
 

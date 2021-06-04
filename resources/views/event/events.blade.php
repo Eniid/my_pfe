@@ -85,7 +85,7 @@ Event Name |
 
         
         @foreach($events as $event)
-        <section class="topic-preview">
+        <section class="topic-preview annim_home annimation_home">
             <h3 class="lt__title"> <a href="/events/{{$event->slug}}"> {{ $event->name }}</a></h3>
             <span class="lt__ariane">{{ $event->date }}</span>
 
