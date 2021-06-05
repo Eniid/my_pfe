@@ -4,12 +4,47 @@
 }
 
 
+.mode_switch{
+    position: relative;
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    position: fixed;
+    bottom: 3rem;
+    right: 3rem;
+    z-index: 10000000000000000000000000000000000000000000000000000000000000000000000000000;
+    background: linear-gradient(#a657d557, #7379eba3);
+    width: 15rem;
+    padding: 1.3rem;
+    border: 1px solid #d3bae2;
+    box-shadow: 0px 11px 20px 4px rgb(169 171 239 / 46%);
+    height: 6rem;
+    width: 6rem;
+    border-radius: 10rem;
+    color: #fff;
+}
+
+.mode_switch:hover{
+    transform: scale(1.1);
+
+}
+
+.round {
+    padding: 1.5rem
+}
+
 .dark {
+
+
+
     .lm_img{
         display: none;
     }
     .dm_img{
         display: inline;
+        margin: 0 -1rem;
     }
 
     $c_bg: #3f3f47; 
@@ -17,16 +52,50 @@
     $nm : 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
     $c_main : #d2b9ff;
 
+
+
+
+    .card {
+        box-shadow: $nm;
+        background: #3a3a40;
+    }
+    
+    
+    .card_ex:hover .sm-pp__info {
+        box-shadow: $nm;
+        background: #3a3a40;
+    
+    }
+    
+    .house-cup__sand:hover .house-point-display {
+        box-shadow: $nm;
+        background: #3a3a40; 
+    }
+
+
+
+.mode_switch{
+    box-shadow: $nm;
+    background: #3a3a40;
     color: #fff;
 
+}
+
+    color: #fff;
+
+    label {
+        color: #fff;
+    }
 
     input {
         box-shadow: $nmi;
+        color: #fff;
     }
 
     textarea {
         box-shadow: $nmi;
         background: #3a3a40;
+        color: #fff;
     }
 
 
@@ -35,6 +104,10 @@
 
     }
 
+
+    .login_checkbox:checked ~ .login_text .cross {
+        color: #fff;
+    }
     .cta_l {
         box-shadow: $nm;
         background: $c_main;

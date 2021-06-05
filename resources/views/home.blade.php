@@ -8,7 +8,7 @@
 
 @section('content')
 <main class="main-sec">
-
+    <div class="frame">
 
     <!-- House cup and last event -->
     <div class="home-info">
@@ -19,9 +19,21 @@
                 <div class="flex filters">
                     <h2>House Cup</h2>
                     <div class="under">
-                        <div class="neu_r"> 
-                            <a href="#">?</a>
+                        <div class="card_ex">
+                            <div class="card" tabindex="0">
+                                <span class="card__infoicon">
+                                  <i class="fa fa-info">?</i>
+                                </span>
+                           </div>
+                           <div class="sm-pp__info">
+                                <p>Every time you post a message, you win 1 point</p>
+                                <p>Every time you post a message, you win 1 point</p>
+                                <p>Every time you post a message, you win 1 point</p>
+                                <p>Every time you post a message, you win 1 point</p>
+
+                            </div>
                         </div>
+                        
                     </div>
                 </div>
                 <div class="house_cup__all">
@@ -124,21 +136,33 @@
 
 
        <!-- Users -->
+        <div class="flex users_flex">
+
 
                <!-- Online users -->
                 <section class="online">
                     <h3 class="h2-like">Who's online ?</h3>
                     <div class="flex">
                             <div class="sm-pp__box ravenclaw_bg">
-                                <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                                <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
                                 <div class="sm-pp__info">
                                     Enid
                                 </div>
                             </div>
                             <div class="sm-pp__box gryffindor_bg">
-                                <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                                <img src="/img/profil/1622615983-c43992e5e65f09cc53d24bc93fa4437e.png" alt="" class="sm-pp">
                                 <div class="sm-pp__info">
-                                    Eliie
+                                    Lucy
+                                </div>
+                            </div>
+                            <div class="sm-pp__box {{ Auth::user()->house}}_bg">
+                                <img src="@if (Auth::user()->img)
+                                /{{ Auth::user()->img}}
+                                @else
+                                        {{'https://eu.ui-avatars.com/api/?name=' . urlencode(Auth::user()->name) . '&size=120&background=9165DF&color=ffffff'}}
+                                @endif" alt="" class="sm-pp">
+                                <div class="sm-pp__info">
+                                    {{ Auth::user()->name }}
                                 </div>
                             </div>
                     </div>
@@ -169,7 +193,8 @@
 
 
                     </div>
-                </secttion>
+                </section>
+            </div>
     </aside>
 
 
@@ -231,6 +256,8 @@
         @endforeach
     </section>
 
+
+</div>
 
 
  

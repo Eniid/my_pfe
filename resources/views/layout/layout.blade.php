@@ -31,13 +31,14 @@
     <body class="body_test">
         <header>
         @auth
+        <input type="checkbox" id="nav" class="visually-hidden nav_check">
             <nav>
                 <h2 class="visually-hidden">Menu de Navigation</h2>
                 <ol class="flex nav-ol">
                    <li><a href="/ww">Wizarding World</a></li> 
                    <li><a href="/bs">Between us</a></li> 
                    <li><a href="/rp">Role Play</a></li> 
-                   <li><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}" alt="home_page" class="lm_img"><img src="{{ asset('img/d_house.svg') }}" alt="home_page" class="dm_img"></a></li> 
+                   <li class="home_li"><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}" alt="home_page" class="lm_img"><img src="{{ asset('img/d_house.svg') }}" alt="home_page" class="dm_img"></a></li> 
                    <li><a href="{{ url('events') }}">Events</a></li> 
                    <li><a href="/">Owls</a></li> 
                    <li>
@@ -49,7 +50,7 @@
                         </form>
                    </li> 
 
-                   <li>
+                   <li class="avatar_li">
                         <div class="sm-pp__box pph {{ Auth::user()->house}}_bg">
                             <img src="
                             @if (Auth::user()->img)
@@ -70,16 +71,25 @@
 
                                 <!-- //? BIGINING OF NOTIFICATIONS  -->
 
-                                <div class="login_btn">
+                                <div class="login_btn note-info">
                                     <input type="checkbox" id="login_img" class="login_checkbox">
                                     <div class="login_btn pph_texte pph_n">
-                                        <label for="login_img" class="login_text">‍Notifications</label>
+                                        <label for="login_img" class="login_text">‍Notifications <span class="cross ">Close</span></label>
                                     </div>
                                     <div class="login_content">
-                                        <div class="bg-color {{ Auth::user()->house}}_full_bg">
+                                            <div class="bg-color {{ Auth::user()->house}}_full_bg">
+                                            </div>             
                                             <div class="main-sec registration-sec notification_box">
-                                                teste
-                                            </div>
+                                                <div class="close"><a href="#">Close</a></div>
+                                                <form action="/profil/edit" method="post" enctype="multipart/form-data">
+                                                    @csrf
+            
+                                                   <input type="checkbox" id="message" class="notification_check"> <label for="message">Revive a notification when someone answer a message I folow</label>
+                                                  
+                                                    <a href="#" class="cta cta_i cta_l {{ Auth::user()->house}}_bg">Save</a>
+                                            
+            
+                                                </form>
                                         </div>
                                         
 
@@ -99,8 +109,24 @@
                         </div>
                    </li> 
                 </ol>
+                <label for="nav" class="navigation_l">
+                    <span class="m_open">Menu</span><span class="m_close">Close</span>
+                </label>
             </nav>
+
         @endauth  
+
+
+
+
+
+
+        <label class="switch mode_switch">
+            <input type="checkbox" id="switch_cb" class="visually-hidden">
+            <img src="{{ asset('img/b1.svg') }}" class="wand_img dm_w" alt="">
+            <span class="slider round lm_img">Nox</span>
+            <span class="slider round dm_img">Lumos</span>
+        </label>
 
 
           
@@ -111,24 +137,24 @@
                 <div class="bg-color {{ Auth::user()->house}}_full_bg"></div>
             
                 <div class="logo_img"><img src="{{ asset('img/asset167.png') }}" alt=""></div>
-                <h1 class="main_title main_title__logged">Wizarding World <span>ONLINE</span> </h1>
+                <h1 class="main_title main_title__logged"><a href="{{ url('/') }}">Wizarding World <span>ONLINE</span></a> </h1>
                 <div class="separation_gold"><img src="{{ asset('img/sep_w.svg') }}" alt=""></div>
             
-                <p class="nmto">Nothing more to see here! </p>
-
-
-                <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a>
-                    <label class="switch">
-                      <input type="checkbox" id="switch_cb">
-                      <span class="slider round"></span>
-                        ICI!! <
-                    </label></p>
-            </div>
+             </div>
         </header>
 
         <!-- //?CONTENT   -->
         @yield('content')
 
+
+
+        <footer class="bg head-sec footer-sec">
+            <p class="nmto">Nothing more to see here! </p>
+
+
+                <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a></p>
+       
+        </footer>
 
         <script src="{{ asset('js/app.js') }}"></script>
 

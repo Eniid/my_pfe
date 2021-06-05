@@ -1,3 +1,10 @@
+@charset "UTF-8";
+.frame {
+  position: relative;
+  max-width: 140rem;
+  margin: auto;
+}
+
 /*
     ? The firts letter of the variables are made to indicate what we're talking about. 
     - c_ -> the colors 
@@ -510,7 +517,7 @@ textarea {
 }
 
 aside {
-  top: 5rem;
+  top: 0rem;
   right: 5rem;
   position: absolute;
   width: 30%;
@@ -579,6 +586,14 @@ aside {
 .topic_box {
   max-width: 100rem;
   margin: 0 auto;
+}
+
+.head-sec {
+  z-index: -10;
+}
+
+.footer-sec {
+  z-index: -10;
 }
 
 .house_cup__all {
@@ -870,7 +885,7 @@ nav .sm-pp__box:hover .sm-pp__info {
   align-items: center;
   justify-content: space-evenly;
   padding: 0;
-  max-width: 200rem;
+  max-width: 150rem;
   margin: 1.5rem auto;
 }
 
@@ -901,6 +916,69 @@ nav .sm-pp__box:hover .sm-pp__info {
   margin: 0;
 }
 
+.navigation_l {
+  display: none;
+}
+
+@media screen and (max-width: 1100px) {
+  .nav-ol {
+    flex-direction: column;
+    height: 80%;
+  }
+
+  nav {
+    height: 63rem;
+    position: fixed;
+    transform: translateY(-56rem);
+    transition: transform 0.5s cubic-bezier(0.29, 0.54, 0.57, 0.79);
+  }
+
+  .home_li {
+    order: -1;
+  }
+
+  .avatar_li {
+    position: absolute;
+    top: 3rem;
+    right: 3rem;
+  }
+
+  .navigation_l {
+    display: block;
+    padding: 2rem;
+    position: relative;
+    top: 3rem;
+    text-transform: uppercase;
+  }
+
+  .m_close {
+    display: none;
+  }
+
+  .m_open {
+    display: block;
+    padding-bottom: 1rem;
+    border-bottom: 2px #aa9120 solid;
+    width: 90%;
+    margin: auto;
+  }
+
+  .nav_check:checked ~ nav {
+    top: 0rem;
+    transform: translateY(0);
+    transition: transform 0.5s cubic-bezier(0.29, 0.54, 0.57, 0.79);
+  }
+  .nav_check:checked ~ nav .m_close {
+    display: block;
+    padding-bottom: 1rem;
+    border-bottom: 2px #aa9120 solid;
+    width: 90%;
+    margin: auto;
+  }
+  .nav_check:checked ~ nav .m_open {
+    display: none;
+  }
+}
 .login-main-sec {
   margin-top: 100vh;
   margin-bottom: 0rem;
@@ -1401,6 +1479,15 @@ h3 a {
   background-color: rgba(255, 0, 0, 0);
 }
 
+.note-info .login_content {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  background-color: rgba(255, 0, 0, 0);
+}
+
 .edit__p .notification_box label {
   margin: 3rem 0 1rem 0;
 }
@@ -1431,6 +1518,25 @@ h3 a {
   z-index: 99999999999999990000000000;
   color: black;
   font-size: 1.4rem;
+}
+
+.notification_box  {
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+}
+.close a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  color: black;
+}
+
+.notification_check {
+  display: inline;
 }
 
 .profil__main-sec {
@@ -1641,6 +1747,36 @@ input[type=checkbox] {
   display: none;
 }
 
+.mode_switch {
+  position: relative;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: center;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  z-index: 10000000000000000000000000000000000000000000000000000000000000000000000000000;
+  background: linear-gradient(#a657d557, #7379eba3);
+  width: 15rem;
+  padding: 1.3rem;
+  border: 1px solid #d3bae2;
+  box-shadow: 0px 11px 20px 4px rgba(169, 171, 239, 0.46);
+  height: 6rem;
+  width: 6rem;
+  border-radius: 10rem;
+  color: #fff;
+}
+
+.mode_switch:hover {
+  transform: scale(1.1);
+}
+
+.round {
+  padding: 1.5rem;
+}
+
 .dark {
   color: #fff;
 }
@@ -1649,13 +1785,36 @@ input[type=checkbox] {
 }
 .dark .dm_img {
   display: inline;
+  margin: 0 -1rem;
+}
+.dark .card {
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+  background: #3a3a40;
+}
+.dark .card_ex:hover .sm-pp__info {
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+  background: #3a3a40;
+}
+.dark .house-cup__sand:hover .house-point-display {
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+  background: #3a3a40;
+}
+.dark .mode_switch {
+  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+  background: #3a3a40;
+  color: #fff;
+}
+.dark label {
+  color: #fff;
 }
 .dark input {
   box-shadow: inset 2px 2px 6px #000000a3, inset -2px -2px 6px #ffffff3b;
+  color: #fff;
 }
 .dark textarea {
   box-shadow: inset 2px 2px 6px #000000a3, inset -2px -2px 6px #ffffff3b;
   background: #3a3a40;
+  color: #fff;
 }
 .dark textarea::-moz-placeholder {
   color: #f1f1f1;
@@ -1665,6 +1824,9 @@ input[type=checkbox] {
 }
 .dark textarea::placeholder {
   color: #f1f1f1;
+}
+.dark .login_checkbox:checked ~ .login_text .cross {
+  color: #fff;
 }
 .dark .cta_l {
   box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
@@ -1958,6 +2120,10 @@ input[type=checkbox] {
 .head-sec {
   position: fixed;
   text-align: center;
+}
+.head-sec a {
+  text-decoration: none;
+  color: #fff;
 }
 .head-sec .bg {
   position: fixed;
@@ -2290,6 +2456,331 @@ header .separation {
   bottom: 1rem;
 }
 
+.wand_img {
+  max-width: 30rem;
+}
+
+.dm_w {
+  transform: rotate(90deg);
+  max-width: 10rem;
+  position: absolute;
+  top: -2rem;
+  right: -1rem;
+}
+
+.bounce-bottom {
+  -webkit-animation: bounce-bottom 0.9s both;
+          animation: bounce-bottom 0.9s both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-6-4 20:26:36
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation bounce-bottom
+ * ----------------------------------------
+ */
+@-webkit-keyframes bounce-bottom {
+  0% {
+    transform: translateY(45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+@keyframes bounce-bottom {
+  0% {
+    transform: translateY(45px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+    opacity: 1;
+  }
+  24% {
+    opacity: 1;
+  }
+  40% {
+    transform: translateY(24px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  65% {
+    transform: translateY(12px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  82% {
+    transform: translateY(6px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  93% {
+    transform: translateY(4px);
+    -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+  }
+  25%, 55%, 75%, 87% {
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+  }
+  100% {
+    transform: translateY(0px);
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    opacity: 1;
+  }
+}
+.tracking-in-expand {
+  -webkit-animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+          animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.61, 0.355, 1) both;
+}
+
+/* ----------------------------------------------
+ * Generated by Animista on 2021-6-4 20:35:17
+ * Licensed under FreeBSD License.
+ * See http://animista.net/license for more info. 
+ * w: http://animista.net, t: @cssanimista
+ * ---------------------------------------------- */
+/**
+ * ----------------------------------------
+ * animation tracking-in-expand
+ * ----------------------------------------
+ */
+@-webkit-keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes tracking-in-expand {
+  0% {
+    letter-spacing: -0.5em;
+    opacity: 0;
+  }
+  40% {
+    opacity: 0.6;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+.card_ex {
+  position: relative;
+  top: -1.5rem;
+}
+
+.card {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: #F5F5F5;
+  box-shadow: 4px 4px 6px #0000001f, -4px -4px 6px #fff;
+  border-radius: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000000000;
+}
+
+.hidden__info {
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 0;
+  background: #F5F5F5;
+  box-shadow: 4px 4px 6px #0000001f, -4px -4px 6px #fff;
+  border-radius: 2rem;
+  width: 3rem;
+  height: 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card_ex:hover .sm-pp__info {
+  display: inline-block;
+  left: -3rem;
+  position: absolute;
+  box-shadow: 1px 1px 2px #00000021, -1px -1px 2px #fff;
+  background-color: #F5F5F5;
+  border-radius: 2rem;
+  width: 35rem;
+  z-index: 1000000;
+  padding: 1rem;
+  font-size: 1.1rem;
+  text-align: center;
+}
+.card_ex:hover .card {
+  box-shadow: none;
+}
+
+.house-cup {
+  width: 35rem;
+}
+
+.frame {
+  position: relative;
+  max-width: 140rem;
+  margin: auto;
+}
+
+/**** LOGO ****/
+@media screen and (max-width: 800px) {
+  .head-sec h1 {
+    font-size: 6.5rem;
+    top: 12rem;
+  }
+}
+@media screen and (max-width: 600px) {
+  .head-sec h1 {
+    font-size: 5.5rem;
+    top: 13rem;
+  }
+
+  .head-sec span {
+    font-size: 2.8rem;
+    letter-spacing: 1rem;
+    top: -1rem;
+  }
+}
+@media screen and (max-width: 500px) {
+  .head-sec h1 {
+    font-size: 4.5rem;
+    top: 15rem;
+  }
+
+  .head-sec span {
+    font-size: 2.5rem;
+    letter-spacing: 1rem;
+    top: -0.1rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .head-sec h1 {
+    font-size: 4rem;
+    top: 15rem;
+  }
+}
+@media screen and (max-width: 340px) {
+  .head-sec h1 {
+    font-size: 3rem;
+    top: 17rem;
+  }
+
+  .head-sec span {
+    font-size: 2rem;
+  }
+}
+/**** Footer ****/
+@media screen and (max-width: 800px) {
+  .head-sec .nmto {
+    font-size: 3rem;
+    line-height: 3rem;
+  }
+}
+/***** HOME ******/
+@media only screen and (min-width: 768px) and (max-width: 1430px) {
+  aside {
+    position: relative;
+    width: 100%;
+    max-width: 30rem;
+  }
+
+  .home-house_ev {
+    width: 100%;
+    justify-content: center;
+  }
+}
+@media only screen and (max-width: 1150px) {
+  .home-house_ev {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+@media only screen and (max-width: 500px) {
+  .main-sec {
+    padding: 1.5rem;
+  }
+
+  .lt__title {
+    padding-top: 5.5rem;
+  }
+
+  .last-event__flex-contener {
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+  }
+}
+.users_flex {
+  flex-direction: column;
+}
+
+@media only screen and (max-width: 1430px) {
+  .last-topics {
+    width: auto;
+  }
+}
+@media only screen and (max-width: 730px) {
+  .filters {
+    flex-direction: column;
+  }
+  .filters .under {
+    position: relative;
+    top: -1.5rem;
+  }
+
+  .house-cup .filters {
+    flex-direction: row;
+  }
+}
 .visually-hidden {
   position: absolute !important;
   border: 0 !important;

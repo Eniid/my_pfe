@@ -32,7 +32,7 @@
                 <div class="bg-color"></div>
             
                 <div class="logo_img"><img src="img/asset167.png" alt=""></div>
-                <h1 class="main_title">Wizarding World <span>ONLINE</span> </h1>
+                <h1 class="main_title tracking-in-expand">Wizarding World <span>ONLINE</span> </h1>
                 <div class="separation_gold"><img src="{{ asset('img/sep.svg') }}" alt=""></div>
             
             

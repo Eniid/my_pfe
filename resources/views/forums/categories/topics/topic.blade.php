@@ -15,6 +15,10 @@ Topic Name |
             <a href="/{{ $forum->slug }}">{{ $forum->name }} </a> ↣ <a href="/{{ $forum->slug}}/{{$categorie->slug}}">{{ $categorie->name }}</a> ↣ {{ $topic->title }}
         </span>
 
+
+
+
+
     <!-- TOPIC -->
 
     {{ $posts->links() }}

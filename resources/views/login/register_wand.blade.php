@@ -39,6 +39,11 @@ Register |
                 <option value="Walnut">
                 <option value="Willow">
             </datalist>
+            @error('wood')
+            <span class="invalid-feedback" role="alert">
+                <strong>You have to chose your house first</strong>
+            </span>
+            @enderror
             
             <label for="core-choice">Core</label>
             <input list="core" id="core-choice" name="core" />
@@ -55,23 +60,24 @@ Register |
                 <option value="White River Monster spine">
                 <option value="Rougarou hair">
             </datalist>
+            @error('core')
+            <span class="invalid-feedback" role="alert">
+                <strong>You have to chose your house first</strong>
+            </span>
+            @enderror
 
             <label for="width">Lenghts</label>
             <input type="number" id="width" name="width" min="8" max="15"/> inches
-            
+            @error('width')
+            <span class="invalid-feedback" role="alert">
+                <strong>You have to chose your house first</strong>
+            </span>
+            @enderror
+
             <div class="fmh__box under">
                 Don't know what is your wand made of ? <a href="https://my.wizardingworld.com/register/age-gate" class="fmh" target="_blank"  rel="noreferrer noopener">Find out on Pottermore</a>
             </div>
 
-            @if ($errors->any())
-                <div class="alert alert-danger">
-                    <ul>
-                        @foreach ($errors->all() as $error)
-                            <li>{{ $error }}</li>
-                        @endforeach
-                    </ul>
-                </div>
-            @endif
             <div class="landing">   
                 <button class="cta register">Let's do magic</button>
             </div> 

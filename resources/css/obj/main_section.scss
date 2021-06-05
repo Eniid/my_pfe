@@ -59,7 +59,7 @@
 //**HOME DISP**//
 
 aside {
-    @include absolute(right 5rem top 5rem);
+    @include absolute(right 5rem top 0rem);
     width: 30%;
     max-width: 30rem;
 
@@ -136,4 +136,13 @@ aside {
 .topic_box {
     max-width: 100rem;
     margin: 0 auto;
+}
+
+
+.head-sec {
+    z-index: -10;
+}
+
+.footer-sec {
+    z-index: -10;
 }

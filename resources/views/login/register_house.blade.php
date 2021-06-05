@@ -38,6 +38,11 @@ Register |
                     <label for="hufflepuff" class="login_img cta hufflepuff">🦡 &nbsp;  Hufflepuff &nbsp;</label>
                 </div>
             </div>
+            @error('house')
+            <span class="invalid-feedback" role="alert">
+                <strong>You have to chose your house first</strong>
+            </span>
+            @enderror
             <div class="fmh__box under">
                 You don't know your house ?<a href="https://my.wizardingworld.com/register/age-gate" class="fmh" target="_blank"  rel="noreferrer noopener">Find out on Pottermore</a>
             </div>

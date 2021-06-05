@@ -19,8 +19,18 @@ New Topic |
         <form action="/{{ $forum->slug}}/{{$categorie->slug}}/topics/store" method='post'>
             @csrf 
             <input type="text" name="title">
-            <input type="file" name="img">
-            <textarea name="body" id="" cols="30" rows="10">Votre message</textarea>
+            @error('title')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
+
+            <textarea name="body" id="" cols="30" rows="10" placeholder="Votre message"></textarea>
+            @error('body')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
             <button>Send</button>
         </form>
     </section>

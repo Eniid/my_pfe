@@ -61,41 +61,59 @@
                                             Profil Picture
                                         </label>
                                         <input type="file" name="profil" accept=".png,.jpg,.jpeg,.gif">
+                                        @error('profil')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
 
                                         <label for="name">
                                             Name
                                         </label>
                                         <input type="text" name="name" id="name" value="{{ $user->name }}">
+                                        @error('name')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
 
                                         <label for="name">
                                             Email
                                         </label>
                                         <input type="text"  name="email" id="name" value="{{ $user->email }}">
+                                        @error('email')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
 
                                         <div class="dash_sep">
                                             <img src="{{ asset('img/sep.svg') }}" alt="">
                                         </div>
+                                        
 
                                         <label for="name">
                                             New Passwors
                                         </label>
-                                        <input type="text" name="password" id="name">
+                                        <input type="password" name="password" id="name">
+                                        @error('password')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
 
                                         <label for="name">
                                             Confirm Password
                                         </label>
-                                        <input type="text" id="name" name="password_confirmation">
+                                        <input type="password" id="name" name="password_confirmation">
+                                        @error('password_confirmation')
+                                        <span class="invalid-feedback" role="alert">
+                                            <strong>{{ $message }}</strong>
+                                        </span>
+                                        @enderror
 
 
-                                        @if ($errors->any())
-                                        <div class="alert alert-danger">
-                                            <ul>
-                                                @foreach ($errors->all() as $error)
-                                                    <li>{{ $error }}</li>
-                                                @endforeach
-                                            </ul>
-                                        </div>
-                                    @endif
+                                       
                                         <button class="cta cta_i cta_l {{ Auth::user()->house}}_bg">Send</button>
                                 
 
@@ -172,7 +190,7 @@
                         <p>{{ $user->wand_wood }}</p>    
                         <p>{{ $user->wand_inside }}</p>
                         <p>{{ $user->wand_length }} inches</p>
-                        <img src="{{ asset('img/wand.png') }}" alt="">
+                        <img src="{{ asset('img/b1.svg') }}" class="wand_img bounce-bottom" alt="">
                     </div>
 
 

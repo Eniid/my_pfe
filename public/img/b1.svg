@@ -1,0 +1,33 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="970" height="116" viewBox="0 0 970 116">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#835836"/>
+      <stop offset="0.724" stop-color="#986546"/>
+      <stop offset="1" stop-color="#785132"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-2" y2="0.797" xlink:href="#linear-gradient"/>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#d7d19d"/>
+      <stop offset="0.675" stop-color="#f7edc9"/>
+      <stop offset="1" stop-color="#dfd3a3"/>
+    </linearGradient>
+  </defs>
+  <g id="Groupe_155" data-name="Groupe 155" transform="translate(-2679 16161)">
+    <ellipse id="Ellipse_24" data-name="Ellipse 24" cx="6" cy="31.5" rx="6" ry="31.5" transform="translate(3360 -16121)" fill="url(#linear-gradient)"/>
+    <path id="Tracé_63" data-name="Tracé 63" d="M.46,2.059,456-3.131v41.7L.46,26Z" transform="translate(2755 -16107)" fill="url(#linear-gradient-2)"/>
+    <rect id="Rectangle_1507" data-name="Rectangle 1507" width="154" height="42" transform="translate(3211 -16110)" fill="url(#linear-gradient-3)"/>
+    <path id="Tracé_64" data-name="Tracé 64" d="M4.7.509,242-5.513V70.672L4.534,63.582Z" transform="translate(3361.255 -16121.58)" fill="url(#linear-gradient)"/>
+    <path id="Tracé_65" data-name="Tracé 65" d="M0,0,61.047-2.05,61,77.972l-61-2.7Z" transform="translate(3582 -16127)" fill="url(#linear-gradient-3)"/>
+    <ellipse id="Ellipse_23" data-name="Ellipse 23" cx="6" cy="21" rx="6" ry="21" transform="translate(3359 -16110)" fill="url(#linear-gradient-3)"/>
+    <ellipse id="Ellipse_25" data-name="Ellipse 25" cx="3.5" cy="12" rx="3.5" ry="12" transform="translate(2752 -16105)" fill="url(#linear-gradient)"/>
+    <ellipse id="Ellipse_26" data-name="Ellipse 26" cx="6" cy="40" rx="6" ry="40" transform="translate(3637 -16129)" fill="url(#linear-gradient-3)"/>
+    <circle id="Ellipse_27" data-name="Ellipse 27" cx="17" cy="17" r="17" transform="translate(2700 -16089)" fill="#dcd1a3" opacity="0.339"/>
+    <circle id="Ellipse_28" data-name="Ellipse 28" cx="17" cy="17" r="17" transform="translate(2722 -16079)" fill="#dcd1a3" opacity="0.339"/>
+    <circle id="Ellipse_29" data-name="Ellipse 29" cx="17" cy="17" r="17" transform="translate(2679 -16148)" fill="#dcd1a3" opacity="0.339"/>
+    <circle id="Ellipse_30" data-name="Ellipse 30" cx="3.5" cy="3.5" r="3.5" transform="translate(2710 -16052)" fill="#dcd1a3" opacity="0.339"/>
+    <circle id="Ellipse_31" data-name="Ellipse 31" cx="17" cy="17" r="17" transform="translate(2700 -16161)" fill="#dcd1a3" opacity="0.339"/>
+    <circle id="Ellipse_32" data-name="Ellipse 32" cx="2" cy="2" r="2" transform="translate(2719 -16051)" fill="#dcd1a3" opacity="0.339"/>
+    <circle id="Ellipse_33" data-name="Ellipse 33" cx="2" cy="2" r="2" transform="translate(2744 -16127)" fill="#dcd1a3" opacity="0.339"/>
+    <circle id="Ellipse_34" data-name="Ellipse 34" cx="3.5" cy="3.5" r="3.5" transform="translate(2732 -16123)" fill="#dcd1a3" opacity="0.339"/>
+  </g>
+</svg>

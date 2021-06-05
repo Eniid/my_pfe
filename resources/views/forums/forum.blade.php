@@ -18,7 +18,11 @@ Forum Name |
 
                 <section class="cat-box_out">
                     <div class="cat-box_img">
-                        <img src="{{ asset('img/hgh.jpg') }}" alt="">
+                        @if ($categorie->img)
+                            <img src="/img/cat/{{ $categorie->img }}" alt="">
+                        @else
+                            <img src="{{ asset('img/cat/hgh.jpg') }}" alt="">
+                        @endif
                     </div>
 
                     <div class="cat-box">

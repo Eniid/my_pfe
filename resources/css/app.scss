@@ -1,3 +1,11 @@
+
+.frame {
+  position: relative;
+  max-width: 140rem;
+  margin: auto;
+}
+
+
 @import 'settings/_settings.scss';
 @import 'tools/_tools.scss';
 @import 'generic/_generic.scss';

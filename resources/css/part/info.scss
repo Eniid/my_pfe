@@ -1,0 +1,61 @@
+
+.card_ex {
+    position: relative;
+    top: -1.5rem;
+}
+
+
+.card {
+    position: absolute;
+    top: 0;
+    right: 0;
+    @include nm; 
+    border-radius: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000000000;
+}
+
+
+.hidden__info {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 0;
+    @include nm; 
+    border-radius: 2rem;
+    width: 3rem;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.card_ex:hover {
+    .sm-pp__info {
+        display: inline-block;
+    left: -3rem;
+    position: absolute;
+    box-shadow: 1px 1px 2px #00000021, -1px -1px 2px #fff;
+    background-color: #F5F5F5;
+    border-radius: 2rem;
+    width: 35rem;
+    z-index: 1000000;
+    padding: 1rem;
+    font-size: 1.1rem;
+    text-align: center;
+    }
+
+
+    .card {
+        box-shadow: none;
+    }
+}
+
+.house-cup{
+    width: 35rem;
+}

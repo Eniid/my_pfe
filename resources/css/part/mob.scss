@@ -1,0 +1,199 @@
+
+
+.frame {
+    position: relative;
+    max-width: 140rem;
+    margin: auto;
+  }
+
+
+
+/**** LOGO ****/
+
+@media screen and (max-width: 800px) {
+    
+    .head-sec h1 {
+
+        font-size: 6.5rem;
+        top: 12rem;
+
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    
+    .head-sec h1 {
+        font-size: 5.5rem;
+        top: 13rem;
+    }
+
+    .head-sec span {
+
+        font-size: 2.8rem;
+        letter-spacing: 1rem;
+        top: -1rem;
+    }
+
+}
+
+@media screen and (max-width: 500px) {
+    
+    .head-sec h1 {
+        font-size: 4.5rem;
+        top: 15rem;
+    }
+
+    .head-sec span {
+
+        font-size: 2.5rem;
+        letter-spacing: 1rem;
+        top: -.1rem;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    
+    .head-sec h1 {
+        font-size: 4rem;
+        top: 15rem;
+    }
+
+
+}
+
+@media screen and (max-width: 340px) {
+    
+    .head-sec h1 {
+        font-size: 3rem;
+        top: 17rem;
+
+    }
+
+    .head-sec span {
+
+        font-size: 2rem;
+
+    }
+
+}
+
+
+
+
+
+
+
+/**** Footer ****/
+
+
+@media screen and (max-width: 800px) {
+    
+    .head-sec .nmto {
+        font-size: 3rem;
+        line-height: 3rem;
+    }
+
+}
+
+
+/***** HOME ******/
+
+
+@media only screen and (min-width: 768px) and (max-width: 1430px){
+    aside {
+        position: relative;
+        width: 100%;
+        max-width: 30rem;
+        }
+
+        .home-house_ev {
+            width: 100%;
+            justify-content: center;
+        }
+
+}
+
+@media only screen and (max-width: 1150px){
+
+
+        .home-house_ev {
+            align-items: center;
+            flex-direction: column;
+        }
+
+}
+
+@media only screen and (max-width: 500px){
+
+      
+    .main-sec{
+        padding: 1.5rem;
+    }
+
+    .lt__title{
+        padding-top: 5.5rem;
+    }
+
+
+
+    .last-event__flex-contener{
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+    }
+
+}
+
+ // Users 
+
+ .users_flex {
+     flex-direction: column;
+ }
+
+ @media only screen and (min-width: 768px) and (max-width: 1430px){
+    // .users_flex {
+    //     flex-direction: row;
+    // justify-content: center;
+    // align-items: flex-start;
+    // width: 96vw;
+
+    // section{
+    //     max-width: 20rem;
+    // }
+    // }
+}
+
+
+
+@media only screen and (max-width: 1430px){
+    .last-topics {
+        width: auto;
+    }
+}
+
+
+
+@media only screen and (max-width: 730px){
+    .filters {
+        flex-direction: column;
+
+        .under{
+            position: relative;
+            top: -1.5rem;
+        }
+    }
+
+    .house-cup  {
+        .filters {
+
+            flex-direction: row;
+        }
+    }
+}
+
+
+
+
