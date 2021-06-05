@@ -1,9 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="145.829" height="145.829" viewBox="0 0 145.829 145.829">
-  <defs>
-    <linearGradient id="linear-gradient" x1="0.114" y1="0.22" x2="0.782" y2="0.881" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#a657d5"/>
-      <stop offset="1" stop-color="#7379eb"/>
-    </linearGradient>
-  </defs>
-  <path id="Icon_awesome-plus" data-name="Icon awesome-plus" d="M135.413,59.54H88.539V12.666A10.418,10.418,0,0,0,78.123,2.25H67.706A10.418,10.418,0,0,0,57.29,12.666V59.54H10.416A10.418,10.418,0,0,0,0,69.956V80.373A10.418,10.418,0,0,0,10.416,90.789H57.29v46.874a10.418,10.418,0,0,0,10.416,10.416H78.123a10.418,10.418,0,0,0,10.416-10.416V90.789h46.874a10.418,10.418,0,0,0,10.416-10.416V69.956A10.418,10.418,0,0,0,135.413,59.54Z" transform="translate(0 -2.25)" fill="url(#linear-gradient)"/>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="145.829" height="145.829" viewBox="0 0 145.829 145.829"><defs><linearGradient id="linear-gradient" x1=".114" x2=".782" y1=".22" y2=".881" gradientUnits="objectBoundingBox"><stop offset="0" stop-color="#a657d5"/><stop offset="1" stop-color="#7379eb"/></linearGradient></defs><path id="Icon_awesome-plus" fill="url(#linear-gradient)" d="M135.413,59.54H88.539V12.666A10.418,10.418,0,0,0,78.123,2.25H67.706A10.418,10.418,0,0,0,57.29,12.666V59.54H10.416A10.418,10.418,0,0,0,0,69.956V80.373A10.418,10.418,0,0,0,10.416,90.789H57.29v46.874a10.418,10.418,0,0,0,10.416,10.416H78.123a10.418,10.418,0,0,0,10.416-10.416V90.789h46.874a10.418,10.418,0,0,0,10.416-10.416V69.956A10.418,10.418,0,0,0,135.413,59.54Z" data-name="Icon awesome-plus" transform="translate(0 -2.25)"/></svg>
