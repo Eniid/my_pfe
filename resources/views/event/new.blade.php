@@ -9,7 +9,7 @@ New event |
 <main class="main-sec">
    
 
-    <section>
+    <section class="forum_cent main_forum">
         <h2>New event</h2>
 
         <form action="/events/create" method="POST">
@@ -24,7 +24,7 @@ New event |
                 @enderror
 
                 <label for="desc">Event descitption</label>
-                <textarea name="desc" id="desc" cols="30" rows="10">Votre message</textarea>
+                <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Description of the event for everyone to see"></textarea>
                 @error('desc')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -49,7 +49,7 @@ New event |
                 @enderror
 
                 <label for="desc">Message for the participents</label>
-                <textarea name="private_desc" id="desc" cols="30" rows="10">Only seenable bu the participents</textarea>
+                <textarea name="private_desc" id="desc" cols="30" rows="10" placeholder="Here you can give information for only the participents. For exeple the adress or the link for the reunion"></textarea>
                 @error('private_desc')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -58,7 +58,7 @@ New event |
             </div>
 
 
-            <button class="cta">Create an event</button>
+            <button class="cta cta_v">Create an event</button>
         </form>
     </section>
     

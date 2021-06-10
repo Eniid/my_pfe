@@ -99,3 +99,47 @@
     justify-content: center;
 
 }
+
+.cta_v {
+    background: linear-gradient(#a657d557, #7379eba3);
+    width: 15rem;
+    padding: 1.3rem;
+    margin: 5rem auto;
+    border: 1px solid #d3bae2;
+    color: #fff;
+
+    box-shadow: 0px 11px 20px 4px rgb(169 171 239 / 46%);
+
+    a{
+
+        color: #fff;
+    }
+}
+
+
+.message_btn {
+    @include nm; 
+    margin: 0 0 0 .8rem;
+    width: 4rem;
+    height: 4rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: .5rem;
+    border: rgba(119, 119, 119, 0.295) .1rem solid;
+    background-color: #f1f1f1;;
+
+    //box-shadow: 2px 2px 6px #7379eb2f, -2px -2px 6px #a757d52a;
+}
+
+.message__box .message__border {
+
+    text-align: left;
+
+}
+
+.mb_box {
+    position : absolute;
+    margin-left: 2rem;
+    bottom: 5rem;
+}

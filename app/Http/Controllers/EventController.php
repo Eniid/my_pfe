@@ -11,12 +11,14 @@ class EventController extends Controller
 {
     public function index(){
 
-        $events = Event::all();
+        $events = Event::with('user')->latest()->get();
+
+        $participations = Event_user::latest()->where('user_id', auth()->id())->with('event')->take(6)->get();
 
 
+       // dd($participations);
 
-
-        return view('event.events', compact('events'));
+        return view('event.events', compact('events', 'participations'));
     }
 
 
@@ -28,6 +30,7 @@ class EventController extends Controller
 
 
         $event->load('event_user');        
+        $event->event_user->load('user');        
         //$event->load('posts');
         $event->load(['posts' => function($query){
             $query->latest();
@@ -37,6 +40,10 @@ class EventController extends Controller
             $query->withCount('posts');
          }]);
 
+
+         $event->isAuthUserPart = $event->event_user->contains(function ($value, $key) {
+            return $value->user_id === auth()->id();
+        });
 
 
 
@@ -67,10 +74,10 @@ class EventController extends Controller
     public function store(Request $request){
         $event = new Event(request()->validate(
             [
-                'name' => 'required|min:4',
+                'name' => 'required|min:4|max:20',
                 'desc' => 'required|min:4',
                 'date' => 'required',
-                'place' => 'required',
+                'place' => 'required|min:4|max:20',
                 'private_desc' => 'required|min:4',
             ]
         ));
@@ -88,7 +95,13 @@ class EventController extends Controller
         $event -> save();
 
 
-        
+
+        $part = new Event_user();
+        $part -> event_id = $event->id;
+        $part -> user_id = auth()->id(); ; 
+        $part -> save();
+
+
         return redirect('/events');
     }
 

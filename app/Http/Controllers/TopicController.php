@@ -21,7 +21,7 @@ class TopicController extends Controller
          }])
         ->where('postable_id', $topic->id)
         ->where('postable_type', 'App\Models\Topic')
-        ->paginate(3);
+        ->paginate(10);
 
 
 

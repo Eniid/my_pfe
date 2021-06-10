@@ -78,7 +78,8 @@
     .main-message__text {
     @include nm; 
     width: 70%;
-    padding: 7rem 6rem 10rem 8rem;    margin: 2rem;
+    padding: 4.5rem 6rem 10rem 8rem;    
+    margin: 0 2rem;
     position: relative;
         
     }
@@ -86,17 +87,22 @@
 }
 
 .message-like {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    text-align: center;
+    display: inline-flex;
+    align-items: center;
+    flex-direction: row-reverse;
 
     button {
         background: none;
         border: none;
+        padding: 0;
     }
 }
 
+.main-message .main-message__text p {
+    width: auto;
+    margin: 0;
+    line-height: 2.1rem;
+}
 
 
 .last-post_event{
@@ -155,4 +161,51 @@
         font-size: 2rem;
         font-weight: bold;
     }
+}
+
+
+.post_date{
+    opacity: .9;
+    font-size: 1.2rem;
+    padding-bottom: 2rem;
+}
+
+
+.pagination {
+    justify-content: flex-end;
+    width: 92%;
+    font-size: 1.7rem;
+}
+
+.page {
+    padding: .3rem;
+}
+
+.main-message__text {
+    img {
+
+        max-width: 100%;
+    }
+}
+
+.topix-preview__content {
+    img {
+
+        max-width: 100%;
+    }
+}
+
+strong {
+    font-weight: bold;
+}
+
+
+.topix-preview__content {
+    font-size: 1.5rem;
+    line-height: 2.2rem;
+    padding: 0 10rem 3rem 0rem;
+}
+
+.message__box {
+    flex-direction: column;
 }

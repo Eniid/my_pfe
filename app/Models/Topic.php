@@ -30,4 +30,6 @@ class Topic extends Model
     {
         return $this->belongsTo(Categorie::class);
     }
+
+    
 }

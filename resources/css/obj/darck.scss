@@ -44,7 +44,7 @@
     }
     .dm_img{
         display: inline;
-        margin: 0 -1rem;
+        //margin: 0 -1rem;
     }
 
     $c_bg: #3f3f47; 
@@ -52,6 +52,11 @@
     $nm : 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
     $c_main : #d2b9ff;
 
+
+    .message_btn {
+        box-shadow: $nm;
+        background: #3a3a40;
+    }
 
 
 
@@ -72,6 +77,19 @@
         background: #3a3a40; 
     }
 
+
+    .box_text .mask {
+        background: linear-gradient(transparent, #3f3f47);
+    }
+
+.page_box {
+
+    select {
+        box-shadow: $nmi;
+        background: #3a3a40; 
+        color: #fff;
+    }
+}
 
 
 .mode_switch{

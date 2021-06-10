@@ -10,11 +10,11 @@ Register |
 
 <div class="flex register_flex">
 
-    <main class="main-sec registration-sec">
+    <div class="main-sec registration-sec">
         
-        <div class="logo_sec">
-            <img src="{{ asset('img/wwo_logo.png') }}" alt="">
-        </div>
+        <h1 class="logo_sec">
+            <img src="{{ asset('img/wwo_logo.png') }}" alt="Wizarding World Online">
+        </h1>
 
         
 
@@ -41,7 +41,7 @@ Register |
             </datalist>
             @error('wood')
             <span class="invalid-feedback" role="alert">
-                <strong>You have to chose your house first</strong>
+                <strong>{{ $message }}</strong>
             </span>
             @enderror
             
@@ -62,7 +62,7 @@ Register |
             </datalist>
             @error('core')
             <span class="invalid-feedback" role="alert">
-                <strong>You have to chose your house first</strong>
+                <strong>{{ $message }}</strong>
             </span>
             @enderror
 
@@ -70,13 +70,14 @@ Register |
             <input type="number" id="width" name="width" min="8" max="15"/> inches
             @error('width')
             <span class="invalid-feedback" role="alert">
-                <strong>You have to chose your house first</strong>
+                <strong>{{ $message }}</strong>
             </span>
             @enderror
 
             <div class="fmh__box under">
                 Don't know what is your wand made of ? <a href="https://my.wizardingworld.com/register/age-gate" class="fmh" target="_blank"  rel="noreferrer noopener">Find out on Pottermore</a>
             </div>
+
 
             <div class="landing">   
                 <button class="cta register">Let's do magic</button>
@@ -85,11 +86,9 @@ Register |
         </form>
     
 
-            
-        </div>
-
+        
     
-    </main>
+    </div>
 </div>
 @endsection
 

@@ -33,6 +33,10 @@
 } 
 
 
+.qeel_profil {
+    margin-top: 10rem;
+}
+
 .profil_info {
     width: 100%;
 
@@ -145,3 +149,47 @@
 }
 
 
+.page_box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    input {
+        display: inline;
+          width: 8rem;
+          margin-right: 2rem;
+
+    }
+    label {
+        display: inline;
+        font-size: 1.3rem;
+    }
+
+    select {
+        //display: block;
+        background: #F5F5F5;
+        box-shadow: inset 2px 2px 6px #dadada, inset -2px -2px 6px #fff;
+        border: none;
+        padding: .4rem 1.3rem;
+        border-radius: 0.7rem;
+        box-sizing: border-box;
+        margin-right: 2rem;
+    }
+
+
+}
+
+.page {
+    padding: 1rem;
+}
+
+
+
+.message__border {
+    margin-top: 3rem;
+}
+
+
+.last-event__flex-contener {
+    min-width: 31rem;
+}

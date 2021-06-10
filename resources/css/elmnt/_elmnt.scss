@@ -53,6 +53,7 @@ input[type=text], input[type=password]{
 input:focus {
     outline : none; 
     border : $c_ravenclaw solid 1px; 
+    
 }
 
 
@@ -115,6 +116,18 @@ h2 {
 
 textarea {
     @include nmi; 
+    background-color: #f1f1f1;;
     border : none; 
     width: 100%;
+    padding: 2rem;
+    border-radius: .5rem;
+    box-sizing: border-box;
+}
+
+strong {
+    font-family: $f_main-bold;
+}
+
+nav {
+    z-index: 10000000;
 }

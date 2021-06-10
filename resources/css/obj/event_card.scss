@@ -19,6 +19,7 @@
     font-size: 1.2rem;
     color: $c_main;
     font-family: $f_main-light;
+    margin: 0 0 1rem 0;
 }
 
 .sm-event__date__month, .sm-event__date__time {
@@ -62,6 +63,11 @@
     padding: 1rem;
     width: 60%;
     margin: 1rem auto .5rem;
+}
+
+.event_new_big {
+    margin: 13rem auto .5rem;
+
 }
 
 .sm-event__add__text {
@@ -124,4 +130,65 @@
 .event_name {
     color: $c_main;
     font-size: 2.7rem;
+}
+
+
+
+.que__event {
+    margin-top: 10rem;
+}
+
+
+.pritavte_title {
+    
+    margin-bottom: 0rem;
+}
+
+
+
+.pivate_sec {
+    p {
+        margin-top: .8rem;
+        margin-bottom: 2rem;
+    }
+
+}
+
+
+.event_more {
+    position: relative;
+    min-height: 9rem;
+
+    .sm-event__date__place {
+        position: absolute;
+        bottom: 1rem;
+    }
+
+    .sm-event__max {
+            position: absolute;
+            right: 2rem;
+            top: 2rem;
+            text-align: right;
+            font-size: 1.2rem;
+    }
+}
+
+
+.event_by {
+    opacity: .8;
+    margin-top: 0;
+    a {
+        font-weight: bold;
+    }
+}
+
+.event_name_befor_by {
+    margin-bottom: .5rem;
+
+}
+
+
+.message__box .message__border textarea {
+
+    box-sizing: content-box;
 }

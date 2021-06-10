@@ -37,18 +37,33 @@ Forum Name |
     
                         </div>
                         <div class="cat__last-message flex">
-                            <div class="cat__last-messge__text">
-                                <p class="topix-preview__author__name">Last mesage by <span><a href="#" class="ravenclaw_c">Name</a></span></p>
-                                <p class="topix-preview__author__messages">230messages</p>
-                                <p class="topix-preview__author__messages cat__last-message__topic">19 topic</p>
-                                    
+
+                                @if ($categorie->topic)
+                                <div class="cat__last-messge__text">
+
+
+
+                                <p class="topix-preview__author__name">Latest message by <span><a href="#" class="{{ $categorie->topic->latestPost->user->house }}_c">{{ $categorie->topic->latestPost?$categorie->topic->latestPost->user->name:""}}</a></span></p>
+                                <p class="topix-preview__author__messages">{{ $categorie->topic->latestPost?$categorie->topic->latestPost->created_at->diffForHumans():""}}</p>
+                                <p class="topix-preview__author__messages cat__last-message__topic">{{ $categorie->topics_count}} topics</p>
+
                             </div>
-                        <div class="sm-pp__box ravenclaw_bg">
-                            <a href="#" name="xxx profil">
-                                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                                </a>
+                            <div class="sm-pp__box {{ $categorie->topic->latestPost->user->house }}_bg">
+                                <a href="#" class="xxx profil">
+                                        <img src="@if ($categorie->topic->latestPost->user->img)
+                                        /{{$categorie->topic->latestPost->user->img}}
+                                        @else
+                                                {{'https://eu.ui-avatars.com/api/?name=' . urlencode($categorie->topic->latestPost->user->name) . '&size=120&background=9165DF&color=ffffff'}}
+                                        @endif" alt="" class="sm-pp">
+                                    </a>
+                                </div>
                             </div>
-                        </div>
+                                     
+                                @endif
+
+                                
+
+                            
                     </div>
 
                 </section>

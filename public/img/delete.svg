@@ -21,25 +21,21 @@
       <feComposite operator="in" in2="blur-3"/>
       <feComposite in="SourceGraphic"/>
     </filter>
-    <linearGradient id="linear-gradient" x1="-0.196" x2="1.143" y2="1" gradientUnits="objectBoundingBox">
-      <stop offset="0" stop-color="#9b2727"/>
-      <stop offset="1" stop-color="#ef0e6d"/>
-    </linearGradient>
   </defs>
-  <g id="Button_round" data-name="Button round" transform="translate(12 12)">
-    <g id="Button">
-      <g id="Groupe_111" data-name="Groupe 111">
-        <g transform="matrix(1, 0, 0, 1, -12, -12)" filter="url(#Neuo_dark_shade_)">
+  <g id="Groupe_153" data-name="Groupe 153" transform="translate(-1247 -6)">
+    <g id="Button_round" data-name="Button round" transform="translate(1259 18)">
+      <g id="Button" transform="translate(-131 -314)">
+        <g transform="matrix(1, 0, 0, 1, 119, 302)" filter="url(#Neuo_dark_shade_)">
           <rect id="Neuo_dark_shade_2" data-name="Neuo (dark shade)" width="38" height="38" rx="19" transform="translate(12 12)" fill="#f5f5f5"/>
         </g>
-        <g transform="matrix(1, 0, 0, 1, -12, -12)" filter="url(#Neuo_white_shade_)">
+        <g transform="matrix(1, 0, 0, 1, 119, 302)" filter="url(#Neuo_white_shade_)">
           <rect id="Neuo_white_shade_2" data-name="Neuo (white shade)" width="38" height="38" rx="19" transform="translate(12 12)" fill="#f5f5f5"/>
         </g>
-        <g transform="matrix(1, 0, 0, 1, -12, -12)" filter="url(#Button_background)">
+        <g transform="matrix(1, 0, 0, 1, 119, 302)" filter="url(#Button_background)">
           <rect id="Button_background-2" data-name="Button background" width="38" height="38" rx="19" transform="translate(12 12)" fill="#f5f5f5"/>
         </g>
       </g>
-      <path id="Icon_material-delete" data-name="Icon material-delete" d="M8.375,19.124a1.8,1.8,0,0,0,1.751,1.828h7a1.8,1.8,0,0,0,1.751-1.828V8.156H8.375Zm11.38-13.71H16.692L15.816,4.5H11.439l-.875.914H7.5V7.242H19.756Z" transform="translate(5.372 6.274)" fill="url(#linear-gradient)"/>
+      <path id="Icon_material-delete" data-name="Icon material-delete" d="M8.37,18.413a1.744,1.744,0,0,0,1.739,1.739h6.957A1.744,1.744,0,0,0,18.8,18.413V7.978H8.37ZM19.674,5.37H16.631l-.87-.87H11.413l-.87.87H7.5V7.109H19.674Z" transform="translate(5.413 6.675)" fill="none" stroke="#767575" stroke-width="1"/>
     </g>
   </g>
 </svg>

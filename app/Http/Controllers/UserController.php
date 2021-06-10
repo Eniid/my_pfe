@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Post;
+use App\Models\Follow;
 use App\Models\Event_user;
 use Illuminate\Support\Facades\Hash;
 
@@ -26,9 +27,15 @@ class UserController extends Controller
          }]);
         
          $parts = Event_user::latest()->where('user_id', $user->id)->with('event')->take(6)->get();
+         $parts->load('event');
+
+         $follows = Follow::where('user_id', $user->id)->with('following')->get();
 
 
-        return view('profil.profil', compact('user', 'posts', 'parts' ));
+         $user->isFollowedByMe = Follow::where('user_id', auth()->id())->where('following_id', $user->id)->exists();
+
+
+        return view('profil.profil', compact('user', 'posts', 'parts', 'follows' ));
     }
 
     public function store_desc(User $user, Request $request){
@@ -102,4 +109,37 @@ class UserController extends Controller
     public function edit(){
         //return view('event.new');
     }
+
+
+
+
+    public function add_f(User $user){
+
+        $part = new Follow(request()->validate(
+            [
+            ]
+        )); 
+
+        $part -> following_id = $user->id; 
+        $part -> user_id = auth()->id(); ; 
+        $part -> save();
+        return redirect('profil/'.$user->id);
+
+    }
+
+
+    public function rem_f(User $user){
+
+        $part = Follow::where('following_id', $user->id)->where('user_id', auth()->id())->first();
+        $part -> delete();
+
+        return redirect('profil/'.$user->id);
+
+    }
+
+
+
+
+
+
 }

@@ -125,6 +125,25 @@
 
 }
 
+@media only screen and (max-width: 950px){
+
+
+    .topix-preview__content {
+        font-size: 1.5rem;
+        line-height: 2.2rem;
+        padding: 0 0rem 3rem 0rem;
+    }
+
+}
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 500px){
 
       
@@ -194,6 +213,221 @@
     }
 }
 
+// House infobules
+@media only screen and (max-width: 1000px){
+    .card_ex:hover .sm-pp__info {
+        right: -1rem;
+        left : auto; 
+    } 
+}
+
+@media only screen and (max-width: 1000px){
+    .card_ex:hover .sm-pp__info {
+        right: -1rem;
+        left : auto; 
+    } 
+
+    .house-cup__sand:hover .house-point-display{
+        bottom: -5rem;
+        left: -9rem;
+    }
+}
+
+
+//Catégories! 
+
+@media only screen and (max-width: 1250px){
+
+    .cat-box_out {
+        margin: 6rem auto;
+        width: 100%;
+    }    
+}
 
 
 
+@media only screen and (max-width: 900px){
+
+    .cat-box_out {
+
+        p{
+
+            font-size: 1.1rem;
+        }
+
+        .cat__last-messge__text {
+            margin: 0 .5rem;
+        }
+    }    
+}
+
+
+
+@media only screen and (max-width: 950px){
+
+    .topic-list{
+        flex-wrap: wrap;
+        flex-direction: column;
+        
+        .latest-message {
+            padding: 0 2rem 2rem 2rem;
+            align-self: flex-start;
+        }
+
+        .sm-pp__box {
+            display: none;
+        }
+
+        .topic-main_box {
+            align-self: flex-start;
+            position: relative;
+            top: -5.4rem;
+
+            h3{
+                a {
+
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }    
+
+    .forum_desc {
+        font-size: 1.2rem;
+    }
+
+    .topic-list {
+        .cat-box_new {
+            flex-grow: 1;
+            align-self: flex-end;
+            text-align: center;
+            img {
+            transform: rotate(90deg);
+            }
+        }
+    }
+
+}
+
+
+@media only screen and (max-width: 550px){
+
+    .mode_switch {
+        transform: scale(0.8);
+        bottom: 0rem;
+        right: 1rem;
+    }
+    .mode_switch:hover {
+        transform: scale(0.9);
+        bottom: 0rem;
+        right: 1rem;
+    }
+
+}
+
+
+
+
+
+ // POSTES 
+
+ @media only screen and (max-width: 950px){
+    // .post_profil{
+    //     position: absolute;
+    //     z-index: 10;
+    // }
+
+     .main-message .profl_main {
+         flex-direction: row; 
+ } 
+
+    // .main-message .main-message__profil {
+    //     width: auto;
+    // }
+
+    .main-message {
+
+        flex-direction: column;
+    }
+
+     .post_profil {
+        display: flex;
+        align-items: flex-end;
+        position: relative;
+        top: 8rem;
+        height: 10rem;
+        z-index: 100;
+        width: 100%;
+        justify-content: space-between;
+     }
+
+     .main-message .main-message__text {
+
+        width: auto; 
+        margin: 0;
+
+    }
+
+    .messages__text {
+        font-size: 1.1rem;
+        
+    }
+
+    .main-message .messages__numbers {
+        font-size: 1.5rem;
+    }
+
+    .box_mess {
+        position: relative;
+        top: -2.6rem;
+    }
+
+    .main-message .profl_main .profil_info {
+        padding: 1rem;
+        text-align: left;
+        margin-left: 2.8rem;
+    }
+
+    .post_profil .name {
+        font-size: 1.7rem;
+        font-weight: bold;
+    }
+
+    .post_profil .rang {
+        font-size: 1.3rem;
+    }
+
+    .box_mess {
+        display: none;
+    }
+
+    .message__box {
+        width: 92%;
+        margin: 0;
+
+    }
+
+
+    .message__box .message__border {
+        width: 100%;
+
+        position: auto;
+
+    }
+
+    .message__box .message__border textarea {
+        width: 74%;
+    }
+
+    .message__box button {
+        margin: 0rem auto 2rem auto;
+        width: 70%;
+        padding: .5rem;
+    }
+
+}
+
+
+.mode_switch {
+    z-index: 1000000;
+}

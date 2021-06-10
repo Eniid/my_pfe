@@ -13,6 +13,10 @@
         <meta name="author" content="Enid">
         
         <!-- Flavicon  -->
+        <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+        <link rel="manifest" href="/site.webmanifest">
 
         <!-- CSRF Token -->
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -30,6 +34,17 @@
 
     <body class="body_test">
         <header>
+
+            <div class="bg head-sec">
+                <div class="bg-color {{ Auth::user()->house}}_full_bg"></div>
+            
+                <div class="logo_img"><img src="{{ asset('img/asset167.png') }}" alt=""></div>
+                <h1 class="main_title main_title__logged"><a href="{{ url('/') }}">Wizarding World <span>ONLINE</span></a> </h1>
+                <div class="separation_gold"><img src="{{ asset('img/sep_w.svg') }}" alt=""></div>
+            
+             </div>
+
+
         @auth
         <input type="checkbox" id="nav" class="visually-hidden nav_check">
             <nav>
@@ -42,9 +57,9 @@
                    <li><a href="{{ url('events') }}">Events</a></li> 
                    <li><a href="/">Owls</a></li> 
                    <li>
-                        <form action="" class="search-form">
+                        <form action="/" class="search-form">
                             <div class="searchbox">
-                                <input type="text" name="" id="" placeholder="search">
+                                <input type="text" name="search" placeholder="search">
                                 <a href="#"><img src="{{ asset('img/search.svg') }}" class="lm_img" alt="search"><img src="{{ asset('img/d_search.svg') }}" class="dm_img" alt="search"></a>
                             </div>
                         </form>
@@ -66,7 +81,7 @@
                                 <hr>
 
                                 <div class="pph_texte pph_p">
-                                    <a href="/profil/{{auth()->id()}}">profil</a>
+                                    <a href="/profil/{{auth()->id()}}">profile</a>
                                 </div>
 
                                 <!-- //? BIGINING OF NOTIFICATIONS  -->
@@ -81,12 +96,18 @@
                                             </div>             
                                             <div class="main-sec registration-sec notification_box">
                                                 <div class="close"><a href="#">Close</a></div>
-                                                <form action="/profil/edit" method="post" enctype="multipart/form-data">
+                                                <form action="/profil/edit" method="post" enctype="multipart/form-data" class="notif_box">
                                                     @csrf
             
+                                                   {{-- <input type="checkbox" id="message" class="notification_check"> <label for="message">Revive a notification when someone answer a message I folow</label>
                                                    <input type="checkbox" id="message" class="notification_check"> <label for="message">Revive a notification when someone answer a message I folow</label>
+                                                   <input type="checkbox" id="message" class="notification_check"> <label for="message">Revive a notification when someone answer a message I folow</label>
+                                                   <input type="checkbox" id="message" class="notification_check"> <label for="message">Revive a notification when someone answer a message I folow</label>
+                                                   <input type="checkbox" id="message" class="notification_check"> <label for="message">Revive a notification when someone answer a message I folow</label>
+                                                   <input type="checkbox" id="message" class="notification_check"> <label for="message">Revive a notification when someone answer a message I folow</label>
+                                                   <input type="checkbox" id="message" class="notification_check"> <label for="message">Revive a notification when someone answer a message I folow</label> --}}
                                                   
-                                                    <a href="#" class="cta cta_i cta_l {{ Auth::user()->house}}_bg">Save</a>
+                                                    <a href="/" class="cta cta_i cta_l {{ Auth::user()->house}}_bg">Save</a>
                                             
             
                                                 </form>
@@ -130,17 +151,6 @@
 
 
           
-
-
-
-            <div class="bg head-sec">
-                <div class="bg-color {{ Auth::user()->house}}_full_bg"></div>
-            
-                <div class="logo_img"><img src="{{ asset('img/asset167.png') }}" alt=""></div>
-                <h1 class="main_title main_title__logged"><a href="{{ url('/') }}">Wizarding World <span>ONLINE</span></a> </h1>
-                <div class="separation_gold"><img src="{{ asset('img/sep_w.svg') }}" alt=""></div>
-            
-             </div>
         </header>
 
         <!-- //?CONTENT   -->

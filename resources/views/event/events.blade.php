@@ -11,43 +11,36 @@ Event Name |
     <div class="home-info">
         <div class="flex home-house_ev">
             <section class="house-cup events">
-                <h2>Event</h2>
-                <p>Events are made for you to be able to argenize amazing things to do with other witches and wizards! Feel free to creat your own events and to all get together for amazing memories!</p>
+                <h2>Events</h2>
+                <p>Events are made for you to be able to organize amazing things to do with other witches and wizards! Feel free to create your own events and to all get together for amazing memories!</p>
             </section>
             <section class="last-event event_events">
-                <h2>Event's you'll be part of</h2>
+                <h2>Events you'll be part of</h2>
                 <div class="last-event__flex-contener">
-                    <a href="#">
-                        <section class="sm-event">
-                            <h3 class="sm-event__title">Event title</h3>
-                            <div class="sm-event__date">
-                                <span class="sm-event__date__month">January</span>
-                                <span class="sm-event__date__day">10</span>
-                                <span class="sm-event__date__time">10.20AM</span>
-                            </div>
-                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">Discord</span>
-                        </section>
-                    </a>
-                    <a href="#">
-                        <section class="sm-event">
-                            <h3 class="sm-event__title">Event title</h3>
-                            <div class="sm-event__date">
-                                <span class="sm-event__date__month">January</span>
-                                <span class="sm-event__date__day">10</span>
-                                <span class="sm-event__date__time">10.20AM</span>
-                            </div>
-                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
-                        </section>
-                    </a>
-                    <section class="sm-event">
-                        <h3 class="sm-event__title">Event title</h3>
-                        <div class="sm-event__date">
-                            <span class="sm-event__date__month">January</span>
-                            <span class="sm-event__date__day">10</span>
-                            <span class="sm-event__date__time">10.20AM</span>
+                        @foreach ($participations as $participation)
+                        <a href="#">
+                            <section class="sm-event">
+                                <h3 class="sm-event__title">{{ $participation->event->name }}</h3>
+                                <div class="sm-event__date">
+                                    <span class="sm-event__date__month">January</span>
+                                    <span class="sm-event__date__day">10</span>
+                                    <span class="sm-event__date__time">10.20AM</span>
+                                </div>
+                                <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">{{ $participation->event->place }}</span>
+                            </section>
+                        </a>
+                        @endforeach
+
+                        @if($participations->isEmpty())
+                        <div class="nothing_box">
+                            <p class="nothing">Ouuuups, there is nothing to see yet! </p>
+                
                         </div>
-                        <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13">Discord</span>
-                    </section>
+                        @endif
+                
+
+ 
+                    
                 </div>
             </section>
         </div>
@@ -58,7 +51,7 @@ Event Name |
 
 
        <!-- Users -->
-       <aside class="event__new sm-event__button">
+       <aside class="event__new sm-event__button event_new_big">
            <a href="/events/create">
             <img src="./img/plus.svg" alt="">
             <h2>Create a new event</h2>
@@ -78,7 +71,7 @@ Event Name |
                 <a href="#" class="active">All</a>
                 <a href="#">Events with your friends</a>
                 <a href="#">Virtual events</a>
-                <a href="#">Event in real world</a>
+                <a href="#">Events in real world</a>
             </div>
         </div>
 
@@ -140,7 +133,7 @@ Event Name |
                         
                 </div>
                <div class="sm-pp__box ravenclaw_bg">
-                   <a href="#" name="xxx profil">
+                   <a href="#" class="xxx profil">
                         <img src="/img/pp1.jpg" alt="" class="sm-pp">
                     </a>
                 </div>
@@ -151,6 +144,9 @@ Event Name |
             </div>
         </section>
         @endforeach
+        
+        <button class="cta cta_v">Load more</button>
+
     </section>
 
 

@@ -21,8 +21,8 @@ Login |
                     <div class=""><img src="{{ asset('img/house_cup.svg')}}" alt=""></div>
                     <div class="landing__nm annim annimation">
                         <section>
-                            <h3>Join your hogwart house and compete for the cup</h3>
-                            <p>Wizarding world online is a comunity in wich you can rejoin your hogwar house to compete for the online house cup. Every message you post, every discutions you create will raward you house with new points. </p>
+                            <h3>Join your Hogwarts house and compete for the cup</h3>
+                            <p>Wizarding world online is a community in which you can rejoin your Hogwars house to compete for the online house cup. Every message you post, every discussion you create will reward your house with new points. </p>
                         </section>
                     </div>
                 </div>
@@ -31,9 +31,9 @@ Login |
                     <div class=""><img src="{{ asset('img/message.png')}}" alt=""></div>
                     <div class="landing__nm annim annimation">
                         <section>
-                            <h3>Make new friends among wizard and witches</h3>
+                            <h3>Make new friends among wizards and witches</h3>
                             <p>In this muggle free part of the internet, you can be 100% yourself and enjoy your wizard community. </p>
-                            <p>Join the conversations and create new topics to gather with you mgical friend and make new ones on the roade.</p>
+                            <p>Join the conversations and create new topics to gather with you magical friends and make new ones on the road.</p>
 
                         </section>
                     </div>
@@ -43,8 +43,8 @@ Login |
                     <div class=""><img src="{{ asset('img/event.png')}}" alt=""></div>
                     <div class="landing__nm annim annimation">
                         <section>
-                            <h3>Participate to events</h3>
-                            <p>You can create and join events with the comunity. Online or in the real world, whatever works best for you! </p>
+                            <h3>Tacke part in events</h3>
+                            <p>You can create and join events with the community. Online or in the real world, whatever works best for you! </p>
                         </section>
                     </div>
                 </div>
@@ -57,7 +57,7 @@ Login |
         </div>
 
 
-        <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a></p>
+        <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All rights reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Terms and Privacy</a></p>
     </section>
 
 

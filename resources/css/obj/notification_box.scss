@@ -102,3 +102,45 @@
 .notification_check {
     display: inline;
 }
+
+
+.notif_box{
+    label {
+        display: inline-block;
+    }
+    input {
+        display: inline-block;
+    }
+
+}
+
+
+
+.not_box{
+    display: none;
+}
+
+.del_c:checked ~ .not_box {
+    display: flex;
+}
+
+
+.not_box {
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    align-items: center;
+    text-align: center;
+    z-index: 100000000;
+}
+
+
+
+.not_box {
+    .cta_not {
+        margin: 1rem 1rem 3rem;
+        width: 15rem;
+    }
+}

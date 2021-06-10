@@ -31,6 +31,7 @@ console.log('coucou');
 
 
  const annimElt = document.getElementsByClassName("annim"); 
+ const annimEltH = document.getElementsByClassName("annim_home"); 
 
  console.log(annimElt);
  
@@ -45,6 +46,14 @@ console.log('coucou');
      let oneElt = annimElt[i];
      oneElt.classList.add('annimation')
      console.log(oneElt);
+ }
+ 
+
+ for(var i= 0; i < annimEltH.length; i++)
+ {
+     let oneElth = annimEltH[i];
+     oneElth.classList.add('annimation_home')
+     console.log(oneElth);
  }
  
  
@@ -73,7 +82,7 @@ console.log('coucou');
         const scrollDeLaPage = window.pageYOffset; // On récupère le scroll de la page
         const positionDeLElement = element.offsetTop; // Puis la position de l'élément .annim
         const tailleDeLaPage = window.innerHeight // et on prend la taille de la page
-        if (scrollDeLaPage >= positionDeLElement - tailleDeLaPage + 300) { // Si on est plus bas que l'élément en bas + 200px (à modifier si tu veux que l'event se passe plus tôt)
+        if (scrollDeLaPage >= positionDeLElement - tailleDeLaPage + 290) { // Si on est plus bas que l'élément en bas + 200px (à modifier si tu veux que l'event se passe plus tôt)
             element.classList.add("animation_suite_home"); // on ajoute la class
         }
    

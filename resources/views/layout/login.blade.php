@@ -40,7 +40,7 @@
                 <div class="login-pres">
             
             
-                    <p>Welcome to Hogwarts the fist ever website for witches and wizard. It’s about time we learn to use technologie. So join us and let’s do some magic together.</p>
+                    <p>Welcome to Wizarding World Online the first ever website for witches and wizards. It’s about time we learn to use technology. So join us and let’s do some magic together.</p>
                     <div class="log-cta">
                         <a href="{{ route('register') }}">Become Beta Tester</a> 
                     </div>

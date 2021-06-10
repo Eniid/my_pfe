@@ -1,4 +1,11 @@
 
+.no_m {
+    margin-bottom: 0
+}
+
+.in {
+    display: inline
+}
 
 @import 'main_section.scss';
 @import 'house_cup.scss';
@@ -14,6 +21,7 @@
 @import 'notification_box.scss';
 @import 'profil.scss';
 @import 'landing.scss';
+@import 'main_form.scss';
 
 
 @import 'darck.scss';

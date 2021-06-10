@@ -52,6 +52,7 @@ Auth::routes();
 //* HOME PAGE
 
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+    Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('home');
     Route::get('/termes-and-policy', [App\Http\Controllers\HomeController::class, 'tp'])->name('t&p');
 
 
@@ -92,6 +93,8 @@ Auth::routes();
             Route::get('/profil/{user}', [UserController::class, 'index'])->middleware('auth');
             Route::post('/profil/{user}/description', [UserController::class, 'store_desc'])->middleware('auth');
             Route::post('/profil/edit', [UserController::class, 'store_info'])->middleware('auth');
+            Route::post('/profil/{user}/add_f', [UserController::class, 'add_f'])->middleware('auth');
+            Route::post('/profil/{user}/rem_f', [UserController::class, 'rem_f'])->middleware('auth');
 
 
             // Edit Profil

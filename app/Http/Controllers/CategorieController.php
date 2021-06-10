@@ -18,10 +18,21 @@ class CategorieController extends Controller
         $categorie->load('topics');
         $categorie->topics->load('user'); 
         $categorie->topics->loadCount('posts'); 
-        $categorie->topics->load(['posts' => function($query){
-            $query->orderByDesc('created_at')->first();
-         }]);
+        // $categorie->topics->load(['posts' => function($query){
+        //     $query->latestPost()->with('user');
+        //  }]);
+        //$categorie->topics->load('post_l'); 
 
+        $categorie->topics->map(function( $topic ){
+            $topic->latestPost = Post::where('postable_id', $topic->id)->where('postable_type', 'App\Models\Topic')->orderByDesc('created_at')->with('user')->first();
+            return $topic;
+        });
+
+        $categorie->topics = $categorie->topics->sortByDesc(function($topic){
+            return $topic->latestPost->created_at;
+        })->values();
+
+       // dd($categorie->topics);
 
         return view('forums.categories.categorie', compact('categorie', 'forum'));
     }

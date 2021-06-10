@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="56" height="56" viewBox="0 0 56 56">
+  <defs>
+    <filter id="Neuo_dark_shade_" x="10" y="10" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset dx="1" dy="1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur"/>
+      <feFlood flood-opacity="0.161"/>
+      <feComposite operator="in" in2="blur"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Neuo_white_shade_" x="8" y="8" width="44" height="44" filterUnits="userSpaceOnUse">
+      <feOffset dx="-1" dy="-1" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="1" result="blur-2"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-2"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+    <filter id="Button_background" x="0" y="0" width="56" height="56" filterUnits="userSpaceOnUse">
+      <feOffset dx="-3" dy="-3" input="SourceAlpha"/>
+      <feGaussianBlur stdDeviation="3" result="blur-3"/>
+      <feFlood flood-color="#fff"/>
+      <feComposite operator="in" in2="blur-3"/>
+      <feComposite in="SourceGraphic"/>
+    </filter>
+  </defs>
+  <g id="Groupe_156" data-name="Groupe 156" transform="translate(-1028 -944)">
+    <g id="Button_round" data-name="Button round" transform="translate(1040 956)">
+      <g id="Button">
+        <g transform="matrix(1, 0, 0, 1, -12, -12)" filter="url(#Neuo_dark_shade_)">
+          <rect id="Neuo_dark_shade_2" data-name="Neuo (dark shade)" width="38" height="38" rx="19" transform="translate(12 12)" fill="#f5f5f5"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, -12, -12)" filter="url(#Neuo_white_shade_)">
+          <rect id="Neuo_white_shade_2" data-name="Neuo (white shade)" width="38" height="38" rx="19" transform="translate(12 12)" fill="#f5f5f5"/>
+        </g>
+        <g transform="matrix(1, 0, 0, 1, -12, -12)" filter="url(#Button_background)">
+          <rect id="Button_background-2" data-name="Button background" width="38" height="38" rx="19" transform="translate(12 12)" fill="#f5f5f5"/>
+        </g>
+      </g>
+    </g>
+    <path id="Icon_awesome-quote-right" data-name="Icon awesome-quote-right" d="M15.948,2.25h-4.4A1.65,1.65,0,0,0,9.9,3.9V8.3a1.65,1.65,0,0,0,1.65,1.65H14.3v2.2a2.2,2.2,0,0,1-2.2,2.2h-.275a.823.823,0,0,0-.825.825v1.65a.823.823,0,0,0,.825.825H12.1a5.5,5.5,0,0,0,5.5-5.5V3.9A1.65,1.65,0,0,0,15.948,2.25Zm-9.9,0H1.65A1.65,1.65,0,0,0,0,3.9V8.3a1.65,1.65,0,0,0,1.65,1.65H4.4v2.2a2.2,2.2,0,0,1-2.2,2.2H1.925a.823.823,0,0,0-.825.825v1.65a.823.823,0,0,0,.825.825H2.2a5.5,5.5,0,0,0,5.5-5.5V3.9A1.65,1.65,0,0,0,6.049,2.25Z" transform="translate(1050.201 965.051)" fill="none" stroke="#7d7c7c" stroke-width="1"/>
+  </g>
+</svg>

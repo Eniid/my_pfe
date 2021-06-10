@@ -10,25 +10,25 @@ Register |
 
 <div class="flex register_flex">
 
-<main class="main-sec registration-sec">
+<div class="main-sec registration-sec">
     
-    <div class="logo_sec">
-        <img src="{{ asset('img/wwo_logo.png') }}" alt="">
-    </div>
+    <h1 class="logo_sec">
+        <img src="{{ asset('img/wwo_logo.png') }}" alt="Wizarding World Online">
+    </h1>
 
     <form class="registration" method="POST" action="{{ route('register') }}">
         @csrf
         <div>
             <div>
-                <label for="name">Pseudo</label>
-                <input type="text" id="name" name="name" value="{{ old('name') }}" required placeholder="Chose the name you want">
+                <label for="name_r">User Name</label>
+                <input type="text" id="name_r" name="name" value="{{ old('name') }}" required placeholder="Chose the name you want">
                 @error('name')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
                 </span>
                 @enderror
-                <label for="email">Email</label>
-                <input type="text" id="email" name="email" value="{{ old('email') }}" required>
+                <label for="email_r">Email</label>
+                <input type="text" id="email_r" name="email" value="{{ old('email') }}" required>
                 @error('email')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -37,8 +37,8 @@ Register |
             </div>
 
             <div class="registration__password">
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" autocomplete="new-password" required>
+                <label for="password_r">Password</label>
+                <input type="password" id="password_r" name="password" autocomplete="new-password" required>
                 @error('password')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -60,7 +60,7 @@ Register |
     </div>
 
  
-</main>
+</div>
 </div>
 
 @endsection

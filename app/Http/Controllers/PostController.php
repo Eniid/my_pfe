@@ -37,9 +37,13 @@ class PostController extends Controller
         $post -> postable_id = $topic->id; 
         $post -> postable_type = "App\Models\Topic";
         $post -> save();
+
+        $topic_n = $topic->loadCount('posts')->posts_count; 
+        $nb_post_page = 10; 
+        $nb_page =ceil($topic_n/$nb_post_page);
             
             
-        return redirect('/'.$forum->slug.'/'.$categorie->slug.'/'.$topic->slug);
+        return redirect('/'.$forum->slug.'/'.$categorie->slug.'/'.$topic->slug.'?page='.$nb_page );
     }
 
     public function store_event(Event $event, Request $request){
@@ -75,6 +79,10 @@ class PostController extends Controller
         $like -> post_id = request('post_id'); 
         $like -> user_id = auth()->id(); 
         $like -> save();
+
+        $topic_n = $topic->loadCount('posts')->posts_count; 
+        $nb_post_page = 10; 
+        $nb_page =ceil($topic_n/$nb_post_page);
               
             
         return redirect('/'.$forum->slug.'/'.$categorie->slug.'/'.$topic->slug);

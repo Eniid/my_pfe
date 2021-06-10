@@ -34,7 +34,7 @@
                 
             
             
-                <div class="back_btn"><a href="{{ route('login') }}">< Back</a></div>
+                <div class="back_btn"><a href="{{ route('login') }}">&lt; Back</a></div>
             
             
                 <div class="login_btn">

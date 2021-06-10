@@ -10,83 +10,82 @@ Events |
 <main class="main-sec">
     <!-- House cup and last event -->
     <section class="home-info">
-        <h2 class="event_name">{{$event->name}}</h2>
-        <section class="flex home-house_ev">
+        <h2 class="event_name event_name_befor_by">{{$event->name}}</h2>
+        <p class="event_by">Created by <span class="under"><a href="" class="{{ $event->user->house }}_c">{{ $event->user->name }}</a></span></p>
+        <div class="flex home-house_ev">
             <div class="house-cup">
                 <p>{{ $event->desc }}</p>
 
-                {{ $event->event_user }}
-
-
-
-                @if($event->event_user->contains(auth()->id()))
-
-                @else
+                @if($event->isAuthUserPart)   
+                    <section class="pivate_sec">
+                        <h3 class="pritavte_title">More informations</h3>
+                        <p class="private_desc">{{ $event->private_desc }}</p>
+                    </section>
                 @endif
 
-                <form action="/events/{{$event->slug}}/leave" method="post">
-                    @csrf
-                    <input type="hidden" name="event_id" value="{{$event->id}}">
-                    <button class="cta cta_i">leave</button>
-                </form>
-                    <form action="/events/{{$event->slug}}/join" method="post">
+
+
+
+                @if($event->isAuthUserPart)   
+                    <form action="/events/{{$event->slug}}/leave" method="post">
                         @csrf
                         <input type="hidden" name="event_id" value="{{$event->id}}">
-                        <button class="cta cta_l">Join the event</button>
+                        <button class="cta cta_i">leave</button>
                     </form>
+                @else
+                <form action="/events/{{$event->slug}}/join" method="post">
+                    @csrf
+                    <input type="hidden" name="event_id" value="{{$event->id}}">
+                    <button class="cta cta_l">Join the event</button>
+                </form>
+                @endif
+
 
             </div>  
             
             <div>
-                <div class="nm">
+                <div class="nm event_more">
                     <div class="sm-event__date">
                         <span class="sm-event__date__month">January</span>
                         <span class="sm-event__date__day">10</span>
                         <span class="sm-event__date__time">10.20AM</span>
                     </div>
 
-                    <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">{{$event->place}}</span>
+                    <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img" alt="place"><img src="/img/d_place.svg" width="11" height="13" class="dm_img" alt="place">{{$event->place}}</span>
+                    <span class="sm-event__max">Max participants <br> 10</span>
 
                     
                 </div>
             </div>
 
-        </section>
+        </div>
     </section>
 
 
        <!-- Users -->
         <aside class="qeel que__event">
-            <h2 class="hidden">Users</h2>
+            <h2 class="visually-hidden">Users</h2>
             <section class="online">
-                <h3 class="h2-like">they will be there ?</h3>
-                    <div class="flex">
-                        <div class="sm-pp__box">
-                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
+                <h3 class="h2-like">Participents</h3>
+
+                <div class="flex">
+                    @foreach ($event->event_user as $participant)
+                    <a href="/profil/{{ $participant->user->id}}">
+                        <div class="sm-pp__box {{ $participant->user->house}}_bg">
+                            <img src="
+                            @if ($participant->user->img)
+                            /{{$participant->user->img}}
+                            @else
+                                    {{'https://eu.ui-avatars.com/api/?name=' . urlencode($participant->user->name) . '&size=120&background=9165DF&color=ffffff'}}
+                            @endif" alt="" class="sm-pp">
                             <div class="sm-pp__info">
-                                User Name
+                                {{ $participant->user->name }}
                             </div>
-                        </div>
-                        <div class="sm-pp__box">
-                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                            <div class="sm-pp__info">
-                                User Name
-                            </div>
-                        </div>
-                        <div class="sm-pp__box">
-                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                            <div class="sm-pp__info">
-                                User Name
-                            </div>
-                        </div>
-                        <div class="sm-pp__box">
-                            <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                            <div class="sm-pp__info">
-                                User Name
-                            </div>
-                        </div>
-                    </div>
-            </div>
+                        </div>    
+                    </a>
+                    @endforeach    
+                </div>    
+            </section>
        </aside>
 
 
@@ -104,7 +103,7 @@ Events |
             @csrf
             <div class="message__box">
                 <div class="message__border">
-                    <textarea name="body" id="" cols="30" rows="10" placeholder="Type your new message here!"></textarea>
+                    <textarea name="body" cols="30" rows="10" placeholder="Type your new message here!"></textarea>
                     <button   class="cta cta_m">Send</button>
                 </div>
             </div>
