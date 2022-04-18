@@ -24,13 +24,11 @@ class TopicController extends Controller
         ->paginate(10);
 
 
-
-        //$topic->load('posts');
-
-//        $topic->posts->user->loadCount('posts');
+        $messagesByPage = 10; 
 
 
-        return view('forums.categories.topics.topic', compact('categorie', 'forum', 'topic', 'posts'));
+        return view('forums.categories.topics.topic', compact('categorie', 'forum', 'topic', 'posts', 'messagesByPage'));
+
     }
 
 

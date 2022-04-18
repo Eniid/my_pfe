@@ -1,6 +1,5 @@
 @extends('layout.layout')
 
-
 @section('title_l')
 
 @endsection
@@ -9,7 +8,7 @@
 @section('content')
 <main class="main-sec">
     <div class="frame">
-
+         
         <!-- House cup and last event -->
         <div class="home-info">
             <div class="flex home-house_ev">
@@ -98,24 +97,52 @@
                     <div class="flex filters">
                         <h2>Events to come</h2>
                         <div class="under">
-                            <a href="#" class="active">All</a>
-                            <a href="#">My events</a>
+                            <a href="?{{ $post_filter ? 'posts=' . $post_filter . '&': '' }}events=all" 
+                            @if($event_filter === 'all')
+                            class="active"
+                            @endif
+                            >All</a>
+                            <a href="?{{ $post_filter ? 'posts=' . $post_filter . '&': '' }}events=mine"
+                            @if($event_filter === 'mine')
+                            class="active"
+                            @endif
+                            >My events</a>
                         </div>
                     </div>
                     <div class="last-event__flex-contener">
-                        @foreach ($events as $event)
-                            <a href="#">
+
+                        @if($event_filter === 'all')
+                            @foreach ($events as $event)
+                            <a href="events/{{$event->slug}}">
                                 <section class="sm-event">
                                     <h3 class="sm-event__title">{{$event->name}}</h3>
                                     <div class="sm-event__date">
-                                        <span class="sm-event__date__month">January</span>
-                                        <span class="sm-event__date__day">10</span>
-                                        <span class="sm-event__date__time">10.20AM</span>
+                                        <span class="sm-event__date__month">{{$event->date->monthName}}</span>
+                                        <span class="sm-event__date__day">{{$event->date->day}}</span>
+                                        <span class="sm-event__date__time">{{$event->date->format('g.iA')}}</span>
                                     </div>
                                     <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img" alt="place"><img src="/img/d_place.svg" width="11" height="13" class="dm_img" alt="place">{{$event->place}}</span>
                                 </section>
                             </a>
+                            @endforeach
+                        @endif
+
+                        @if($event_filter === 'mine')
+                        @foreach ($events as $participation)
+                        <a href="events/{{$participation->event->slug}}">
+                            <section class="sm-event">
+                                <h3 class="sm-event__title">{{ $participation->event->name }}</h3>
+                                <div class="sm-event__date">
+                                    <span class="sm-event__date__month">{{ $participation->event->date->monthName }}</span>
+                                    <span class="sm-event__date__day">{{ $participation->event->date->day }}</span>
+                                    <span class="sm-event__date__time">{{ $participation->event->date->format('g.iA')}}</span>
+                                </div>
+                                <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">{{ $participation->event->place }}</span>
+                            </section>
+                        </a>
                         @endforeach
+                        @endif
+
                             <a href="/events/create">
                             <div class="sm-event__add">
                                 <div class="sm-event__button">
@@ -143,28 +170,68 @@
                     <section class="online">
                         <h3 class="h2-like">Who's online ?</h3>
                         <div class="flex">
+                    
+                            <div class="flex pp__box-qeel">
                                 <div class="sm-pp__box ravenclaw_bg">
                                     <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
                                     <div class="sm-pp__info">
-                                        Enid
+                                        Admin
                                     </div>
                                 </div>
+                                <div class="name">
+                                    Enid
+                                </div>
+                            </div>
+
+                            
+                            <div class="flex pp__box-qeel">
                                 <div class="sm-pp__box gryffindor_bg">
                                     <img src="/img/profil/1622615983-c43992e5e65f09cc53d24bc93fa4437e.png" alt="" class="sm-pp">
-                                    <div class="sm-pp__info">
-                                        Lucy
-                                    </div>
                                 </div>
+                                <div class="name">
+                                    Lucy
+                                </div>
+                            </div>
+
+
+                            <div class="flex pp__box-qeel">
                                 <div class="sm-pp__box {{ Auth::user()->house}}_bg">
                                     <img src="@if (Auth::user()->img)
                                     /{{ Auth::user()->img}}
                                     @else
                                             {{'https://eu.ui-avatars.com/api/?name=' . urlencode(Auth::user()->name) . '&size=120&background=9165DF&color=ffffff'}}
                                     @endif" alt="" class="sm-pp">
+                                    @if(auth()->user()->is_admin )
                                     <div class="sm-pp__info">
-                                        {{ Auth::user()->name }}
+                                        Admin
                                     </div>
+                                    @elseif (auth()->user()->is_modo )
+                                    <div class="sm-pp__info">
+                                        Modo
+                                    </div>
+                                    @endif
                                 </div>
+                                <div class="name">
+                                    @if(Auth::user()->is_admin )
+                                    <span class="tooltip">
+                                        <img src="img/admin.svg" alt="admin" title="admin" class="tag admin">
+                                        <span class="tooltiptext">
+                                            admin
+                                        </span>
+                                    </span>
+
+                                @elseif (Auth::user()->is_modo )
+                                <span class="tooltip">
+                                    <img src="img/modo.svg" alt="admin" title="modo" class="tag modo">
+                                    <span class="tooltiptext">
+                                        modo
+                                    </span>
+                                </span>
+                                @endif{{ Auth::user()->name }}
+                                </div>
+                            </div>
+
+
                         </div>
                     </section>
 
@@ -176,18 +243,20 @@
                         <div class="flex pp_flex">
 
                             @foreach ($new_users as $user )
-                            <a href="/profil/{{ $user->id}}">
-                                <div class="sm-pp__box {{ $user->house}}_bg">
-                                    <img src="
-                                    @if ($user->img)
-                                    /{{$user->img}}
-                                    @else
-                                            {{'https://eu.ui-avatars.com/api/?name=' . urlencode($user->name) . '&size=120&background=9165DF&color=ffffff'}}
-                                    @endif" alt="" class="sm-pp">
-                                    <div class="sm-pp__info">
+                            <a href="/profil/{{ $user->id}}" class="pp_link">
+                                <div class="flex pp__box-qeel">
+                                    <div class="sm-pp__box {{ $user->house}}_bg">
+                                        <img src="@if ($user->img)
+                                        /{{ $user->img}}
+                                        @else
+                                                {{'https://eu.ui-avatars.com/api/?name=' . urlencode($user->name) . '&size=120&background=9165DF&color=ffffff'}}
+                                        @endif" alt="" class="sm-pp">
+                                    </div>
+                                    <div class="name">
                                         {{ $user->name }}
                                     </div>
-                                </div>    
+                                </div>
+
                             </a>
                             @endforeach
 
@@ -213,9 +282,21 @@
             <div class="flex filters">
                 <h2>Latest messages</h2>
                 <div class="under">
-                    <a href="#" class="active">All</a>
-                    <a href="#">Topics you follow</a>
-                    <a href="#">Your friends topics</a>
+                    <a href="?{{ $event_filter ? 'events=' . $event_filter . '&': '' }}posts=all" 
+                    @if($post_filter === 'all')
+                    class="active"
+                    @endif
+                    >All</a>
+                    <a href="?{{ $event_filter ? 'events=' . $event_filter . '&': '' }}posts=followed"
+                    @if($post_filter === 'followed')
+                    class="active"
+                    @endif
+                    >Topics you follow</a>
+                    <a href="?{{ $event_filter ? 'events=' . $event_filter . '&': '' }}posts=friends"
+                    @if($post_filter === 'friends')
+                    class="active"
+                    @endif
+                    >Your friends topics</a>
                 </div>
             </div>
 
@@ -241,7 +322,24 @@
 
                     <div class="topix-preview__author flex">
                         <div class="topix-preview_nm"> 
-                            <p class="topix-preview__author__name {{ $post->user->house }}_c"><span><a href="/profil/{{$post->user->id }}">{{ $post->user->name }}</a></span></p>
+                            <p class="topix-preview__author__name {{ $post->user->house }}_c"><span><a href="/profil/{{$post->user->id }}">
+                                @if($post->user->is_admin )
+                                <span class="tooltip">
+                                    <img src="img/admin.svg" alt="admin" title="admin" class="tag admin">
+                                    <span class="tooltiptext">
+                                        admin
+                                    </span>
+                                </span>
+                                @elseif ($post->user->is_modo )
+                                <span class="tooltip">
+                                    <img src="img/modo.svg" alt="modo" title="modo" class="tag modo">
+                                    <span class="tooltiptext">
+                                        modo
+                                    </span>
+                                </span>
+                                @endif
+                                {{ $post->user->name }}
+                            </a></span></p>
                             <p class="topix-preview__author__messages">{{ $post->user->posts_count }} messages</p>
         
                         </div>

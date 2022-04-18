@@ -19,7 +19,7 @@ class CreateEventsTable extends Migration
             $table->string('slug');
             $table->string('desc');
             $table->string('private_desc');
-            $table->string('date');
+            $table->dateTime('date');
             $table->string('place');
             $table->string('link')->nullable();
             $table->foreignId('user_id')->constrained(); 

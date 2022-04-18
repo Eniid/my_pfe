@@ -18,13 +18,13 @@ Event Name |
                 <h2>Events you'll be part of</h2>
                 <div class="last-event__flex-contener">
                         @foreach ($participations as $participation)
-                        <a href="#">
+                        <a href="/events/{{ $participation->event->slug }}">
                             <section class="sm-event">
                                 <h3 class="sm-event__title">{{ $participation->event->name }}</h3>
                                 <div class="sm-event__date">
-                                    <span class="sm-event__date__month">January</span>
-                                    <span class="sm-event__date__day">10</span>
-                                    <span class="sm-event__date__time">10.20AM</span>
+                                    <span class="sm-event__date__month">{{ $participation->event->date->monthName }}</span>
+                                    <span class="sm-event__date__day">{{ $participation->event->date->day }}</span>
+                                    <span class="sm-event__date__time">{{ $participation->event->date->format('g.iA')}}</span>
                                 </div>
                                 <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">{{ $participation->event->place }}</span>
                             </section>
@@ -33,7 +33,7 @@ Event Name |
 
                         @if($participations->isEmpty())
                         <div class="nothing_box">
-                            <p class="nothing">Ouuuups, there is nothing to see yet! </p>
+                            <p class="nothing">Oooops, there is nothing to see yet! </p>
                 
                         </div>
                         @endif

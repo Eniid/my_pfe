@@ -10,6 +10,45 @@
 <main class="main-sec">
     <div class="frame">
 
+
+
+        <aside class="qeel">
+            <h2 class="hidden">Users</h2>
+            <section class="">
+                <h3 class="h2-like">User's event</h3>
+                <div class="last-event__flex-contener">
+
+
+
+                    @foreach ($events as $event)
+                        <a href="#">
+                            <section class="sm-event">
+                                <h3 class="sm-event__title">{{$event->name}}</h3>
+                                <div class="sm-event__date">
+                                    <span class="sm-event__date__month">{{$event->date->monthName}}</span>
+                                    <span class="sm-event__date__day">10</span>
+                                    <span class="sm-event__date__time">10.20AM</span>
+                                </div>
+                                <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">Disocrd</span>
+                            </section>
+                        </a>
+                    @endforeach
+    
+                    <a href="#">
+                        <section class="sm-event">
+                            <h3 class="sm-event__title">Un titre</h3>
+                            <div class="sm-event__date">
+                                <span class="sm-event__date__month">January</span>
+                                <span class="sm-event__date__day">10</span>
+                                <span class="sm-event__date__time">10.20AM</span>
+                            </div>
+                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">Skype</span>
+                        </section>
+                    </a>
+                </div>
+            </section>
+    </aside>
+
     <!-- House cup and last event -->
     <div class="home-info">
         <section class="last-topics">
@@ -20,11 +59,11 @@
     
     
             <div class="flex filters">
-                <h2>Latest messages</h2>
+                <h2>Search resultes for "{{$searched}}"</h2>
                 <div class="under">
                     <a href="#" class="active">All</a>
-                    <a href="#">Topics you follow</a>
-                    <a href="#">Your friends topic</a>
+                    <a href="#">Topics titles</a>
+                    <a href="#">Post content</a>
                 </div>
             </div>
     
@@ -70,37 +109,7 @@
 
 
        <!-- Users -->
-       <aside class="qeel">
-            <h2 class="hidden">Users</h2>
-            <section class="">
-                <h3 class="h2-like">User's event</h3>
-                <div class="last-event__flex-contener">
-                    <a href="#">
-                        <section class="sm-event">
-                            <h3 class="sm-event__title">Un titre</h3>
-                            <div class="sm-event__date">
-                                <span class="sm-event__date__month">January</span>
-                                <span class="sm-event__date__day">10</span>
-                                <span class="sm-event__date__time">10.20AM</span>
-                            </div>
-                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">Disocrd</span>
-                        </section>
-                    </a>
-    
-                    <a href="#">
-                        <section class="sm-event">
-                            <h3 class="sm-event__title">Un titre</h3>
-                            <div class="sm-event__date">
-                                <span class="sm-event__date__month">January</span>
-                                <span class="sm-event__date__day">10</span>
-                                <span class="sm-event__date__time">10.20AM</span>
-                            </div>
-                            <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img"><img src="/img/d_place.svg" width="11" height="13" class="dm_img">Skype</span>
-                        </section>
-                    </a>
-                </div>
-            </section>
-    </aside>
+
 
 
 

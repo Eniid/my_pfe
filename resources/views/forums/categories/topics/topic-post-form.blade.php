@@ -18,8 +18,8 @@ New Topic |
 
         <form action="/{{ $forum->slug}}/{{$categorie->slug}}/topics/store" method='post'>
             @csrf 
-            <label for="">Title</label>
-            <input type="text" name="title" class="t_input"  placeholder="Give a title to yur topic! ">
+            <label for="title">Title</label>
+            <input type="text" id="title" name="title" class="t_input"  placeholder="Give a title to yur topic!" value="{{ old('title') }}">
             @error('title')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>
@@ -27,7 +27,7 @@ New Topic |
             @enderror
 
             <label for="">Your Message</label>
-            <textarea name="body" id="" cols="30" rows="10" placeholder="Type an awesome message"></textarea>
+            <textarea name="body" id="" cols="30" rows="10" placeholder="Type an awesome message">{{ old('body') }}</textarea>
             @error('body')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

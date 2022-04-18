@@ -1,3 +1,4 @@
+//* Dack Mode **// 
 
 .dm_img{
     display: none;
@@ -335,5 +336,53 @@
     }
 
 
+    .conversation__box {
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+    
+    
+    .auth-user__message{
+        .conversation_message{
+            color: rgb(255, 255, 255);
+            background: linear-gradient(130deg, #3a3a3f, #3a3a3f) !important;
+            box-shadow: $nm;
+        }
+    }
+    
 
-}
+    .user-infos_main-section__scrool{
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+    .user-infos{
+        background: $c_bg;
+        box-shadow: $nm;
+    }
+
+
+    .owls-list {
+        background: rgb(116 116 116 / 35%);
+    }
+
+    .user_inos{
+        color: rgb(202, 202, 202);
+    }
+
+    .user-btn__message{
+        color: rgb(202, 202, 202);
+    }
+
+    .user-btn_contener:first-child {
+        background-color: rgb(63 63 70 / 77%);
+    }
+
+    .user-infos_main-section__scrool .profil_link a {
+        color: white;
+        font-size: 1.4rem;
+    }
+
+    }
+
+

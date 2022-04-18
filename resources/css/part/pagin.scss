@@ -1,0 +1,23 @@
+.pagin{
+    color: black;
+    padding: 0.5rem;
+    a{
+        text-decoration: none;
+        color: black;
+    }
+}
+
+.current_page_pagination {
+    color: #fff;
+    background-color: #9065df;
+    border-radius: 10rem;
+    padding: 0rem 0.7rem;
+
+
+}
+
+
+.pagin_arrow {
+    padding: 1rem;
+    width: 1rem;
+}

@@ -49,7 +49,7 @@ Forum Name |
 
                             </div>
                             <div class="sm-pp__box {{ $categorie->topic->latestPost->user->house }}_bg">
-                                <a href="#" class="xxx profil">
+                                <a href="/profil/{{ $categorie->topic->latestPost->user->id }}" class="xxx profil">
                                         <img src="@if ($categorie->topic->latestPost->user->img)
                                         /{{$categorie->topic->latestPost->user->img}}
                                         @else

@@ -23,7 +23,7 @@ Register |
     
             <label for="wood-choice">Wood</label>
             <input list="wood" id="wood-choice" name="wood" />
-            <datalist id="wood">
+            <datalist id="wood" >
                 <option value="Acacia">
                 <option value="Ash">
                 <option value="Black Walnut">
@@ -67,7 +67,7 @@ Register |
             @enderror
 
             <label for="width">Lenghts</label>
-            <input type="number" id="width" name="width" min="8" max="15"/> inches
+            <input type="number" id="width" name="width" min="8" max="15" value="{{ old('width') }}"> inches
             @error('width')
             <span class="invalid-feedback" role="alert">
                 <strong>{{ $message }}</strong>

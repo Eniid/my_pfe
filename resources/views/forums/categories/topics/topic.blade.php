@@ -21,7 +21,7 @@ Topic Name |
 
     <!-- TOPIC -->
 
-    {{ $posts->links() }}
+    {{ $posts->links('vendor.pagination.tailwind', ['messagesByPage' => $messagesByPage]) }}
             @foreach($posts as $post)
                 <div class="main-message flex">
                     <!-- Profil -->
@@ -39,7 +39,14 @@ Topic Name |
                             <div class="profil_info">
                                 <div class="main-message__user-name ra under {{$post->user->house}}_c">
                                     <a href="/profil/{{$post->user->id}}" class="name">{{$post->user->name}}</a></div>
-                                <div class="main-message__title rang">Rang</div>
+                                <div class="main-message__title rang">
+                                    @if($post->user->is_admin )
+                                    <img src="{{ asset('img/admin.svg') }}" alt="admin" title="admin" class="tag admin"> admin
+                                    @elseif ($post->user->is_modo )
+                                    <img src="{{ asset('img/modo.svg') }}" alt="modo" title="admin" class="tag modo"> modo
+
+                                    @endif
+                                </div>
                             </div>
                         </div>
                         <div class="box_mess">
@@ -89,7 +96,7 @@ Topic Name |
                         @endif
 
                         <a href=""><img class="icone lm_img" src="{{ asset('img/quote.svg')}}" alt="edit the topic"><img class="icone dm_img" src="{{ asset('img/d_quote.svg')}}" alt="edit the topic" class="dm_img"></a>
-                        @if($post->user->id === auth()->id() || auth()->user()->is_admin )    
+                        @if($post->user->id === auth()->id() || auth()->user()->is_modo )    
                         <a href=""><img class="icone lm_img" src="{{ asset('img/edit.svg')}}" alt="edit the topic"><img class="icone dm_img" src="{{ asset('img/d_edit.svg')}}" alt="edit the topic" class="dm_img"></a>
                         <input type="checkbox" name="del" id="del" class="del_c visually-hidden">
                         <label href="" class="in" for="del"><img class="icone lm_img" src="{{ asset('img/delete.svg')}}" alt="delete topic"><img class="icone dm_img" src="{{ asset('img/d_delete.svg')}}" alt="delete topic" ></label>
@@ -114,7 +121,7 @@ Topic Name |
                     </div>
                 </div>
         @endforeach
-        {{ $posts->links() }}
+        {{ $posts->links('vendor.pagination.tailwind', ['messagesByPage' => $messagesByPage]) }}
 
 
 
@@ -127,7 +134,7 @@ Topic Name |
             @csrf
             <div class="message__box flex">
                 <div class="message__border">
-                    <textarea name="body" id="" cols="30" rows="10" placeholder="Type your new message here!"></textarea>
+                    <textarea name="body" id="" cols="30" rows="10" placeholder="Type your new message here!" >{{ old('body') }}</textarea>
                     <div class="mb_box">
                         <div class="message_btn"><i>i</i></div>
                         <div class="message_btn"><strong>b</strong></div>

@@ -55,13 +55,14 @@
                    <li><a href="/rp">Role Play</a></li> 
                    <li class="home_li"><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}" alt="home_page" class="lm_img"><img src="{{ asset('img/d_house.svg') }}" alt="home_page" class="dm_img"></a></li> 
                    <li><a href="{{ url('events') }}">Events</a></li> 
-                   <li><a href="/">Owls</a></li> 
+                   <li><a href="/owls">Owls</a></li> 
                    <li>
-                        <form action="/" class="search-form">
+                        <form action="/search" class="search-form" method='get'>
+                            @csrf
                             <div class="searchbox">
-                                <input type="text" name="search" placeholder="search">
-                                <a href="#"><img src="{{ asset('img/search.svg') }}" class="lm_img" alt="search"><img src="{{ asset('img/d_search.svg') }}" class="dm_img" alt="search"></a>
-                            </div>
+                                <input type="text" name="search" placeholder="search" value="{{ old('search') }}">
+                                <button><img src="{{ asset('img/search.svg') }}" class="lm_img" alt="search"><img src="{{ asset('img/d_search.svg') }}" class="dm_img" alt="search"></button>
+                            </div> 
                         </form>
                    </li> 
 
@@ -162,7 +163,9 @@
             <p class="nmto">Nothing more to see here! </p>
 
 
-                <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy</a></p>
+                <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a>    ☽ &nbsp; &nbsp; @2021 Wizarding World Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy <br> @if(auth()->user()->is_admin )    
+                    <a href="#">Administration Board</a>
+                @endif</a></p>
        
         </footer>
 

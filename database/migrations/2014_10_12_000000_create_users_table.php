@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
             $table->unsignedSmallInteger('wand_length')->nullable();
             $table->unsignedSmallInteger('messages')->default('0');
             $table->unsignedSmallInteger('house_point')->default('0');
+            $table->boolean('is_modo')->default(false);
             $table->boolean('is_admin')->default(false);
             $table->rememberToken();
             $table->timestamps();

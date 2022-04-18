@@ -30,7 +30,7 @@
                         <img src="{{ asset('img/new.svg')}}" alt="new message">
                     </div>
                     <div class="sm-pp__box {{ $topic->user->house}}_bg">
-                        <a href="#" class="xxx profil">
+                        <a href="/profil/{{$topic->user->id}}" class="xxx profil">
                             <img src="
                             @if ($topic->user->img)
                             /{{$topic->user->img}}
@@ -83,7 +83,7 @@
         @else
         <div class="nothing_box">
             <img class="nothing_img lm_img" src="{{ asset('img/nothing.svg')}}" alt=""><img class="nothing_img dm_img" src="{{ asset('img/d_nothing.svg')}}" alt="">
-            <p class="nothing">Ouuuups, there is nothing to see yet! </p>
+            <p class="nothing">Oooops, there is nothing to see yet! </p>
             <div class="cta cta_v">
                 <a href="/{{ $forum->slug}}/{{ $categorie->slug}}/topics/create">
                     Create the first topic

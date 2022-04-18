@@ -1,0 +1,38 @@
+.house_cup-title{
+    font-family: $f_title;
+    font-size: 5rem;
+    text-align: center;
+}
+
+.house_cup_winner-title{
+    color: black;
+    font-size: 1.4rem;
+
+    span{
+        color: $c_ravenclaw;
+        display: block;
+        font-size: 2rem;
+        padding: .5rem;
+    }
+}
+
+.house-winer_box{
+    padding: 5rem;
+    text-align: center;
+    @include nm; 
+    position: relative;
+}
+
+
+.house-cup_img_one {
+    top: 0;
+    right: 8rem;
+    position: absolute;
+}
+
+
+.house-cup_img_two {
+    top: 0;
+    left: 8rem;
+    position: absolute;
+}

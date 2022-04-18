@@ -7,7 +7,10 @@ use App\Http\Controllers\EventController;
 use App\Http\Controllers\TopicController;
 use App\Http\Controllers\CategorieController;
 use App\Http\Controllers\PostController;
+use App\Http\Controllers\OwlsController;
+use App\Http\Controllers\HcController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\SearchController;
 
 /*
 |--------------------------------------------------------------------------
@@ -53,7 +56,10 @@ Auth::routes();
 
     Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
     Route::get('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('home');
+    Route::post('/search', [App\Http\Controllers\HomeController::class, 'search'])->name('home');
     Route::get('/termes-and-policy', [App\Http\Controllers\HomeController::class, 'tp'])->name('t&p');
+
+//* Search thingy
 
 
 
@@ -86,6 +92,15 @@ Auth::routes();
 
            Route::post('/events/{event:slug}/join', [EventController::class, 'participation'])->middleware('auth');
            Route::post('/events/{event:slug}/leave', [EventController::class, 'leave'])->middleware('auth');
+
+
+    //* Owls 
+        Route::get('/owls', [OwlsController::class, 'show'])->middleware('auth');
+
+    //* House Cup 
+        Route::get('/house-cup-history', [hcController::class, 'show'])->middleware('auth');
+
+
 
 
     //* Profil
@@ -132,4 +147,6 @@ Auth::routes();
             // Like
             Route::post('/{forum:slug}/{categorie:slug}/{topic:slug}/like', [PostController::class, 'like'])->middleware('auth');
             Route::delete('/{forum:slug}/{categorie:slug}/{topic:slug}/unlike', [PostController::class, 'unlike'])->middleware('auth');
+
+
 

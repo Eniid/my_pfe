@@ -103,10 +103,15 @@ Events |
             @csrf
             <div class="message__box">
                 <div class="message__border">
-                    <textarea name="body" cols="30" rows="10" placeholder="Type your new message here!"></textarea>
+                    <textarea name="body" cols="30" rows="10" placeholder="Type your new message here!">{{ old('body') }}</textarea>
                     <button   class="cta cta_m">Send</button>
                 </div>
             </div>
+            @error('body')
+            <span class="invalid-feedback" role="alert">
+                <strong>{{ $message }}</strong>
+            </span>
+            @enderror
          </form>
 
         @foreach ($event->posts as $post)
@@ -124,7 +129,7 @@ Events |
                             
                     </div>
                    <div class="sm-pp__box {{ $post->user->house }}_bg">
-                       <a href="#" name="xxx profil">
+                       <a href="/profil/{{ $post->user->id}}" name="xxx profil">
                             <img src="@if ($post->user->img)
                             /{{$post->user->img}}
                             @else

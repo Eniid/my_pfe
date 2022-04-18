@@ -7,5 +7,5 @@
   @mixin nmi($color1: #dadada, $color2 : #fff) {
     background: #F5F5F5;
     box-shadow: inset 4px 4px 6px $color1,
-                inset -4px -4px 6px$color2;
+                inset -4px -4px 6px $color2;
   }

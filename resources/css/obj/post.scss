@@ -18,7 +18,7 @@
 
 
         .profil_info {
-            padding: 1rem;
+            padding: 1rem 1rem 1rem 0;
             text-align: right;
         }
         
@@ -184,7 +184,15 @@
 .main-message__text {
     img {
 
+        padding: 2rem 0;
         max-width: 100%;
+
+    }
+
+    .edit-btn__topic {
+        img {
+            padding: 0;
+        }
     }
 }
 
@@ -208,4 +216,23 @@ strong {
 
 .message__box {
     flex-direction: column;
+}
+
+
+
+.main-message .profl_main {
+    margin: 0;
+}
+
+
+.box_mess {
+    position: relative;
+    top: 3rem;
+}
+
+.main-message .main-message__text p {
+    width: auto;
+    margin: 0;
+    line-height: 2.1rem;
+    padding: 1rem 0;
 }

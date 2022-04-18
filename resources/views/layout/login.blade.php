@@ -55,6 +55,9 @@
                         <label for="login_img" class="login_text">‍Login</label>
                     </div>
                         <div class="login_content">
+
+                            <div class="lb_title">Welcome Back!</div>
+
                             <form method="POST" action="{{ route('login') }}">
                             @csrf
                                 <label for="email">Email</label>
@@ -71,13 +74,13 @@
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
-                                <div class="fup">
+                                <div class="fup under">
                                     <a href="#">Password forgotten ?</a>
                                 </div>
                 
                                 <div class="form-group row">
                                     <div class="col-md-6 offset-md-4">
-                                        <div class="form-check">
+                                        <div class="form-check" id="checklist">
                                             <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
                 
                                             <label class="form-check-label remember" for="remember">

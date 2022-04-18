@@ -294,7 +294,7 @@
         @if($posts->isEmpty())
         <div class="nothing_box">
             <img class="nothing_img lm_img" src="{{ asset('img/nothing.svg')}}" alt=""><img class="nothing_img dm_img" src="{{ asset('img/d_nothing.svg')}}" alt="">
-            <p class="nothing">Ouuuups, there is nothing to see yet! </p>
+            <p class="nothing">Oooops, there is nothing to see yet! </p>
 
         </div>
         @else

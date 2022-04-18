@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="96" height="222.004" viewBox="0 0 96 222.004">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#405d8d"/>
+      <stop offset="1" stop-color="#1484bf"/>
+    </linearGradient>
+  </defs>
+  <g id="Groupe_209" data-name="Groupe 209" transform="translate(-131 -586.998)">
+    <g id="Groupe_208" data-name="Groupe 208">
+      <path id="Union_3" data-name="Union 3" d="M9511,21410h96l-48,58Zm0,0v-164h96v164Z" transform="translate(-9380 -20659)" fill="url(#linear-gradient)"/>
+      <rect id="Rectangle_1513" data-name="Rectangle 1513" width="96" height="164" transform="translate(131 587)" fill="url(#linear-gradient)"/>
+      <text id="_" data-name="🦅" transform="translate(160 646)" fill="#fff" font-size="45" font-family="AppleColorEmoji, Apple Color Emoji"><tspan x="0" y="45">🦅</tspan></text>
+    </g>
+  </g>
+</svg>

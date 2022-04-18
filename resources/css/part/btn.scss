@@ -13,6 +13,10 @@
 }
 
 
+.cta:hover{
+    transform: scale(1.01);
+}
+
 .cta_m {
     background: linear-gradient(54deg, $g-main_t) ;
     backdrop-filter: blur( 3.0px );
@@ -117,6 +121,12 @@
 }
 
 
+.cta_v:hover {
+    box-shadow: -1px 4px 13px 4px rgb(169 171 239 / 46%);
+    transform: scale(0.97);
+}
+
+
 .message_btn {
     @include nm; 
     margin: 0 0 0 .8rem;
@@ -142,4 +152,28 @@
     position : absolute;
     margin-left: 2rem;
     bottom: 5rem;
+}
+
+
+.sm-event__button:hover {
+
+    transform: scale(1.05);
+
+    img {
+        transform: rotate(90deg);
+        transition: .9s;
+    }
+}
+
+button {
+    cursor: pointer;
+}
+
+
+.switch{
+    cursor: pointer;
+}
+
+.navigation_l {
+    cursor: pointer;
 }

@@ -16,7 +16,7 @@ New event |
             @csrf
             <div>
                 <label for="name">Event's name</label>
-                <input type="text" name="name" id="name" placeholder="Give your event a name">
+                <input type="text" name="name" id="name" placeholder="Give your event a name" value="{{ old('name') }}">
                 @error('name')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -24,7 +24,7 @@ New event |
                 @enderror
 
                 <label for="desc">Event descitption</label>
-                <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Description of the event for everyone to see"></textarea>
+                <textarea name="desc" id="desc" cols="30" rows="10" placeholder="Description of the event for everyone to see">{{ old('title') }}</textarea>
                 @error('desc')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -33,7 +33,7 @@ New event |
             </div>
             <div>
                 <label for="date">Date</label>
-                <input type="date" id="date" name="date">
+                <input type="datetime-local" id="date" name="date"  value="{{ old('date') }}">
                 @error('date')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -41,7 +41,7 @@ New event |
                 @enderror
 
                 <label for="place">Place</label>
-                <input type="text" name="place" id="place" placeholder="Skype ? Discord ? An adress ?">
+                <input type="text" name="place" id="place" placeholder="Skype ? Discord ? An adress ?" value="{{ old('place') }}">
                 @error('place')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>
@@ -49,7 +49,7 @@ New event |
                 @enderror
 
                 <label for="desc">Message for the participents</label>
-                <textarea name="private_desc" id="desc" cols="30" rows="10" placeholder="Here you can give information for only the participents. For exeple the adress or the link for the reunion"></textarea>
+                <textarea name="private_desc" id="desc" cols="30" rows="10" placeholder="Here you can give information for only the participents. For exeple the adress or the link for the reunion">{{ old('private_desc') }}</textarea>
                 @error('private_desc')
                 <span class="invalid-feedback" role="alert">
                     <strong>{{ $message }}</strong>

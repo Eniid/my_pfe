@@ -42,19 +42,24 @@ nav {
     width: 15rem; 
     height: 3rem;
 
+        button{
+            background: none;
+            border: none;
+        }
+
 
         input {
-            position : absolute; 
+            //position : absolute; 
             border-radius: 4rem;
             top : 0rem;
             box-sizing: content-box;
 
             height: 100%;
         }
-        a {
-            position : absolute;  
-            top: -4.2rem;
-            right: -7rem;
+        button {
+            position: absolute;
+            top: -0.35rem;
+            right: -4rem;
 
             img {
                 width: 5rem;
