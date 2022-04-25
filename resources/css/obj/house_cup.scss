@@ -13,6 +13,7 @@
     @include nm;
     display: flex;
     margin: 0.7rem; 
+
 }
 
 .house-cup__sand {
@@ -84,5 +85,60 @@
         padding: 1rem;
         font-size: 1.2rem;
         text-align: center;
+    }
+}
+
+
+//baas 
+
+
+
+.history{
+
+    margin-left: 3rem;
+
+    table{
+        text-align: center;
+    }
+    th{
+        border-bottom: 0.1rem solid #cdcccc;
+        width: 30rem;
+        padding: 2rem;
+        font-family: $f_main-bold;
+    }
+
+    td{
+        padding: 2rem; 
+        
+    }
+
+    tr:hover{
+        background-color: rgb(236, 236, 236);
+
+    }
+}
+
+
+.best_users{
+
+    .topix-preview__author__name {
+        font-size: 1.5rem;
+        
+    }
+
+    h3{
+        margin-bottom: 0.1rem;
+        }
+    .bu_in{
+        @include nm;
+        padding: 2rem;
+        border-radius: 1rem;
+        min-width: 21rem;
+
+    }
+    
+
+    li{
+        padding: 1.2rem;
     }
 }

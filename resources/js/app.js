@@ -112,13 +112,13 @@ document.addEventListener("click", e=>{
         window.localStorage.removeItem("darkmode")
     }
 }, false)
-document.body.onload = ()=>{
+
 const dm = window.localStorage.getItem("darkmode")
 if(dm){
     const cb = document.querySelector("input#switch_cb")
     cb.checked = true
     document.body.classList.add("dark")
-}
+
 }
 
 

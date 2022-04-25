@@ -5,6 +5,7 @@
 
 .pph_p {
     margin-top: 1.2rem;
+    text-align: left;
 }
 
 .pph_texte {
@@ -19,12 +20,16 @@
 
     }
 
-    label {
+
+    label{
         color: black;
         font-size: 1.2rem;
         letter-spacing: 0;
-        margin: .1rem 0;
+        margin: 0.1rem 0.5rem;
         text-transform: none;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
 }
@@ -44,6 +49,12 @@
 }
 
 
+
+
 .pph_n {
     margin-bottom: 2rem;
+}
+
+.pp_link{
+    font-family: $f_main-bold;
 }

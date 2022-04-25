@@ -1941,16 +1941,13 @@ document.addEventListener("click", function (e) {
     window.localStorage.removeItem("darkmode");
   }
 }, false);
+var dm = window.localStorage.getItem("darkmode");
 
-document.body.onload = function () {
-  var dm = window.localStorage.getItem("darkmode");
-
-  if (dm) {
-    var cb = document.querySelector("input#switch_cb");
-    cb.checked = true;
-    document.body.classList.add("dark");
-  }
-};
+if (dm) {
+  var cb = document.querySelector("input#switch_cb");
+  cb.checked = true;
+  document.body.classList.add("dark");
+}
 
 var element = document.querySelector(".revers_scrool");
 element.addEventListener("wheel", function (e) {

@@ -38,8 +38,6 @@
 
 .dark {
 
-
-
     .lm_img{
         display: none;
     }
@@ -383,6 +381,39 @@
         font-size: 1.4rem;
     }
 
+    .notif_box_inside {
+        box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+        background: #3f3f47;
     }
+
+    .notif:hover {
+        background-color: #353535;
+    }
+
+
+    .notif_box .lable {
+        background-color: #353535;
+    }
+
+
+
+    .profil_box{
+        box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+        background: #3f3f47;
+    }
+
+    .pph_texte a{
+        color: #fff;
+    }
+
+
+element.style {
+}
+.pph_texte label {
+    color: rgb(255, 255, 255);
+
+}
+    }
+
 
 

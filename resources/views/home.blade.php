@@ -8,7 +8,7 @@
 @section('content')
 <main class="main-sec">
     <div class="frame">
-         
+
         <!-- House cup and last event -->
         <div class="home-info">
             <div class="flex home-house_ev">

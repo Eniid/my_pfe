@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="24.171" height="25.803" viewBox="0 0 24.171 25.803">
+  <g id="Groupe_212" data-name="Groupe 212" transform="translate(2303.066 17014.234)">
+    <g id="Icon_ionic-ios-notifications" data-name="Icon ionic-ios-notifications" transform="translate(-2309.282 -17021.664)">
+      <path id="Tracé_86" data-name="Tracé 86" d="M18.087,32.166c2.247,0,3.476-1.59,3.476-3.83H14.6C14.6,30.576,15.832,32.166,18.087,32.166Z" transform="translate(0.218 0.566)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1"/>
+      <path id="Tracé_87" data-name="Tracé 87" d="M29.585,21.622c-1.113-1.212-3.3-1.923-3.3-7.35,0-5.571-2.977-7.81-5.752-8.347-.26-.054-.448-.125-.448-.352V5.4A1.643,1.643,0,0,0,18.319,3.93,1.639,1.639,0,0,0,16.556,5.4v.173c0,.221-.188.3-.448.352-2.782.543-5.752,2.776-5.752,8.347,0,5.427-2.19,6.132-3.3,7.35-.715.782-.036,1.9,1.149,1.9H28.443C29.621,23.521,30.3,22.4,29.585,21.622Z" transform="translate(-0.018 4)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="bevel" stroke-width="1"/>
+    </g>
+    <circle id="Ellipse_37" data-name="Ellipse 37" cx="3.5" cy="3.5" r="3.5" transform="translate(-2287 -17012)" fill="#9165df"/>
+  </g>
+</svg>
