@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Categorie;
 use App\Models\Forum;
+use App\Models\User;
 use App\Models\Topic;
 use App\Models\Post;
 use Illuminate\Support\Str;
@@ -74,6 +75,9 @@ class TopicController extends Controller
         $post -> save();
             
             
+        $user = User::where('id', auth()->id())->first();
+        $user-> house_point = $user-> house_point + 5; 
+        $user -> save();
 
 
         return redirect('/'.$forum->slug.'/'.$categorie->slug);

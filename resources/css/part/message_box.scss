@@ -1,6 +1,5 @@
-
 .message__box {
-    width : 82%;
+    width: 82%;
     margin: auto;
     justify-content: flex-end;
     align-items: flex-end;
@@ -9,13 +8,13 @@
 
 
 
-    .message__border{
+    .message__border {
         width: 92.5%;
-         @include nm; 
-         text-align: center;
-         position: relative;
-         right: -2rem; 
-        
+        @include nm;
+        text-align: center;
+        position: relative;
+        right: -2rem;
+
 
         textarea {
             margin: 2rem;
@@ -25,31 +24,31 @@
     }
 
     button {
-        margin: 0rem 2rem 2rem 88%; 
-       }
-    
+        margin: 0rem 2rem 2rem 88%;
+    }
+
 }
 
 
-.event-message{
+.event-message {
     .message__box {
-        width : 100%;
+        width: 100%;
         border-radius: 0.5rem;
         position: relative;
         margin-bottom: 3rem;
-    }     
+    }
 
-    .message__border{
+    .message__border {
         width: 100%;
-         @include nm; 
-         text-align: center;
+        @include nm;
+        text-align: center;
     }
 
 
     textarea {
         height: 6rem;
     }
-    
+
     .cta {
         padding: 1rem 3rem;
         position: absolute;
@@ -58,4 +57,3 @@
     }
 
 }
-

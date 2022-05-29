@@ -1,0 +1,63 @@
+
+nav {
+
+    a {
+        display: block;
+        position: relative;
+    }
+    
+    
+    //** La bare **//
+    a::after {
+        content: "";
+        position: absolute;
+        bottom: -1rem;
+        left: 0;
+        width: 100%;
+        height: 0.1em;
+        background-color: $c_main;
+        opacity: 0;
+        transition: opacity 300ms, transform 300ms;
+    }
+    
+    // a:hover::after,
+    // a:focus::after {
+    //     opacity: 1;
+    //     transform: translate3d(0, 0.2em, 0);
+    // }
+    
+    li a {
+        padding: 0 2rem;
+        margin: 0 1rem;
+        text-decoration: none;
+        color: black;
+    }
+
+    li a::after {
+        opacity  :1;
+        transform: scale(0);
+        transform-origin: center;
+    }
+    
+    .under_menu a:hover::after,
+    .under_menu a:focus::after {
+        transform: scale(1);
+    }
+
+    .home_li  a::after {
+        opacity: 0;
+    }
+}
+
+
+.nav_selected_item {
+    a::after {
+        transform: scale(1);
+    }
+
+    a::after{
+        opacity: 1;
+        transform: translate3d(0, 0.2em, 0);
+    }
+    
+}

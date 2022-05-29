@@ -3,7 +3,7 @@ nav {
     border-radius: 0 0 .5rem .5rem;
     top: 0;
     width: 100%;
-    background-color: $c_bg;
+    background-color: #f3f4f2BB;
     text-align: center;
     z-index: 10000000000000000000000000000000000;
     box-shadow: 0px 1px 72px -23px rgba(0, 0, 0, 0.53);
@@ -23,6 +23,19 @@ nav {
         bottom: -6.3rem;
         left: -6rem;
     }
+}
+
+
+.sub_nav-toblure{
+    position: fixed;
+    border-radius: 0 0 .5rem .5rem;
+    top: 0;
+    height: 8.8rem;
+    width: 100%;
+    background-color: $c_bg;
+    text-align: center;
+    z-index: -1;
+
 }
 
 .nav-ol {
@@ -93,75 +106,6 @@ nav {
 
 
 
-@media screen and (max-width: 1100px) {
-    .nav-ol {
-        flex-direction: column;
-        height: 80%;
-
-    }
-
-    nav {
-        height: 63rem;
-
-        position: fixed;
-        transform: translateY(-56rem);
-        transition: transform .5s cubic-bezier(.29, .54, .57, .79);
-
-    }
-
-    .home_li {
-        order: -1;
-    }
-
-    .avatar_li {
-        position: absolute;
-        top: 3rem;
-        right: 3rem;
-    }
-
-    .navigation_l {
-        display: block;
-        padding: 2rem;
-        position: relative;
-        top: 3rem;
-        text-transform: uppercase;
-    }
-
-    .m_close {
-        display: none;
-    }
-
-    .m_open {
-        display: block;
-        padding-bottom: 1rem;
-        border-bottom: 2px #aa9120 solid;
-        width: 90%;
-        margin: auto;
-
-    }
-
-    .nav_check:checked~nav {
-        top: 0rem;
-        transform: translateY(0);
-        transition: transform .5s cubic-bezier(.29, .54, .57, .79);
-
-
-        .m_close {
-            display: block;
-            padding-bottom: 1rem;
-            border-bottom: 2px #aa9120 solid;
-            width: 90%;
-            margin: auto;
-        }
-
-        .m_open {
-            display: none;
-        }
-    }
-
-
-}
-
 
 
 
@@ -189,7 +133,7 @@ nav {
     background: #455a64;
     border-radius: 30px;
     position: relative;
-    top: 0.5rem;
+    //top: 0.5rem;
     cursor: pointer;
     margin-left: 1rem;
 }

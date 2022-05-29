@@ -25,7 +25,7 @@
     border: 1px solid #a5880f91;
     padding: 2rem;
     box-shadow:  2px 2px 6px #7379eb57,
-                 -2px -2px 6px #a757d552;
+                -2px -2px 6px #a757d552;
     color: #fff;
     a {
         color : #fff; 
@@ -35,19 +35,30 @@
 .cta_i {
     background : linear-gradient(54deg, $g-gryffondor); 
     box-shadow:  2px 2px 6px #ef0e6c38,
-                 -2px -2px 6px #ef0e6c38;
-                 width: 100%;
+                -2px -2px 6px #ef0e6c38;
+                width: 100%;
         color : #fff; 
         padding: .5rem;
 }
 
 .cta_l {
-
         padding: .5rem;
         width: 100%;
 
 }
 
+
+.house-winer_box{
+    .cta{
+        text-decoration: none;
+        margin: 4rem auto 0;
+        width: 15rem;
+        padding: 1.3rem 3rem;
+        color: black;
+        text-transform: uppercase;
+        font-size: 1.2rem;
+    }
+}
 
 
 
@@ -105,24 +116,23 @@
 }
 
 .cta_v {
-    background: linear-gradient(#a657d557, #7379eba3);
-    width: 15rem;
-    padding: 1.3rem;
-    margin: 5rem auto;
-    border: 1px solid #d3bae2;
-    color: #fff;
 
-    box-shadow: 0px 11px 20px 4px rgb(169 171 239 / 46%);
+        background: linear-gradient(#6e46b9, #8c62d8);
+        width: 15rem;
+        padding: 0.8rem;
+        margin: -1rem auto 3rem;
+        border: 1px solid #959595;
+        color: #fff;
+    
 
     a{
 
-        color: #fff;
+        color: #ffffff;
     }
 }
 
 
 .cta_v:hover {
-    box-shadow: -1px 4px 13px 4px rgb(169 171 239 / 46%);
     transform: scale(0.97);
 }
 
@@ -176,4 +186,8 @@ button {
 
 .navigation_l {
     cursor: pointer;
+}
+
+.cta_newevent {
+    margin: 1.5rem auto 3rem;
 }

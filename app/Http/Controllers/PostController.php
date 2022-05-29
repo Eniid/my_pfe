@@ -8,6 +8,7 @@ use App\Models\Forum;
 use App\Models\Topic;
 use App\Models\Like;
 use App\Models\Event;
+use App\Models\User;
 use App\Models\Post;
 use Illuminate\Support\Str;
 
@@ -41,6 +42,10 @@ class PostController extends Controller
         $topic_n = $topic->loadCount('posts')->posts_count; 
         $nb_post_page = 10; 
         $nb_page =ceil($topic_n/$nb_post_page);
+
+        $user = User::where('id', auth()->id())->first();
+        $user-> house_point = $user-> house_point + 2; 
+        $user -> save();
             
             
         return redirect('/'.$forum->slug.'/'.$categorie->slug.'/'.$topic->slug.'?page='.$nb_page );
@@ -60,11 +65,16 @@ class PostController extends Controller
         $post -> postable_id = $event->id; 
         $post -> postable_type = "App\Models\Event";
         $post -> save();
+
+        $user = User::where('id', auth()->id())->first();
+        $user-> house_point = $user-> house_point + 5; 
+        $user -> save();
             
+
+
             
         return redirect('/events/'.$event->slug);
     }
- 
 
 
     public function like(Forum $forum, Categorie $categorie, Topic $topic, Request $request){
@@ -83,7 +93,7 @@ class PostController extends Controller
         $topic_n = $topic->loadCount('posts')->posts_count; 
         $nb_post_page = 10; 
         $nb_page =ceil($topic_n/$nb_post_page);
-              
+            
             
         return redirect('/'.$forum->slug.'/'.$categorie->slug.'/'.$topic->slug);
     }

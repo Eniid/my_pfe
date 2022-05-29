@@ -23,6 +23,7 @@
     position: relative;
     border-radius: 1rem;
     margin-bottom: 5rem;
+
 }
 
 
@@ -38,3 +39,33 @@
     left: 8rem;
     position: absolute;
 }
+
+
+.house-cup{
+    a{
+        color: black;
+        font-size: 1.4rem;
+    }
+
+    p{
+        margin: 0;
+        span{
+            font-family: $f_main-bold;
+            font-size: 1.4rem;
+        }
+    }
+
+    .cta_v {
+        background: linear-gradient(#6e46b9, #8c62d8);
+        width: 15rem;
+        padding: 0.8rem;
+        margin: -1rem auto 3rem;
+        border: 1px solid #d3bae2;
+        color: #fff;
+    }
+
+    .house_ex {
+        top:0; 
+    }
+}
+

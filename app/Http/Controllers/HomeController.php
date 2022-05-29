@@ -75,21 +75,21 @@ class HomeController extends Controller
         $posts->load(['postable' => function($query){
             $query->with(['categorie' => function($query){
                 $query->with('forum');
-             }]);
-         }]);
+            }]);
+        }]);
         $posts->load(['user' => function($query){
             $query->withCount('posts');
-         }]);
+        }]);
 
 
-        $new_users = User::latest()->where('name', 'like', '%' .$searched.'%')->take(10)->get();
+        $users = User::latest()->where('name', 'like', '%' .$searched.'%')->take(10)->get();
 
         $events = Event::latest()->where('name', 'like', '%' .$searched.'%')->take(10)->get();
 
 
         //dd($posts);
 
-        return view('search', compact('events', 'posts', 'new_users', 'searched'));
+        return view('search', compact('events', 'posts', 'users', 'searched'));
     }
 
 

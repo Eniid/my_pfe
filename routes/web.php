@@ -48,7 +48,7 @@ Auth::routes();
     Route::post('/register/house', [RegisterController::class, 'storeHouse'])->middleware('auth');
     Route::get('/register/wand', [RegisterController::class, 'setWand'])->middleware('auth');
     Route::post('/register/wand', [RegisterController::class, 'storeWand'])->middleware('auth');
-
+ 
 
 
 
@@ -63,7 +63,6 @@ Auth::routes();
 
 
 
-
     Route::get('/teste', function () {
         return view('teste');
     });  
@@ -75,23 +74,22 @@ Auth::routes();
            // Events
            Route::get('/events', [EventController::class, 'index'])->middleware('auth');
 
-   
+
            // New event
-           Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
-           Route::post('/events/create', [EventController::class, 'store'])->middleware('auth');
-   
-   
+            Route::get('/events/create', [EventController::class, 'create'])->middleware('auth');
+            Route::post('/events/create', [EventController::class, 'store'])->middleware('auth');
+
            // Edit event 
-           Route::get('/events/edit/{event:slug}', [EventController::class, 'edit'])->middleware('auth');
+            Route::get('/events/edit/{event:slug}', [EventController::class, 'edit'])->middleware('auth');
 
            // Event 
 
-           Route::get('/events/{event:slug}', [EventController::class, 'show'])->middleware('auth');
-           Route::post('/events/{event:slug}', [PostController::class, 'store_event'])->middleware('auth');
-   
+            Route::get('/events/{event:slug}', [EventController::class, 'show'])->middleware('auth');
+            Route::post('/events/{event:slug}', [PostController::class, 'store_event'])->middleware('auth');
 
-           Route::post('/events/{event:slug}/join', [EventController::class, 'participation'])->middleware('auth');
-           Route::post('/events/{event:slug}/leave', [EventController::class, 'leave'])->middleware('auth');
+
+            Route::post('/events/{event:slug}/join', [EventController::class, 'participation'])->middleware('auth');
+            Route::post('/events/{event:slug}/leave', [EventController::class, 'leave'])->middleware('auth');
 
 
     //* Owls 

@@ -1,11 +1,11 @@
-@mixin nm($color1: #0000001f, $color2 : #fff) {
-    background: #F5F5F5;
+@mixin nm($color1: #0000001f, $color2 : #ffffff5e) {
+    background: $c_bg;
     box-shadow:  4px 4px 6px $color1,
-             -4px -4px 6px $color2;
-  }
+             -4px -4px 6px #fffffff1;
+  };
 
-  @mixin nmi($color1: #dadada, $color2 : #fff) {
-    background: #F5F5F5;
+  @mixin nmi($color1: #dadada, $color2 : #ffffff5e) {
+    background: $c_bg;
     box-shadow: inset 4px 4px 6px $color1,
-                inset -4px -4px 6px $color2;
+                inset -4px -4px 6px #ffffff5e;
   }

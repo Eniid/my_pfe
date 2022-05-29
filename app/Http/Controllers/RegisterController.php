@@ -8,6 +8,12 @@ use Illuminate\Validation\Rule;
 use Illuminate\Support\Facades\Auth;
 
 
+use Illuminate\Support\Facades\Mail;
+
+use App\Mail\Welcome;
+
+
+
 class RegisterController extends Controller
 {
     
@@ -20,10 +26,10 @@ class RegisterController extends Controller
 
 
 
-     public function storeHouse(Request $request){
+    public function storeHouse(Request $request){
 
         
-        $house =   $request->validate(
+        $house =  $request->validate(
             [
                 'house' => [
                     'required', 
@@ -70,6 +76,11 @@ class RegisterController extends Controller
         Auth::user() -> wand_inside = request('core');
         Auth::user() -> wand_length = request('width');
         Auth::user() -> save(); 
+
+        $user = Auth::user();
+
+
+        Mail::to($user->email)->send(new Welcome($user));
 
     
         

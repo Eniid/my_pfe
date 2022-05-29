@@ -72,6 +72,13 @@ class CategorieSeeder extends Seeder
         ]);
 
         Categorie::create([
+            'name'           => 'House Cup',
+            'slug'           => 'house-cup',
+            'description'    => 'Let\'s Chat about the hose cup!',
+            'forum_id'      => '2',
+        ]);
+
+        Categorie::create([
             'name'           => 'Oranazation',
             'slug'           => 'fan-made-content',
             'description'    => 'Create your caracter, difnine your relationship, looke for a role play partner! ',

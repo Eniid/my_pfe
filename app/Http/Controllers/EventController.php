@@ -5,10 +5,19 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Event;
 use App\Models\Event_user;
+use App\Models\User;
 use Illuminate\Support\Str;
+
+
+
+
 
 class EventController extends Controller
 {
+
+    public $search;
+
+
     public function index(){
 
         $events = Event::with('user')->latest()->get();
@@ -23,8 +32,6 @@ class EventController extends Controller
 
 
 
-
-
     
     public function show(Event $event){
 
@@ -34,41 +41,35 @@ class EventController extends Controller
         //$event->load('posts');
         $event->load(['posts' => function($query){
             $query->latest();
-         }]);
+        }]);
 
         $event->posts->load(['user' => function($query){
             $query->withCount('posts');
-         }]);
+        }]);
 
 
-         $event->isAuthUserPart = $event->event_user->contains(function ($value, $key) {
+        $event->isAuthUserPart = $event->event_user->contains(function ($value, $key) {
             return $value->user_id === auth()->id();
         });
 
+        $events = Event::latest()->take(4)->get();
+
+        $participations = Event_user::latest()->where('user_id', auth()->id())->with('event')->take(6)->get();
 
 
-        return view('event.event', compact('event'));
+
+
+        return view('event.event', compact('event', 'events', 'participations'));
     }
-
-
-
 
 
 
     public function create(){
 
- 
 
 
         return view("/event.new");
     }
-
-
-
-
-
-
-
 
 
     public function store(Request $request){
@@ -101,6 +102,9 @@ class EventController extends Controller
         $part -> user_id = auth()->id(); ; 
         $part -> save();
 
+        $user = User::where('id', auth()->id())->first();
+        $user-> house_point = $user-> house_point + 10; 
+        $user -> save();
 
         return redirect('/events');
     }

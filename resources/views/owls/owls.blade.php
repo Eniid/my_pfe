@@ -173,8 +173,8 @@ Owls
                         </div>
 
                         <div class="profil__messages">
-                                                            <p class="desc_texte__p" itemprop="description">""</p>
-                                                    </div>
+                            <p class="desc_texte__p" itemprop="description">Bigest fan of Harry Potter out here, try me! </p>
+                        </div>
 
                     </div>
 

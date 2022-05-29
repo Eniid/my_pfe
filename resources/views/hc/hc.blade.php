@@ -8,6 +8,114 @@
 @section('content')
 <main class="main-sec">
     <div class="frame">
+
+        <div class="flex home-house_ev">
+
+            <!-- House Cup  -->
+            <section class="house-cup">
+                <div class="flex filters">
+                    <h2>House Cup Current results</h2>
+                </div>
+                <div>
+                    <p><span class="ravenclaw_c">Ravenclaw</span> is currently on top of the classment!
+                        @if(Auth::user()->house === 'ravenclaw')
+                            Congratulation, carry one! 
+                        @else
+                            You can participate to conversation to win point for your house.
+                        @endif
+
+                    
+                    
+                    
+                    </p>
+                </div>
+                <div class="house_cup__all">
+                    <div class="house-cup__rav house-cup__h">
+                        <div class="house-cup__hourglass">
+                            <div class="house-cup__sand">
+                                <div class="house-point-display">
+                                    <b>Ravenclaw</b> : 120 house points
+                                </div>
+                            </div>
+
+                        </div>
+                        <div class="house-emoji">
+                        🦅
+                        </div>
+                    </div>
+                    <div class="house-cup__sly house-cup__h">
+                        <div class="house-cup__hourglass">
+                            <div class="house-cup__sand">
+                                <div class="house-point-display">
+                                    <b>Slytherin</b> : 120 house points
+                                </div>
+                            </div>
+                        </div>
+                        <div class="house-emoji">
+                            🐍
+                        </div>
+
+                    </div>
+                    <div class="house-cup__grif house-cup__h">
+                        <div class="house-cup__hourglass">
+                            <div class="house-cup__sand">
+                                <div class="house-point-display">
+                                    <b>Gryffindor</b> : 120 house points
+                                </div>
+                            </div>
+                        </div>
+                        <div class="house-emoji">
+                            🦁
+                        </div>
+                    </div>
+                    <div class="house-cup__huff house-cup__h">
+                        <div class="house-cup__hourglass">
+                            <div class="house-cup__sand">
+                                <div class="house-point-display">
+                                    <b>Hufflepuff</b> : 120 house points
+                                </div>
+                            </div>
+                        </div>
+                        <div class="house-emoji">
+                            🦡
+                        </div>
+
+                    </div>
+
+                </div>            
+
+            </section>
+
+
+            <!-- House Cup  -->
+            <section class="last-event">
+                    <h2>House Cup Rules</h2>
+
+                    <div class="flex" style="width: 70rem;">
+
+                        <div>
+                            <img src="https://www.tikoweb.fr/medias/logos/harry-potter-blason-poudlard.png" alt="" style="width: 20rem;">
+                        </div>
+
+                        <div>
+                            <p>Just like in Hogwarts, the 4 houses are fighting for the house cup. You can take part in the competition simply by bing active on the website. </p>
+
+                            <ul>
+                                <li>You win <span>5</span> point when you create a new post</li>
+                                <li>You win <span>2</span> point when send a message on a post</li>
+                                <li>You win <span>10</span> point when when orgenize an eventst</li>
+                                <li>You win <span>3</span> point when you participate in an even</li>
+                            </ul>
+        
+                            <p>Every month, we start bacl from scratch and all house are set up to 0 again. Howerver, you keep in your profil all the house point you won since you arrive on WWO. </p>
+        
+                        </div>
+                    </div>
+            </section>
+        </div>
+
+
+
         <section>
             <h2>House Cup Resultes</h2>
 
@@ -18,7 +126,9 @@
                 <div class="dash_sep">
                     <img src="{{ asset('img/sep.svg') }}" alt="">
                 </div>
-                <p>Ravenclaw won the Appri <b>2022</b> Cup with with <b>1209</b> point thanks to <b>Enid</b> and the rest of Ravenclaw members.</p>
+                <p>Ravenclaw won the Mai <b>2022</b> Cup  with <b>1209</b> point thanks to <b>Enid</b> and the rest of Ravenclaw members.</p>
+
+                <a href="bs//house-cup/ravenclaw-won-the-mai-house-cup" class="cta">Congragulate them</a>
             </section>
 
 

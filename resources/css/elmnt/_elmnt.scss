@@ -18,10 +18,15 @@ body{
 h3 {
     font-family: $f_main-light;
     color: $c_main;
+    
+    a{
+        transition: .2s cubic-bezier(0.27, 0.01, 0.84, 1.04);
+
+    }
 
     a:hover {
-        padding-left: 1rem;
-        transition: 1s;
+        text-shadow: 1px 1px 3px #00000024;
+        transition: .4s cubic-bezier(0.27, 0.01, 0.84, 1.04);
     }
 }
 
@@ -37,7 +42,7 @@ b{
 
 input {
     display : block; 
-        background: #F5F5F5;
+        background: $c_bg;
     box-shadow: inset 2px 2px 6px #dadada,
                 inset -2px -2px 6px #fff;
     border : none; 
@@ -119,12 +124,17 @@ h2 {
 
 textarea {
     @include nmi; 
-    background-color: #f1f1f1;;
+    background-color: $c_bg;
     border : none; 
     width: 100%;
     padding: 2rem;
     border-radius: .5rem;
     box-sizing: border-box;
+}
+
+textarea :focus {
+    outline: none;
+    border: #405D8D solid 1px;
 }
 
 strong {
@@ -133,6 +143,7 @@ strong {
 
 nav {
     z-index: 100000000000000000000;
+    backdrop-filter: blur( 10.5px );
 }
 
 

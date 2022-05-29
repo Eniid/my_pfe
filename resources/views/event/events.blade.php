@@ -50,13 +50,13 @@ Event Name |
 
 
 
-       <!-- Users -->
-       <aside class="event__new sm-event__button event_new_big">
-           <a href="/events/create">
+        <!-- Users -->
+        <aside class="event__new sm-event__button event_new_big">
+            <a href="/events/create">
             <img src="./img/plus.svg" alt="">
             <h2>Create a new event</h2>
-        </a>
-       </aside>
+            </a>
+        </aside>
 
     <!-- Last topic -->
     <section class="last-topics">
@@ -66,7 +66,7 @@ Event Name |
         </div>
         
         <div class="flex filters">
-            <h2>Latest events</h2>
+            <h2>Events</h2>
             <div class="under">
                 <a href="#" class="active">All</a>
                 <a href="#">Events with your friends</a>
@@ -74,76 +74,8 @@ Event Name |
                 <a href="#">Events in real world</a>
             </div>
         </div>
-
-
+        @livewire('events-filters', ['events'=>$events])
         
-        @foreach($events as $event)
-        <section class="topic-preview annim_home annimation_home">
-            <h3 class="lt__title"> <a href="/events/{{$event->slug}}"> {{ $event->name }}</a></h3>
-            <span class="lt__ariane">{{ $event->date }}</span>
-
-            <div class="topix-preview__content">
-                <p>{{ $event->desc }}</p>
-            </div>
-
-            <p>Participants</p>
-            <div class="flex">
-                <div class="sm-pp__box ravenclaw_bg">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        Enid
-                    </div>
-                </div>
-                <div class="sm-pp__box gryffindor_bg">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        Lucy
-                    </div>
-                </div>
-                <div class="sm-pp__box ravenclaw_bg">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        Cedric
-                    </div>
-                </div>
-                <div class="sm-pp__box hufflepuff_bg">
-                    <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    <div class="sm-pp__info">
-                        Morgan
-                    </div>
-                </div>
-
-                <div class="sm-pp__box ">
-                    <div>
-                        +10
-                    </div>
-                    <div class="sm-pp__info">
-                        User Name
-                    </div>
-                </div>
-
-                {{-- <div class="cta"><a href="#">Participer</a></div> --}}
-            </div>
-            
-
-            <div class="topix-preview__author flex">
-                <div>
-                    <p class="topix-preview__author__name"><span><a href="#" class="ravenclaw_c">Enid</a></span></p>
-                    <p class="topix-preview__author__messages">230messages</p>
-                        
-                </div>
-               <div class="sm-pp__box ravenclaw_bg">
-                   <a href="#" class="xxx profil">
-                        <img src="/img/pp1.jpg" alt="" class="sm-pp">
-                    </a>
-                </div>
-            </div>
-
-            <div class="topix-preview__participents">
-                
-            </div>
-        </section>
-        @endforeach
         
         <button class="cta cta_v">Load more</button>
 
@@ -152,7 +84,6 @@ Event Name |
 
 
 
- 
 </main>
 
 @endsection

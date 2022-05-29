@@ -28,10 +28,7 @@
             }
         }
     }
-
-
-} 
-
+}
 
 .qeel_profil {
     margin-top: 10rem;
@@ -44,22 +41,21 @@
         flex-grow: 1;
     }
 
-    .messages__numbers{
+    .messages__numbers {
         font-size: 3rem;
         margin: 0;
         font-weight: bold;
     }
 
     .messages__text {
-        margin : .2rem;
+        margin: .2rem;
     }
 }
 
 .profil__intro {
     justify-content: space-between;
-    width: 100%;
+    width: 70%;
 }
-
 
 .wand__info {
     text-align: center;
@@ -68,7 +64,7 @@
 }
 
 .profil__mehp {
-    width: 30%;
+    width: 45%;
     text-align: center;
 }
 
@@ -87,13 +83,12 @@
     }
 }
 
-
 .add_f {
-    button{
+    button {
         background: none;
         border: none;
     }
-    
+
 }
 
 .profil__user-name {
@@ -103,10 +98,9 @@
 
 .desc_text {
     height: 10rem;
-    margin:  3rem 0rem 0 0rem;
+    margin: 3rem 0rem 0 0rem;
 
 }
-
 
 .desc_f {
     .update_btn {
@@ -136,8 +130,7 @@
 }
 
 .last-event__flex-contener {
-
-    a{
+    a {
         color: black;
     }
 }
@@ -157,10 +150,11 @@
 
     input {
         display: inline;
-          width: 8rem;
-          margin-right: 2rem;
+        width: 8rem;
+        margin-right: 2rem;
 
     }
+
     label {
         display: inline;
         font-size: 1.3rem;
@@ -195,4 +189,18 @@
     min-width: 31rem;
 }
 
+
+//** Profil descri **/ 
+
+
+.lable_desc_user{
+    margin-bottom: -2rem;
+}
+
+
+//** Edit Fixes **// 
+
+.home-info .login_content {
+    margin: auto;
+}
 

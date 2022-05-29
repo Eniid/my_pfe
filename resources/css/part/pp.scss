@@ -1,6 +1,5 @@
-
 .sm-pp__box {
-    @include nm; 
+    @include nm;
     background: $c_bg;
     height: 5.5rem;
     width: 5.5rem;
@@ -39,23 +38,23 @@
     //padding: 1rem;
     border: $c_bg .3rem solid;
     margin: .7rem;
-    transition : transform .3s; 
+    transition: transform .3s;
 
-    
+
 }
 
 .sm-pp__box:hover {
-    .sm-pp {        
-        transform : rotate(40deg);
-        transition : .6s; 
+    .sm-pp {
+        transform: rotate(40deg);
+        transition: .6s;
     }
 
     .sm-pp__info {
 
         display: inline-block;
         @include absolute(bottom -4rem left -3rem);
-        box-shadow:  1px 1px 2px #00000021,
-                    -1px -1px 2px #fff;
+        box-shadow: 1px 1px 2px #00000021,
+            -1px -1px 2px #fff;
         background-color: $c_bg;
         border-radius: 2rem;
         width: 10rem;
@@ -66,26 +65,26 @@
     }
 }
 
-.sm-pp__info{
+.sm-pp__info {
     display: none;
 }
 
-.pp__box-qeel{
-  flex-direction: column;
-  align-items: center;
+.pp__box-qeel {
+    flex-direction: column;
+    align-items: center;
 
-  .name{
-      padding: .5rem;
-  }
+    .name {
+        padding: .5rem;
+    }
 }
 
-.pp_link{
+.pp_link {
     text-decoration: none;
     color: black;
 }
 
 
-.tag{
+.tag {
     height: 1.3rem;
 }
 
@@ -95,11 +94,12 @@
 .tooltip {
     position: relative;
     display: inline-block;
-    border-bottom: 1px dotted black; /* If you want dots under the hoverable text */
-  }
-  
-  /* Tooltip text */
-  .tooltip .tooltiptext {
+    border-bottom: 1px dotted black;
+    /* If you want dots under the hoverable text */
+}
+
+/* Tooltip text */
+.tooltip .tooltiptext {
     visibility: hidden;
     width: 120px;
     background-color: black;
@@ -107,7 +107,7 @@
     text-align: center;
     padding: 5px 0;
     border-radius: 6px;
-   
+
     /* Position the tooltip text - see examples below! */
     position: absolute;
     z-index: 1;
@@ -116,14 +116,14 @@
     bottom: 100%;
     left: 50%;
     margin-left: -60px;
-  }
-  
-  /* Show the tooltip text when you mouse over the tooltip container */
-  .tooltip:hover .tooltiptext {
+}
+
+/* Show the tooltip text when you mouse over the tooltip container */
+.tooltip:hover .tooltiptext {
     visibility: visible;
-  }
+}
 
 
-  .rang {
-      display: inline-block;
-  }
+.rang {
+    display: inline-block;
+}

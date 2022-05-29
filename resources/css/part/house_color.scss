@@ -1,20 +1,20 @@
 .ravenclaw_bg {
-    background: linear-gradient(130deg, $g_ravenclaw)!important;
+    background: linear-gradient(130deg, $g_ravenclaw) !important;
 }
 
 .slytherin_bg {
-    
-    background: linear-gradient(130deg, $g_slytherin)!important;
+
+    background: linear-gradient(130deg, $g_slytherin) !important;
 }
 
 
 .hufflepuff_bg {
-    background: linear-gradient(130deg, $g_hufflepuff)!important;
+    background: linear-gradient(130deg, $g_hufflepuff) !important;
 }
 
 
 .gryffindor_bg {
-    background: linear-gradient(130deg, $g_gryffondor)!important;
+    background: linear-gradient(130deg, $g_gryffondor) !important;
 }
 
 
@@ -22,80 +22,119 @@
 
 
 .ravenclaw_full_bg {
-    background: linear-gradient(#405D8D,  #1484BF,  #1484BF)!important;
-    opacity: .8;
+
+    background: #405D8Dbb;
+    backdrop-filter: blur( 3px );
 }
 
 .slytherin_full_bg {
-    background: linear-gradient(#206F12, #91BF14, #91BF14)!important;
-    opacity: .8;
-
+    background: #206F12bb;
+    backdrop-filter: blur( 3px );
 }
 
 
+
 .hufflepuff_full_bg {
-    background: linear-gradient(#FFB37B, #FFE200, #FFE200)!important;
-    opacity: .8;
+    background: #ffcf4abb;
+    backdrop-filter: blur( 3px );
 }
 
 
 .gryffindor_full_bg {
-    background: linear-gradient(#9B2727, #EF0E6D,#EF0E6D)!important;
-    opacity: .8;
-
+    background: #9B2727bb;
+    backdrop-filter: blur( 3px );
 }
+
 
 
 
 
 
 .ravenclaw_c {
-    color: $c_ravenclaw!important;
+    color: $c_ravenclaw !important;
 
     a:hover:after {
-        background:$c_ravenclaw;
-      }
+        background: $c_ravenclaw;
+    }
 }
 
 .slytherin_c {
-    color: $c_slytherin!important;
+    color: $c_slytherin !important;
+
     a:hover:after {
-        background:$c_slytherin;
-      }
+        background: $c_slytherin;
+    }
 }
 
 
 .hufflepuff_c {
-    color: $c_hufflepuff!important;
+    color: $c_hufflepuff !important;
+
     a:hover:after {
-        background:$c_hufflepuff;
-      }
+        background: $c_hufflepuff;
+    }
+}
+
+.gryffindor_c {
+    color: $c_gryffondor !important;
+
+    a:hover:after {
+        background: $c_gryffondor;
+    }
 }
 
 
+
+
+.ravenclaw_c {
+    color: $c_ravenclaw !important;
+
+    :hover:after {
+        background: $c_ravenclaw;
+    }
+}
+
+.slytherin_c {
+    color: $c_slytherin !important;
+
+    :hover:after {
+        background: $c_slytherin;
+    }
+}
+
+
+.hufflepuff_c {
+    color: $c_hufflepuff !important;
+
+    :hover:after {
+        background: $c_hufflepuff;
+    }
+}
+
 .gryffindor_c {
-    color: $c_gryffondor!important;
-    a:hover:after {
-        background:$c_gryffondor;
-      }
+    color: $c_gryffondor !important;
+
+    :hover:after {
+        background: $c_gryffondor;
+    }
 }
 
 
 
 .ravenclaw_c a {
-    color: $c_ravenclaw!important;
+    color: $c_ravenclaw !important;
 }
 
 .slytherin_c a {
-    color: $c_slytherin!important;
+    color: $c_slytherin !important;
 }
 
 
 .hufflepuff_c a {
-    color: $c_hufflepuff!important;
+    color: $c_hufflepuff !important;
 }
 
 
 .gryffindor_c a {
-    color: $c_gryffondor!important;
+    color: $c_gryffondor !important;
 }

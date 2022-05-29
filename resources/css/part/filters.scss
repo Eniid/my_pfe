@@ -41,3 +41,17 @@
     background: $c_main;
 }
 
+.flex-grower{
+    flex-grow: 8;
+}
+
+
+.filter_search{
+    display: block;
+    background: #ffffff;
+    box-shadow: inset 2px 2px 6px #dadada, inset -2px -2px 6px #fff;
+    border: 0.9px black solid;
+    padding: 0.6rem 2rem;
+    border-radius: 0.7rem;
+    box-sizing: border-box;
+}

@@ -46,20 +46,43 @@
 
         </div>
 
-
         @auth
             <input type="checkbox" id="nav" class="visually-hidden nav_check">
+
+            <div class="sub_nav-toblure">
+
+            </div>
             <nav>
                 <h2 class="visually-hidden">Menu de Navigation</h2>
                 <ol class="flex nav-ol">
-                    <li><a href="/ww">Wizarding World</a></li>
-                    <li><a href="/bs">Between us</a></li>
-                    <li><a href="/rp">Role Play</a></li>
+                    <li class="under_menu"
+                    @if (Request::path() == 'ww')
+                        class="nav_selected_item"
+                    @endif
+                    ><a href="/ww" >Wizarding World</a></li>
+                    <li class="under_menu"
+                    @if (Request::path() == 'bs')
+                        class="nav_selected_item"
+                    @endif
+                    ><a href="/bs">Between us</a></li>
+                    <li class="under_menu"
+                    @if (Request::path() == 'rp')
+                        class="nav_selected_item"
+                    @endif
+                    ><a href="/rp">Role Play</a></li>
                     <li class="home_li"><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}"
                                 alt="home_page" class="lm_img"><img src="{{ asset('img/d_house.svg') }}"
                                 alt="home_page" class="dm_img"></a></li>
-                    <li><a href="{{ url('events') }}">Events</a></li>
-                    <li><a href="/owls">Owls</a></li>
+                    <li class="under_menu"
+                    @if (Request::path() == 'events')
+                        class="nav_selected_item"
+                    @endif
+                ><a href="{{ url('events') }}">Events</a></li>
+                    <li class="under_menu"
+                    @if (Request::path() == 'owls')
+                        class="nav_selected_item"
+                    @endif
+                    ><a href="/owls">Owls</a></li>
                     <li>
                         <form action="/search" class="search-form" method='get'>
                             @csrf
@@ -74,7 +97,9 @@
 
                     <li class="notif_box">
                         <label for="open_notif">
-                            <img src="{{ asset('img/notif.svg') }}" alt="">
+                            <img src="{{ asset('img/notif.svg') }}"
+                                alt="home_page" class="lm_img"><img src="{{ asset('img/notif_b.svg') }}"
+                                alt="home_page" class="dm_img">
                         </label>
                         <input type="checkbox" id="open_notif">
 
@@ -93,90 +118,108 @@
 
 
                             <div class="notifs">
-                                <div class="notif flex">
-                                    <div>
-                                        <div class="flex pp__box-qeel">
-                                            <div class="sm-pp__box ravenclaw_bg">
-                                                <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
+                                <a href="/" class="notification_link">
+                                    <div class="notif flex">
+                                        <div>
+                                            <div class="house-emoji">
+                                                🦅
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="notif_text">
-                                        <b>Enid</b> answerd your topic <b>What is your favourite Movie ?</b>
-                                        <div>1h ago</div>
-                                    </div>
-                                </div>
-
-                                <div class="notif flex">
-                                    <div>
-                                        <div class="flex pp__box-qeel">
-                                            <div class="sm-pp__box ravenclaw_bg">
-                                                <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
-                                            </div>
+                                        <div class="notif_text">
+                                            <b>Ravenclaw</b> is now on top of the house cup. 
+                                            @if(Auth::user()->house === 'ravenclaw')
+                                            Well done! 
+                                        @else
+                                            You're 298 point away, keep participating to beat them. 
+                                        @endif
+                                        
+                                        </b>
+                                            <div>1h ago</div>
                                         </div>
                                     </div>
-                                    <div class="notif_text">
-                                        Your firend <b>Enid</b> just posted a new topic : <b>Show us your Harry Potter collection</b>
-                                        <div>1h ago</div>
-                                    </div>
-                                </div>
+                                </a>
 
-                                <div class="notif flex">
-                                    <div>
-                                        <div class="flex pp__box-qeel">
-                                            <div class="sm-pp__box ravenclaw_bg">
-                                                <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
+                                <a href="ww/movies/excepturi-facere-ut" class="notification_link">
+                                    <div class="notif flex">
+                                        <div>
+                                            <div class="flex pp__box-qeel">
+                                                <div class="sm-pp__box ravenclaw_bg">
+                                                    <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="notif_text">
-                                        <b>Enid</b> followed you
-                                        <div>3h ago</div>
-                                    </div>
-                                </div>
-
-
-                                <div class="notif flex read">
-                                    <div>
-                                        <div class="flex pp__box-qeel">
-                                            <div class="sm-pp__box ravenclaw_bg">
-                                                <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
-                                            </div>
+                                        <div class="notif_text">
+                                            Your firend <b>Enid</b> just posted a new topic : <b>Show us your Harry Potter collection</b>
+                                            <div>1h ago</div>
                                         </div>
                                     </div>
-                                    <div class="notif_text">
-                                        <b>Enid</b> answerd your topic <b>What did you think about Fantastic Beast the secrets of dumbledore</b>
-                                        <div>3 days ago</div>
-                                    </div>
-                                </div>
+                                </a>
 
-                                <div class="notif flex read">
-                                    <div>
-                                        <div class="flex pp__box-qeel">
-                                            <div class="sm-pp__box ravenclaw_bg">
-                                                <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
+                                <a href="/profil/1" class="notification_link">
+                                    <div class="notif flex">
+                                        <div>
+                                            <div class="flex pp__box-qeel">
+                                                <div class="sm-pp__box ravenclaw_bg">
+                                                    <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
+                                                </div>
                                             </div>
                                         </div>
-                                    </div>
-                                    <div class="notif_text">
-                                        Enid answerd your topic <b>The best house</b>
-                                        <div>3 days ago</div>
-                                    </div>
-                                </div>
-
-                                <div class="notif flex read">
-                                    <div>
-                                        <div class="flex pp__box-qeel">
-                                            <div class="sm-pp__box ravenclaw_bg">
-                                                <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
-                                            </div>
+                                        <div class="notif_text">
+                                            <b>Enid</b> followed you
+                                            <div>3h ago</div>
                                         </div>
                                     </div>
-                                    <div class="notif_text">
-                                        Enid answerd your topic <b>The best house</b>
-                                        <div>5 days ago</div>
+                                </a>
+
+
+                                <a href="ww/movies/excepturi-facere-ut" class="notification_link">
+                                    <div class="notif flex read">
+                                        <div>
+                                            <div class="flex pp__box-qeel">
+                                                <div class="sm-pp__box ravenclaw_bg">
+                                                    <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notif_text">
+                                            <b>Enid</b> answerd your topic <b>What did you think about Fantastic Beast the secrets of dumbledore</b>
+                                            <div>3 days ago</div>
+                                        </div>
                                     </div>
-                                </div>
+                                </a>
+
+                                <a href="ww/movies/excepturi-facere-ut" class="notification_link">
+                                    <div class="notif flex read">
+                                        <div>
+                                            <div class="flex pp__box-qeel">
+                                                <div class="sm-pp__box ravenclaw_bg">
+                                                    <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notif_text">
+                                            Enid answerd your topic <b>The best house</b>
+                                            <div>3 days ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+
+                                <a href="ww/movies/excepturi-facere-ut" class="notification_link">
+                                    <div class="notif flex read">
+                                        <div>
+                                            <div class="flex pp__box-qeel">
+                                                <div class="sm-pp__box ravenclaw_bg">
+                                                    <img src="/img/profil/1622615794-miranda06.jpg" alt="" class="sm-pp">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="notif_text">
+                                            Enid answerd your topic <b>The best house</b>
+                                            <div>5 days ago</div>
+                                        </div>
+                                    </div>
+                                </a>
+
 
                             </div>
                         </div>
@@ -270,11 +313,6 @@
 
         @endauth
 
-
-
-
-
-
         <label class="switch mode_switch">
             <input type="checkbox" id="switch_cb" class="visually-hidden">
             <img src="{{ asset('img/b1.svg') }}" class="wand_img dm_w" alt="">
@@ -292,8 +330,6 @@
 
 
     <footer class="bg head-sec footer-sec">
-        <p class="nmto">Nothing more to see here! </p>
-
 
         <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a> ☽ &nbsp; &nbsp; @2021 Wizarding World
             Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy <br>

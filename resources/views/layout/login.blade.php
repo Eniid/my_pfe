@@ -92,6 +92,9 @@
                                 <div class="landing">   
                                     <button class="cta register">Login</button>
                                 </div>
+                                <div class="fup under fup_caa">
+                                    <a href="/register">Create a betta account</a>
+                                </div>
                             </form>
                     </div>
                 </div>

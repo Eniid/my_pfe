@@ -18,22 +18,31 @@
                     <div class="flex filters">
                         <h2>House Cup</h2>
                         <div class="under">
-                            <div class="card_ex">
-                                <div class="card" tabindex="0">
+                            <div class="card_ex house_ex">
+                                <div class="" tabindex="0">
                                     <span class="card__infoicon">
                                     <i class="fa fa-info">?</i>
                                     </span>
                             </div>
                             <div class="sm-pp__info">
-                                    <p>Every time you post a message, you win 1 point</p>
-                                    <p>Every time you post a message, you win 1 point</p>
-                                    <p>Every time you post a message, you win 1 point</p>
-                                    <p>Every time you post a message, you win 1 point</p>
-
+                                    <p>Take part to activities in Wizarding World online and win point for your house.</p>
                                 </div>
                             </div>
                             
                         </div>
+                    </div>
+                    <div>
+                        <p><span class="ravenclaw_c">Ravenclaw</span> is currently on top of the classment!
+                            @if(Auth::user()->house === 'ravenclaw')
+                                Congratulation, carry one! 
+                            @else
+                                You can participate to conversation to win point for your house.
+                            @endif
+
+                        
+                        
+                        
+                        </p>
                     </div>
                     <div class="house_cup__all">
                         <div class="house-cup__rav house-cup__h">
@@ -87,8 +96,11 @@
                             </div>
 
                         </div>
-                    </div>            
 
+                    </div>            
+                    <div class="cta cta_v">
+                        <a href="/house-cup-history" class="active">Learn More</a>
+                    </div>
                 </section>
 
 
@@ -113,9 +125,14 @@
 
                         @if($event_filter === 'all')
                             @foreach ($events as $event)
-                            <a href="events/{{$event->slug}}">
+
                                 <section class="sm-event">
-                                    <h3 class="sm-event__title">{{$event->name}}</h3>
+                                    <div class="under">
+                                        <a href="events/{{$event->slug}}" class="under event-link">
+                                            <h3 class="sm-event__title">{{$event->name}}</h3>
+                                        </a>
+                                    </div>
+
                                     <div class="sm-event__date">
                                         <span class="sm-event__date__month">{{$event->date->monthName}}</span>
                                         <span class="sm-event__date__day">{{$event->date->day}}</span>
@@ -123,7 +140,7 @@
                                     </div>
                                     <span class="sm-event__date__place"><img src="/img/where.svg" width="11" height="13" class="lm_img" alt="place"><img src="/img/d_place.svg" width="11" height="13" class="dm_img" alt="place">{{$event->place}}</span>
                                 </section>
-                            </a>
+
                             @endforeach
                         @endif
 
@@ -153,14 +170,13 @@
                             </a>
                     </div>
                 </section>
-        </div>
+            </div>
 
 
 
         <!-- Users -->
-        <aside class="qeel">
+        <aside class="qeel home_qeel">
                 <h2 class="hidden">Users</h2>
-
 
         <!-- Users -->
             <div class="flex users_flex">
@@ -253,6 +269,21 @@
                                         @endif" alt="" class="sm-pp">
                                     </div>
                                     <div class="name">
+                                        @if($user->s_admin )
+                                        <span class="tooltip">
+                                            <img src="{{ asset('img/admin.svg') }}" alt="admin" title="admin" class="tag admin">
+                                            <span class="tooltiptext">
+                                                admin
+                                            </span>
+                                        </span>
+                                        @elseif ($user->is_modo )
+                                        <span class="tooltip">
+                                            <img src="{{ asset('img/modo.svg') }}" alt="modo" title="modo" class="tag modo">
+                                            <span class="tooltiptext">
+                                                modo
+                                            </span>
+                                        </span>
+                                        @endif
                                         {{ $user->name }}
                                     </div>
                                 </div>
@@ -302,7 +333,7 @@
 
             @foreach ($posts as $post)
             <section class="topic-preview annim_home">
-                <h3 class="lt__title"><a href="{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}/{{ $post->postable->slug}}"> {{ $post->postable->title }}</a></h3>
+                <h3 class="lt__title under"><a href="{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}/{{ $post->postable->slug}}"> {{ $post->postable->title }}</a></h3>
                 <span class="lt__ariane under"> <a href="/{{ $post->postable->categorie->forum->slug}}">{{ $post->postable->categorie->forum->name}}</a> ↣ <a href="/{{ $post->postable->categorie->forum->slug}}/{{ $post->postable->categorie->slug}}"> {{ $post->postable->categorie->name}} </a> </span>
 
 

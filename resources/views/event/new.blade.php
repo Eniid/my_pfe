@@ -58,7 +58,7 @@ New event |
             </div>
 
 
-            <button class="cta cta_v">Create an event</button>
+            <button class="cta cta_v cta_newevent">Create an event</button>
         </form>
     </section>
     

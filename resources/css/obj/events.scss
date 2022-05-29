@@ -1,0 +1,75 @@
+.event_cr{
+    display: flex;
+    flex-wrap: wrap;
+    width: 31rem;
+
+    a{
+        color: black;
+    }
+}
+
+
+
+.last-topics{
+    .pph_p {
+        display: flex;
+        align-items: center;
+        padding: 0 2rem 2rem 0;
+        margin: 0;
+
+
+        .switch{
+            padding-right: 2rem;
+        }
+    }
+
+
+}
+
+
+
+
+//*An Event Description *//
+
+
+.event_discribe{
+    justify-content : space-between;
+    width: 70%;
+
+    .house-cup {
+        width: 100%;
+        max-width: 50rem;
+    }
+}
+
+.event_important{
+    padding: 3rem;
+    text-align: right;
+
+    .sm-event__date__day {
+        font-size: 3.6rem;
+    }
+
+    .sm-event__date__month, .sm-event__date__time {
+        font-size: 1.5rem;
+    }
+    
+
+}
+
+
+.diff-time{
+    color:#6d46b9;
+    font-family: muli_b, Helvetica, Arial, sans-serif;
+    font-size: 1.2rem;
+
+}
+
+
+.sm-event__title{
+    margin: 0 0 0rem 0;
+}
+
+.sm-event{
+    min-width: 11rem;
+}
