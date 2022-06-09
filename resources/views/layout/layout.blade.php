@@ -52,36 +52,43 @@
             <div class="sub_nav-toblure">
 
             </div>
+
+
             <nav>
                 <h2 class="visually-hidden">Menu de Navigation</h2>
                 <ol class="flex nav-ol">
-                    <li class="under_menu"
+                    <li class="under_menu 
                     @if (Request::path() == 'ww')
-                        class="nav_selected_item"
+                        nav_selected_item
                     @endif
+                    "
                     ><a href="/ww" >Wizarding World</a></li>
-                    <li class="under_menu"
+                    <li class="under_menu
                     @if (Request::path() == 'bs')
-                        class="nav_selected_item"
+                        nav_selected_item
                     @endif
+                    "
                     ><a href="/bs">Between us</a></li>
-                    <li class="under_menu"
+                    <li class="under_menu
                     @if (Request::path() == 'rp')
-                        class="nav_selected_item"
+                        nav_selected_item
                     @endif
+                    "
                     ><a href="/rp">Role Play</a></li>
                     <li class="home_li"><a href="{{ url('/') }}"><img src="{{ asset('img/home.svg') }}"
                                 alt="home_page" class="lm_img"><img src="{{ asset('img/d_house.svg') }}"
                                 alt="home_page" class="dm_img"></a></li>
-                    <li class="under_menu"
+                    <li class="under_menu
                     @if (Request::path() == 'events')
-                        class="nav_selected_item"
+                        nav_selected_item
                     @endif
+                    "
                 ><a href="{{ url('events') }}">Events</a></li>
-                    <li class="under_menu"
+                    <li class="under_menu
                     @if (Request::path() == 'owls')
-                        class="nav_selected_item"
+                        nav_selected_item
                     @endif
+                    "
                     ><a href="/owls">Owls</a></li>
                     <li>
                         <form action="/search" class="search-form" method='get'>
@@ -132,8 +139,6 @@
                                         @else
                                             You're 298 point away, keep participating to beat them. 
                                         @endif
-                                        
-                                        </b>
                                             <div>1h ago</div>
                                         </div>
                                     </div>
@@ -332,11 +337,11 @@
     <footer class="bg head-sec footer-sec">
 
         <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a> ☽ &nbsp; &nbsp; @2021 Wizarding World
-            Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy <br>
+            Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy </a><br>
                 @if (auth()->user()->is_admin)
                     <a href="#">Administration Board</a>
                 @endif
-            </a></p>
+            </p>
 
     </footer>
 

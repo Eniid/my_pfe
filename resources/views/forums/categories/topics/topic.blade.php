@@ -112,7 +112,7 @@
                                 <a href=""><img class="icone lm_img" src="{{ asset('img/edit.svg') }}"
                                         alt="edit the topic"><img class="icone dm_img"
                                         src="{{ asset('img/d_edit.svg') }}" alt="edit the topic"
-                                        class="dm_img"></a>
+                                        ></a>
                                 <input type="checkbox" name="del" id="del" class="del_c visually-hidden">
                                 <label href="" class="in" for="del"><img class="icone lm_img"
                                         src="{{ asset('img/delete.svg') }}" alt="delete topic"><img class="icone dm_img"

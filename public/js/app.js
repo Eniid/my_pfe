@@ -1845,9 +1845,7 @@ module.exports = {
  * includes Vue and other libraries. It is a great starting point when
  * building robust, powerful web applications using Vue and Laravel.
  */
-__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js");
-
-console.log('coucou'); //window.Vue = require('vue').default;
+__webpack_require__(/*! ./bootstrap */ "./resources/js/bootstrap.js"); //window.Vue = require('vue').default;
 
 /**
  * The following block of code may be used to automatically register your
@@ -1866,6 +1864,7 @@ console.log('coucou'); //window.Vue = require('vue').default;
  * or customize the JavaScript scaffolding to fit your unique needs.
  */
 
+
 var annimElt = document.getElementsByClassName("annim");
 var annimEltH = document.getElementsByClassName("annim_home");
 console.log(annimElt);
@@ -1879,14 +1878,11 @@ for (var i = 0; i < annimElt.length; i++) {
   var _oneElt = annimElt[i];
 
   _oneElt.classList.add('annimation');
-
-  console.log(_oneElt);
 }
 
 for (var i = 0; i < annimEltH.length; i++) {
   var oneElth = annimEltH[i];
   oneElth.classList.add('annimation_home');
-  console.log(oneElth);
 }
 
 window.addEventListener("scroll", function (e) {
@@ -1905,8 +1901,6 @@ window.addEventListener("scroll", function (e) {
     }
 
     var teste = positionDeLElement - tailleDeLaPage + 1500;
-    console.log("quand ça " + scrollDeLaPage);
-    console.log("est égale à" + teste);
   });
 }, false);
 window.addEventListener("scroll", function (e) {
@@ -1925,8 +1919,6 @@ window.addEventListener("scroll", function (e) {
     }
 
     var teste = positionDeLElement - tailleDeLaPage + 1500;
-    console.log("quand ça " + scrollDeLaPage);
-    console.log("est égale à" + teste);
   });
 }, false); // darkmode
 
@@ -1947,13 +1939,11 @@ if (dm) {
   var cb = document.querySelector("input#switch_cb");
   cb.checked = true;
   document.body.classList.add("dark");
-}
-
-var element = document.querySelector(".revers_scrool");
-element.addEventListener("wheel", function (e) {
-  //e.preventDefault()
-  element.scrollLeft += e.deltaY;
-}, true);
+} // const element = document.querySelector(".revers_scrool")
+// element.addEventListener("wheel", e => {
+//     //e.preventDefault()
+//     element.scrollLeft += e.deltaY
+// }, true)
 
 /***/ }),
 

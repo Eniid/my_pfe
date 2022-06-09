@@ -38,8 +38,7 @@
             
             
                 <div class="login-pres">
-            
-            
+
                     <p>Welcome to Wizarding World Online the first ever website for witches and wizards. It’s about time we learn to use technology. So join us and let’s do some magic together.</p>
                     <div class="log-cta">
                         <a href="{{ route('register') }}">Become Beta Tester</a> 
@@ -50,7 +49,7 @@
                 <div class="login_btn">
                     <input type="checkbox" id="login_img" class="login_checkbox"                                 @if ($errors->any())
                     checked
-                @endif>
+                    @endif>
                     <div class="login_btn">
                         <label for="login_img" class="login_text">‍Login</label>
                     </div>

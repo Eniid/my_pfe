@@ -31,7 +31,7 @@
                                     <img src="./img/cat-new.svg" alt="new message">
                                 </div>
                                 <div class="cat-content">
-                                    <h3 class="under"><a href="/{{ $forum->slug }}/{{ $categorie->slug }}"> {{ $categorie->name }}</a>
+                                    <h3 class="under under_title"><a href="/{{ $forum->slug }}/{{ $categorie->slug }}"> {{ $categorie->name }}</a>
                                     </h3>
                                     <p>{{ $categorie->description }}</p>
                                 </div>
@@ -42,7 +42,7 @@
                                 @if ($categorie->topic)
                                     <div class="cat__last-messge__text">
 
-                                        <p class="topix-preview__author__name">Latest message by <span><a href="#"
+                                        <p class="topix-preview__author__name under_cath-name_fix">Latest message by <span><a href="#"
                                                     class="{{ $categorie->topic->latestPost->user->house }}_c">{{ $categorie->topic->latestPost ? $categorie->topic->latestPost->user->name : '' }}</a></span>
                                         </p>
                                         <p class="topix-preview__author__messages">
@@ -58,7 +58,7 @@
                                             <img src="@if ($categorie->topic->latestPost->user->img) /{{ $categorie->topic->latestPost->user->img }}
                                         @else
                                                 {{ 'https://eu.ui-avatars.com/api/?name=' . urlencode($categorie->topic->latestPost->user->name) . '&size=120&background=9165DF&color=ffffff' }} @endif"
-                                                alt="" class="sm-pp">
+                                                alt="{{ $categorie->topic->latestPost->user->name }} profil" class="sm-pp">
                                         </a>
                                     </div>
                             </div>
@@ -76,14 +76,6 @@
         </section>
         <!-- Cathegories -->
 
-
-
-        <!-- CTA bacl home -->
-        {{-- <div class="cat-cta_contener">
-        <div class="cta cta_m cat-cta">
-            <a href="#" class="main-cta_link">Go back home</a>
-        </div>
-    </div> --}}
 
     </main>
 @endsection

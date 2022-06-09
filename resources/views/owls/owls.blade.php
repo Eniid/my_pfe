@@ -26,7 +26,7 @@ Owls
                                     /{{$user->img}}
                                     @else
                                             {{'https://eu.ui-avatars.com/api/?name=' . urlencode($user->name) . '&size=120&background=9165DF&color=ffffff'}}
-                                    @endif" alt="" class="sm-pp">
+                                    @endif" alt="{{ $user->house }} profil" class="sm-pp">
                             </a>
                         </div>
                     </div>
@@ -57,7 +57,7 @@ Owls
                                     /{{$current_user->img}}
                                     @else
                                             {{'https://eu.ui-avatars.com/api/?name=' . urlencode($current_user->name) . '&size=120&background=9165DF&color=ffffff'}}
-                                    @endif" alt="" class="sm-pp">
+                                    @endif" alt="{{ $current_user->house }} profil" class="sm-pp">
                             </a>
                         </div>
                     </div>
@@ -78,7 +78,7 @@ Owls
                                     /{{$current_user->img}}
                                     @else
                                             {{'https://eu.ui-avatars.com/api/?name=' . urlencode($current_user->name) . '&size=120&background=9165DF&color=ffffff'}}
-                                    @endif" alt="" class="sm-pp">
+                                    @endif" alt="{{ $current_user->house }} profil" class="sm-pp">
                             </a>
                         </div>
                     </div>
@@ -105,7 +105,7 @@ Owls
                                         /{{$current_user->img}}
                                         @else
                                                 {{'https://eu.ui-avatars.com/api/?name=' . urlencode($current_user->name) . '&size=120&background=9165DF&color=ffffff'}}
-                                        @endif" alt="" class="sm-pp">
+                                        @endif" alt="{{ $current_user->house }} profil" class="sm-pp">
                                 </a>
                             </div>
                         </div>
@@ -123,7 +123,7 @@ Owls
                 <div>
                     <form action="" class="message__form">
                         <input type="text" placeholder="your message">
-                        <button><img src="{{ asset('img/mess_btn.svg') }}" alt=""></button>
+                        <button aria-label="Send"><img src="{{ asset('img/mess_btn.svg') }}" alt=""></button>
                     </form>
                 </div>
             </div>

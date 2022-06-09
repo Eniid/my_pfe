@@ -224,9 +224,6 @@
 
 }
 
-
-
-
 @media only screen and (max-width: 500px) {
 
 
@@ -254,9 +251,6 @@
     }
 
 }
-
-
-
 
 @media only screen and (max-width: 500px){
     .last-event__flex-contener {
@@ -411,9 +405,6 @@
 
 
     }
-
-
-
 
     @media only screen and (max-width: 950px) {
 
@@ -613,13 +604,13 @@
         margin: 2rem;
 
         h2{
-            margin: 2rem 5rem;
+            //margin: 2rem 5rem;
             padding-top: 4rem;
 
         }
 
         .lt__ariane {
-            margin: 0 5rem;
+            //margin: 0 5rem;
 
         }
     }
@@ -629,7 +620,7 @@
 
 
 
-/*** PADDING FIX**/
+//*** PADDING FIX**/
 
 @media only screen and (max-width: 500px){
 
@@ -647,9 +638,6 @@
 
 
 //** Landing **//
-
-
-
 @media only screen and (max-width: 1200px){
     .landing__text{
         img{
@@ -665,8 +653,6 @@
 
 }
 
-
-
 @media screen and (max-width: 1300px){
     .sub_nav-toblure {
         height: 7rem;
@@ -676,7 +662,239 @@
 
 
 //*** New Topic ***/
-
 .cta_newtopic{
     margin: 3rem auto 0rem;
 }
+
+@media only screen and (max-width: 950px){
+    .message__box {
+        width: 100%;
+        margin: -2rem;
+    }
+
+
+    .mb_box {
+        position: absolute;
+        margin-left: 2rem;
+        bottom: 6rem;
+    }
+
+
+    .message__box{
+        .cta{
+            margin-top: 4rem;
+        }
+    }
+
+
+
+    .last-topics .pph_p {
+        display: flex;
+        align-items: stretch; 
+        padding: 0 2rem 2rem 0;
+        margin: 0;
+        flex-direction: column;
+
+
+        .switch{
+            padding-bottom: 1rem;
+        }
+
+        form{
+            padding-top: 1rem;
+        }
+    }
+}
+
+
+
+
+
+
+
+
+//**** Profil Page ****//
+
+@media only screen and (max-width: 1430px){
+    .profil__intro {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .qeel_profil {
+        margin-top: 10rem;
+        margin: 10rem auto 0rem;
+        right: 0;
+    }
+
+    .edit__p {
+        padding: 2rem 4rem;
+    }
+}
+
+@media only screen and (max-width: 1000px){
+    .profil__intro {
+        flex-direction: column;
+    }
+
+    .profil__mehp {
+        width: 45%;
+        margin: 2rem auto 5rem;
+        text-align: center;
+
+
+    }
+}
+
+@media only screen and (max-width: 700px){
+    .profil__intro {
+        flex-direction: column;
+    }
+
+    .profil__mehp {
+        width: 100%;
+        margin: 2rem auto 5rem;
+        text-align: center;
+    }
+
+
+}
+
+
+
+//**** House Cup Page  ****//
+
+@media only screen and (max-width: 700px){
+
+    .hc_infos-main {
+        .flex {
+            display: flex;
+            flex-direction: column;
+        }
+
+        .house-cup_img_two {
+            left: 2rem;
+            width: 5rem;
+        }
+
+        .house-cup_img_one {
+            right: 2rem;
+            width: 5rem;
+        }
+    }
+
+
+}
+
+@media only screen and (max-width: 600px){
+
+    .hc_infos-main {
+        .history {
+            margin-left: 3rem;
+            font-size: 1.1rem;
+        }
+    }
+
+}
+
+//**** EVENT fix   ****//
+@media only screen and (max-width: 1430px){
+    .event_new_big {
+        margin: 2rem auto 0.5rem;
+        right: 0;
+    }
+}
+
+@media screen and (max-width: 500px){
+    .message__form {
+        max-width: 100%;
+    }
+
+
+    .conversation__box .conversation_message {
+        margin: 0 -0.1rem;
+
+    }
+
+    .conversation__box {
+        padding: 0 1.5rem;
+    }
+
+
+    .auth-user__message {
+        margin-left: 3rem;
+    }
+
+    .messager_separator {
+        text-align: center;
+        padding: 1rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+@media only screen and (max-width: 1430px){
+    .que__event{
+        margin: 0 auto;
+        text-align: center;
+        right: 0;
+
+        .flex{
+            justify-content: center;
+        }
+    }
+
+
+    .event_discribe {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .last-post_event .main-message .main-message__text {
+        margin: 0;
+        width: auto;
+        position: relative;
+        padding: 3rem 10rem 5rem 7rem;
+    }
+    .single_event{
+        .message__box .cta {
+            position: relative;
+            top: -0.9rem;
+            margin-top: 0;
+        }
+    }
+}
+
+
+
+
+
+@media screen and (max-width: 500px){
+    .event_discribe {
+        justify-content: space-between;
+        width: 100%;
+        flex-direction: column-reverse;
+    }
+
+    .event_important {
+        padding: 3rem;
+        text-align: right;
+        margin-bottom: -7.5rem;
+    }
+
+    .que__event .event_cr{
+        align-items: center;
+        justify-content: flex-start;
+        flex-wrap: nowrap;
+        overflow-x: scroll;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+
+}
+
+
+
+
+

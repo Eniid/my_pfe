@@ -18,32 +18,34 @@ class EventController extends Controller
     public $search;
 
 
-    public function index(){
+    public function index()
+    {
 
         $events = Event::with('user')->latest()->get();
 
         $participations = Event_user::latest()->where('user_id', auth()->id())->with('event')->take(6)->get();
 
 
-       // dd($participations);
+        // dd($participations);
 
         return view('event.events', compact('events', 'participations'));
     }
 
 
 
-    
-    public function show(Event $event){
+
+    public function show(Event $event)
+    {
 
 
-        $event->load('event_user');        
-        $event->event_user->load('user');        
+        $event->load('event_user');
+        $event->event_user->load('user');
         //$event->load('posts');
-        $event->load(['posts' => function($query){
+        $event->load(['posts' => function ($query) {
             $query->latest();
         }]);
 
-        $event->posts->load(['user' => function($query){
+        $event->posts->load(['user' => function ($query) {
             $query->withCount('posts');
         }]);
 
@@ -64,7 +66,8 @@ class EventController extends Controller
 
 
 
-    public function create(){
+    public function create()
+    {
 
 
 
@@ -72,7 +75,8 @@ class EventController extends Controller
     }
 
 
-    public function store(Request $request){
+    public function store(Request $request)
+    {
         $event = new Event(request()->validate(
             [
                 'name' => 'required|min:4|max:20',
@@ -83,54 +87,57 @@ class EventController extends Controller
             ]
         ));
 
-        $slug = Str::of(request('name'))->slug('-'); 
-        
-        $event -> name = request('name'); 
-        $event -> slug = $slug; 
-        $event -> desc = request('desc'); 
-        $event -> private_desc = request('private_desc'); 
-        $event -> date = request('date'); 
-        $event -> place = request('place'); 
-        $event -> link = request('private_desc'); 
-        $event -> user_id = auth()->id(); ; 
-        $event -> save();
+        $slug = Str::of(request('name'))->slug('-');
+
+        $event->name = request('name');
+        $event->slug = $slug;
+        $event->desc = request('desc');
+        $event->private_desc = request('private_desc');
+        $event->date = request('date');
+        $event->place = request('place');
+        $event->link = request('private_desc');
+        $event->user_id = auth()->id();;
+        $event->save();
 
 
 
         $part = new Event_user();
-        $part -> event_id = $event->id;
-        $part -> user_id = auth()->id(); ; 
-        $part -> save();
+        $part->event_id = $event->id;
+        $part->user_id = auth()->id();;
+        $part->save();
 
         $user = User::where('id', auth()->id())->first();
-        $user-> house_point = $user-> house_point + 10; 
-        $user -> save();
+        $user->house_point = $user->house_point + 10;
+        $user->save();
 
         return redirect('/events');
     }
 
-    public function edit(){
+    public function edit()
+    {
         return view('event.new');
     }
 
-    public function participation(Event $event,Request $request){
+    public function participation(Event $event, Request $request)
+    {
 
 
         $part = new Event_user(request()->validate(
             [
                 'event_id' => 'required',
             ]
-        )); 
+        ));
 
-        $part -> event_id = request('event_id'); 
-        $part -> user_id = auth()->id(); ; 
-        $part -> save();
-        
+        $part->event_id = request('event_id');
+        $part->user_id = auth()->id();;
+        $part->save();
 
-        return redirect('/events/'.$event->slug);
+
+        return redirect('/events/' . $event->slug);
     }
 
-    public function leave(Event $event,Request $request){
+    public function leave(Event $event, Request $request)
+    {
 
 
         $part = new Event_user(request()->validate(
@@ -140,11 +147,9 @@ class EventController extends Controller
         ));
 
         $part = Event_user::where('event_id', request('event_id'))->where('user_id', auth()->id())->first();
-        $part -> delete();
-        
+        $part->delete();
 
-        return redirect('/events/'.$event->slug);
+
+        return redirect('/events/' . $event->slug);
     }
-
-
 }

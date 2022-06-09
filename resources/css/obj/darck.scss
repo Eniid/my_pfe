@@ -81,9 +81,9 @@
     .cta_v a {
         color: #ffffff;
     }
+
     .cta {
         box-shadow: 4px 4px 6px #0000004d, -4px -4px 6px #5b5b5bf1;
-
     }
 
     .notif_text div {
@@ -95,13 +95,10 @@
         background: #3a3a40;
     }
 
-
-
     .card {
         box-shadow: $nm;
         background: #3a3a40;
     }
-    
     
     .card_ex:hover .sm-pp__info {
         box-shadow: $nm;
@@ -114,20 +111,17 @@
         background: #3a3a40; 
     }
 
-
     .box_text .mask {
         background: linear-gradient(transparent, #3f3f47);
     }
 
 .page_box {
-
     select {
         box-shadow: $nmi;
         background: #3a3a40; 
         color: #fff;
     }
 }
-
 
 .mode_switch{
     box-shadow: $nm;
@@ -168,11 +162,13 @@
         background: $c_main;
     }
 
-
-    .notif_box{
-        box-shadow: $nm;
-        background: $c_bg;
+    @media screen and (max-width: 1300px){
+        .notif_box{
+            box-shadow: $nm;
+            background: $c_bg;
+        }
     }
+
     .forum_desc {
         color: #fff;
     }

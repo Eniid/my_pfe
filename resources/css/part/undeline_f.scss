@@ -1,0 +1,33 @@
+.under_title a:after{
+    margin: 0.5rem 0rem;
+}
+
+.under_cath-name_fix a:after{
+    margin: -0.3rem 0rem;
+}
+
+
+.topix-preview__author__name .gryffindor_c:hover:after {
+    width: 100%;
+    background: $c_gryffondor;
+}
+
+
+.topix-preview__author__name .hufflepuff_c:hover:after {
+    width: 100%;
+    background: $c_hufflepuff;
+}
+
+
+.topix-preview__author__name .slytherin_c:hover:after {
+    width: 100%;
+    background: $c_slytherin;
+}
+
+
+/** temps***/
+.profil__main-sec .main-message__profil {
+    position: absolute;
+    top: -10rem;
+    left: 2rem;
+}

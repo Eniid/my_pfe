@@ -1,5 +1,9 @@
 .owls_main {
     height: 100vh;
+
+    .sm-pp {
+        margin-bottom: 0.45rem;
+    }
 }
 
 
@@ -92,7 +96,7 @@
 
     .user-btn__message {
         font-size: 1.4rem;
-        color: #373737;
+        color: #000; 
         padding-top: 0.2rem;
 
     }
@@ -236,12 +240,14 @@
         color: #fff;
         margin: 0 1rem;
         max-width: 25rem;
+        font-size: 1.2rem;
+        line-height: 2rem;
     }
 }
 
 .auth-user__message {
     flex-direction: row-reverse;
-    padding: 1.5rem 0;
+    padding:  0;
 
     .conversation_message {
         color: black;

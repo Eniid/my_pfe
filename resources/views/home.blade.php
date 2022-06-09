@@ -375,14 +375,14 @@
         
                         </div>
                     <div class="sm-pp__box {{ $post->user->house }}_bg">
-                        <a href="#" class="profil">
+                        <a href="/profil/{{$post->user->id }}" class="profil">
                                 <img src="
                                 @if ($post->user->img)
                                 /{{$post->user->img}}
                                 @else
                                         {{'https://eu.ui-avatars.com/api/?name=' . urlencode($post->user->name) . '&size=120&background=9165DF&color=ffffff'}}
                                 @endif
-                            " alt="" class="sm-pp">
+                            " alt="{{ $post->user->name }} profil" class="sm-pp">
                             </a>
                         </div>
                     </div>

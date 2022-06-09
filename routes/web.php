@@ -11,6 +11,7 @@ use App\Http\Controllers\OwlsController;
 use App\Http\Controllers\HcController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SearchController;
+use Laravel\Nova\Nova;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,7 +73,7 @@ Auth::routes();
 
 
            // Events
-           Route::get('/events', [EventController::class, 'index'])->middleware('auth');
+            Route::get('/events', [EventController::class, 'index'])->middleware('auth');
 
 
            // New event
@@ -145,6 +146,7 @@ Auth::routes();
             // Like
             Route::post('/{forum:slug}/{categorie:slug}/{topic:slug}/like', [PostController::class, 'like'])->middleware('auth');
             Route::delete('/{forum:slug}/{categorie:slug}/{topic:slug}/unlike', [PostController::class, 'unlike'])->middleware('auth');
+
 
 
 

@@ -6,7 +6,7 @@
 
 
 @section('content')
-<main class="main-sec">
+<main class="main-sec hc_infos-main">
     <div class="frame">
 
         <div class="flex home-house_ev">
@@ -94,7 +94,7 @@
                     <div class="flex" style="width: 70rem;">
 
                         <div>
-                            <img src="https://www.tikoweb.fr/medias/logos/harry-potter-blason-poudlard.png" alt="" style="width: 20rem;">
+                            <img src="{{ asset('img/blason.png') }}" alt="" style="width: 20rem;">
                         </div>
 
                         <div>

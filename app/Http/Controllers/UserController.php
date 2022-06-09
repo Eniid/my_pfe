@@ -23,16 +23,16 @@ class UserController extends Controller
         $posts->load(['postable' => function($query){
             $query->with(['categorie' => function($query){
                 $query->with('forum');
-             }]);
-         }]);
+            }]);
+        }]);
         
-         $parts = Event_user::latest()->where('user_id', $user->id)->with('event')->take(6)->get();
-         $parts->load('event');
+        $parts = Event_user::latest()->where('user_id', $user->id)->with('event')->take(6)->get();
+        $parts->load('event');
 
-         $follows = Follow::where('user_id', $user->id)->with('following')->get();
+        $follows = Follow::where('user_id', $user->id)->with('following')->get();
 
 
-         $user->isFollowedByMe = Follow::where('user_id', auth()->id())->where('following_id', $user->id)->exists();
+        $user->isFollowedByMe = Follow::where('user_id', auth()->id())->where('following_id', $user->id)->exists();
 
 
         return view('profil.profil', compact('user', 'posts', 'parts', 'follows' ));
@@ -60,10 +60,10 @@ class UserController extends Controller
         $validations = [];
 
         if($request->name){
-            $validations['name']='min:4|max:200';
+            $validations['name']='min:4|max:10';
         }
         if($request->file('profil') && $request->file('profil')->isValid()){
-            $validations['profil']='mimes:jpg,jpeg,png,gif|file|max:5120';
+            $validations['profil']='mimes:jpg,jpeg,png,gif|file|max:1120';
         }
         if($request->email){
             $validations['email']='min:4|max:200';
@@ -110,9 +110,6 @@ class UserController extends Controller
         //return view('event.new');
     }
 
-
-
-
     public function add_f(User $user){
 
         $part = new Follow(request()->validate(
@@ -136,10 +133,6 @@ class UserController extends Controller
         return redirect('profil/'.$user->id);
 
     }
-
-
-
-
 
 
 }

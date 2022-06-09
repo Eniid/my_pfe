@@ -80,7 +80,7 @@ class RegisterController extends Controller
         $user = Auth::user();
 
 
-        Mail::to($user->email)->send(new Welcome($user));
+        //Mail::to($user->email)->send(new Welcome($user));
 
     
         

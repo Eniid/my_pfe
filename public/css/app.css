@@ -1241,7 +1241,7 @@ nav .sm-pp__box:hover .sm-pp__info {
 .registration-sec {
   width: 90%;
   max-width: 30rem;
-  margin: 2rem;
+  margin: 0 2rem;
 }
 .registration-sec .cta {
   width: 20rem;
@@ -1275,7 +1275,7 @@ nav .sm-pp__box:hover .sm-pp__info {
 
 .register_flex {
   justify-content: center;
-  align-items: center;
+  align-items: start;
 }
 
 @media screen and (max-width: 210px) {
@@ -1324,6 +1324,7 @@ nav .sm-pp__box:hover .sm-pp__info {
   height: 100vh;
   display: flex;
   justify-content: center;
+  margin-top: 6rem;
 }
 
 .login_img:hover {
@@ -1345,7 +1346,7 @@ nav .sm-pp__box:hover .sm-pp__info {
 }
 
 .login_btn input:checked ~ .hufflepuff {
-  color: #FFB37B;
+  color: #ae4a00;
 }
 
 .login_btn input:checked ~ .gryffindor {
@@ -1596,7 +1597,7 @@ h3 a {
   color: #405D8D;
 }
 .main-message .hu {
-  color: #FFB37B;
+  color: #ae4a00;
 }
 .main-message .sl {
   color: #206F12;
@@ -2019,6 +2020,10 @@ strong {
   margin: auto;
 }
 
+.file_input {
+  width: 25rem;
+}
+
 .landing__title {
   width: 100%;
   text-align: center;
@@ -2412,6 +2417,9 @@ input[type=checkbox] {
 .owls_main {
   height: 100vh;
 }
+.owls_main .sm-pp {
+  margin-bottom: 0.45rem;
+}
 
 .owls-section_contener {
   align-items: stretch;
@@ -2487,7 +2495,7 @@ input[type=checkbox] {
 }
 .user-btn_contener .user-btn__message {
   font-size: 1.4rem;
-  color: #373737;
+  color: #000;
   padding-top: 0.2rem;
 }
 .user-btn_contener .user-btn__message {
@@ -2597,11 +2605,13 @@ input[type=checkbox] {
   color: #fff;
   margin: 0 1rem;
   max-width: 25rem;
+  font-size: 1.2rem;
+  line-height: 2rem;
 }
 
 .auth-user__message {
   flex-direction: row-reverse;
-  padding: 1.5rem 0;
+  padding: 0;
 }
 .auth-user__message .conversation_message {
   color: black;
@@ -2890,9 +2900,11 @@ input[type=checkbox] {
   box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
   background: #d2b9ff;
 }
-.dark .notif_box {
-  box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
-  background: #3f3f47;
+@media screen and (max-width: 1300px) {
+  .dark .notif_box {
+    box-shadow: 4px 4px 6px #00000045, -4px -4px 5px #ffffff0d;
+    background: #3f3f47;
+  }
 }
 .dark .forum_desc {
   color: #fff;
@@ -3221,6 +3233,10 @@ input[type=checkbox] {
   display: inline-block;
 }
 
+.topic .sm-pp {
+  margin-bottom: 0.5rem;
+}
+
 .head-sec {
   position: fixed;
   text-align: center;
@@ -3362,6 +3378,10 @@ header .separation {
   transition: transform 1s;
 }
 
+.event_events h2 {
+  padding: 1rem 1rem 0 1rem;
+}
+
 .filters {
   align-items: center;
   justify-content: space-between;
@@ -3466,10 +3486,10 @@ header .separation {
 }
 
 .hufflepuff_c {
-  color: #FFB37B !important;
+  color: #ae4a00 !important;
 }
 .hufflepuff_c a:hover:after {
-  background: #FFB37B;
+  background: #ae4a00;
 }
 
 .gryffindor_c {
@@ -3494,10 +3514,10 @@ header .separation {
 }
 
 .hufflepuff_c {
-  color: #FFB37B !important;
+  color: #ae4a00 !important;
 }
 .hufflepuff_c :hover:after {
-  background: #FFB37B;
+  background: #ae4a00;
 }
 
 .gryffindor_c {
@@ -3516,7 +3536,7 @@ header .separation {
 }
 
 .hufflepuff_c a {
-  color: #FFB37B !important;
+  color: #ae4a00 !important;
 }
 
 .gryffindor_c a {
@@ -4205,6 +4225,36 @@ nav .home_li a::after {
   transform: translate3d(0, 0.2em, 0);
 }
 
+.under_title a:after {
+  margin: 0.5rem 0rem;
+}
+
+.under_cath-name_fix a:after {
+  margin: -0.3rem 0rem;
+}
+
+.topix-preview__author__name .gryffindor_c:hover:after {
+  width: 100%;
+  background: #9B2727;
+}
+
+.topix-preview__author__name .hufflepuff_c:hover:after {
+  width: 100%;
+  background: #ae4a00;
+}
+
+.topix-preview__author__name .slytherin_c:hover:after {
+  width: 100%;
+  background: #206F12;
+}
+
+/** temps***/
+.profil__main-sec .main-message__profil {
+  position: absolute;
+  top: -10rem;
+  left: 2rem;
+}
+
 .frame {
   position: relative;
   max-width: 140rem;
@@ -4639,14 +4689,9 @@ nav .home_li a::after {
     margin: 2rem;
   }
   .topic_box h2 {
-    margin: 2rem 5rem;
     padding-top: 4rem;
   }
-  .topic_box .lt__ariane {
-    margin: 0 5rem;
-  }
 }
-/*** PADDING FIX**/
 @media only screen and (max-width: 500px) {
   .last-topics {
     padding: 1rem;
@@ -4676,6 +4721,173 @@ nav .home_li a::after {
   margin: 3rem auto 0rem;
 }
 
+@media only screen and (max-width: 950px) {
+  .message__box {
+    width: 100%;
+    margin: -2rem;
+  }
+
+  .mb_box {
+    position: absolute;
+    margin-left: 2rem;
+    bottom: 6rem;
+  }
+
+  .message__box .cta {
+    margin-top: 4rem;
+  }
+
+  .last-topics .pph_p {
+    display: flex;
+    align-items: stretch;
+    padding: 0 2rem 2rem 0;
+    margin: 0;
+    flex-direction: column;
+  }
+  .last-topics .pph_p .switch {
+    padding-bottom: 1rem;
+  }
+  .last-topics .pph_p form {
+    padding-top: 1rem;
+  }
+}
+@media only screen and (max-width: 1430px) {
+  .profil__intro {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .qeel_profil {
+    margin-top: 10rem;
+    margin: 10rem auto 0rem;
+    right: 0;
+  }
+
+  .edit__p {
+    padding: 2rem 4rem;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .profil__intro {
+    flex-direction: column;
+  }
+
+  .profil__mehp {
+    width: 45%;
+    margin: 2rem auto 5rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .profil__intro {
+    flex-direction: column;
+  }
+
+  .profil__mehp {
+    width: 100%;
+    margin: 2rem auto 5rem;
+    text-align: center;
+  }
+}
+@media only screen and (max-width: 700px) {
+  .hc_infos-main .flex {
+    display: flex;
+    flex-direction: column;
+  }
+  .hc_infos-main .house-cup_img_two {
+    left: 2rem;
+    width: 5rem;
+  }
+  .hc_infos-main .house-cup_img_one {
+    right: 2rem;
+    width: 5rem;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .hc_infos-main .history {
+    margin-left: 3rem;
+    font-size: 1.1rem;
+  }
+}
+@media only screen and (max-width: 1430px) {
+  .event_new_big {
+    margin: 2rem auto 0.5rem;
+    right: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .message__form {
+    max-width: 100%;
+  }
+
+  .conversation__box .conversation_message {
+    margin: 0 -0.1rem;
+  }
+
+  .conversation__box {
+    padding: 0 1.5rem;
+  }
+
+  .auth-user__message {
+    margin-left: 3rem;
+  }
+
+  .messager_separator {
+    text-align: center;
+    padding: 1rem;
+    font-size: 1.2rem;
+  }
+}
+@media only screen and (max-width: 1430px) {
+  .que__event {
+    margin: 0 auto;
+    text-align: center;
+    right: 0;
+  }
+  .que__event .flex {
+    justify-content: center;
+  }
+
+  .event_discribe {
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .last-post_event .main-message .main-message__text {
+    margin: 0;
+    width: auto;
+    position: relative;
+    padding: 3rem 10rem 5rem 7rem;
+  }
+
+  .single_event .message__box .cta {
+    position: relative;
+    top: -0.9rem;
+    margin-top: 0;
+  }
+}
+@media screen and (max-width: 500px) {
+  .event_discribe {
+    justify-content: space-between;
+    width: 100%;
+    flex-direction: column-reverse;
+  }
+
+  .event_important {
+    padding: 3rem;
+    text-align: right;
+    margin-bottom: -7.5rem;
+  }
+
+  .que__event .event_cr {
+    align-items: center;
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    overflow-x: scroll;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
 .main-message__text img {
   padding: 0;
 }

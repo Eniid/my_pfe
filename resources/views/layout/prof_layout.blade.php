@@ -133,7 +133,6 @@
                                                 You're 298 point away, keep participating to beat them. 
                                             @endif
                                             
-                                            </b>
                                                 <div>1h ago</div>
                                             </div>
                                         </div>
@@ -302,7 +301,7 @@
                                         <button class="cta cta_i">logout</button>
                                     </form>
                                 </div>
-    
+
                             </div>
                         </li>
                     </ol>
@@ -339,11 +338,11 @@
 
 
         <p class="footer"><a href="mailto:enid-bc@hotmail.com">Contact</a> ☽ &nbsp; &nbsp; @2021 Wizarding World
-            Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracicy <br>
+            Online. All right reserved. &nbsp; &nbsp; ☾ <a href="/termes-and-policy">Termes and Pracic</a> <br>
                 @if (auth()->user()->is_admin)
                     <a href="#">Administration Board</a>
                 @endif
-            </a></p>
+            </p>
 
     </footer>
 
